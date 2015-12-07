@@ -1,0 +1,225 @@
+
+<!-- saved from url=(0042)http://faskes.bpjs-kesehatan.go.id/faskes/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><link href="gradient.css" rel="stylesheet" type="text/css">
+
+
+
+
+<style type="text/css">
+    .style7 {color: #000000; font-size: 16px; border-width: 0px}
+    .style8 {color: #000000; font-size: 12px; border-width: 0px}
+    .style13 {
+        font-size: 14px;
+        font-weight: bold;
+    }
+</style>
+
+
+
+    <title>Input Data Kunjungan</title>
+
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-responsive.css" rel="stylesheet">
+    <link href="prettify.css" rel="stylesheet">
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="select2.css">
+    <script type="text/javascript" src="select2.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            $('.select2').select2();
+
+            $("select#kc").change(function() {
+                // Post string 
+                var post_string = "kdkc=" + $(this).val();
+
+                // Mengirimkan permintaan dari pilihan id=wilayah 
+                $.ajax({
+                    type: "POST",
+                    data: post_string,
+                    dataType: "json",
+                    cache: true,
+                    url: 'json.php',
+                    timeout: 60000,
+                    error: function() {
+                        alert(" Gagal Submit");
+                    },
+                    success: function(data) {
+                        // Bersihkan isi option id=dati2
+                        $("select#dati2 option").remove();
+                        // Mengisikan data option id=negara
+                        $.each(data, function(i, j) {
+                            var row = "<option value=\"" + j.kddati2 + "\">" + j.nmdati2 + "</option>";
+                            $(row).appendTo("select#dati2");
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</head><body><div id="content">
+    <form id="form1" name="form1" method="post" action="" class="bs-docs-example form-after">
+        <p> Update Terakhir Tanggal : 7 Desember 2015</p>
+        
+        <a target="_blank" href="http://faskes.bpjs-kesehatan.go.id/aplicares"><img width="20px" height="20px" src="peta2.png"></a>
+        <a class="style13" target="_blank" href="http://faskes.bpjs-kesehatan.go.id/aplicares">Peta Lokasi Fasilitas Kesehatan</a>
+        
+        <table width="auto" border="0" align="left" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;">
+            <tbody><tr>
+                <td width="102" height="26" class="style7">Provinsi </td>
+                <td width="221" class="style8">
+                    <div class="select2-container select2" id="s2id_kc" style="width: 250px"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">---- Pilih Provinsi ----</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1" tabindex="0"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select name="kc" id="kc" class="select2 select2-offscreen" style="width: 250px" tabindex="-1">
+                         
+<option value="">---- Pilih Provinsi ----</option> <option value="01">01 - NANGGROE ACEH DARUSSALAM</option> 
+<option value="02">02 - SUMATERA UTARA</option> 
+<option value="03">03 - SUMATERA BARAT</option> 
+<option value="04">04 - RIAU</option> 
+<option value="05">05 - JAMBI</option> 
+<option value="06">06 - SUMATERA SELATAN</option> 
+<option value="07">07 - BENGKULU</option> 
+<option value="08">08 - LAMPUNG</option> 
+<option value="09">09 - KEP. BANGKA BELITUNG</option> 
+<option value="10">10 - DKI JAKARTA</option> 
+<option value="11">11 - JAWA BARAT</option> 
+<option value="12">12 - JAWA TENGAH</option> 
+<option value="13">13 - D I  YOGYAKARTA</option> 
+<option value="14">14 - JAWA TIMUR</option> 
+<option value="15">15 - BANTEN</option> 
+<option value="16">16 - BALI</option> 
+<option value="17">17 - NUSA TENGGARA BARAT</option> 
+<option value="18">18 - NUSA TENGGARA TIMUR</option> 
+<option value="19">19 - KALIMANTAN BARAT</option> 
+<option value="20">20 - KALIMANTAN TENGAH</option> 
+<option value="21">21 - KALIMANTAN SELATAN</option> 
+<option value="22">22 - KALIMANTAN TIMUR</option> 
+<option value="23">23 - SULAWESI UTARA</option> 
+<option value="24">24 - SULAWESI TENGAH</option> 
+<option value="25">25 - SULAWESI SELATAN</option> 
+<option value="26">26 - SULAWESI TENGGARA</option> 
+<option value="27">27 - GORONTALO</option> 
+<option value="28">28 - MALUKU</option> 
+<option value="29">29 - MALUKU UTARA</option> 
+<option value="30">30 - PAPUA</option> 
+<option value="31">31 - PAPUA BARAT</option> 
+<option value="32">32 - SULAWESI BARAT</option> 
+<option value="33">33 - KEPULAUAN RIAU</option> 
+<option value="34">34 - KALIMANTAN UTARA</option> 
+<option value="99">99 - LUAR NEGERI</option> 
+                    </select>		      </td>
+            </tr>
+            <tr>
+                <td class="style7">Kab./Kota </td>
+                <td class="style8"> 
+                    <div class="select2-container select2" id="s2id_dati2" style="width: 250px"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">---- Pilih Kabupaten/Kota ----</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen2" tabindex="0"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select name="dati2" id="dati2" class="select2 select2-offscreen" style="width: 250px" tabindex="-1"> 
+                        <option value="">---- Pilih Kabupaten/Kota ----</option> 
+                    </select>              
+                </td>
+            </tr>
+            <tr>
+                <td class="style7"><span class="style7">Jenis Faskes </span></td>
+                <td class="style8"> 
+                    <div class="select2-container select2" id="s2id_jns" style="width: 250px"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">---- Pilih Faskes -----</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3" tabindex="0"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select name="jns" id="jns" class="select2 select2-offscreen" style="width: 250px" tabindex="-1">
+                                                <option value="faskes" selected="selected">---- Pilih Faskes -----</option>
+                        <option value="R">RUMAH SAKIT</option>
+                        <option value="DP">RS D PRATAMA</option>
+                        <option value="I">RS TNI/POLRI</option>
+                        <option value="P">PUSKESMAS</option>
+                        <option value="DU">DOKTER PRAKTEK PERORANGAN</option>
+						<option value="DS">DOKTER SPESIALIS</option>
+                        <option value="DG">DOKTER GIGI PRAKTIK</option>
+                        <option value="BP">KLINIK PRATAMA</option>
+                        <option value="BP1">KLINIK TNI</option>
+                        <option value="BP2">KLINIK POLRI</option>
+                        <option value="AP">APOTIK</option>
+                        <option value="OP">OPTIK</option>
+                        <option value="L">LAINNYA</option>
+                        <!--<option value="DS">DOKTER SPESIALIS</option>-->
+                    </select>	          
+                </td>
+            </tr>
+            <tr>
+                <td class="style7">&nbsp;</td>
+                <td class="style7"><input type="submit" name="Submit" value="Tampilkan">&nbsp;	  </td>
+            </tr>
+        </tbody></table>
+    </form>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>
+        </p><p class="style13">DATA  FASILITAS KESEHATAN </p>
+<div align="left">
+  <table width="auto" border="0" align="left">
+    <tbody><tr align="center" valign="middle">
+    </tr><tr bgcolor="#ddd">
+      <td width="5"><div align="center">NO.</div></td>
+      <td width="5"><div align="center">KODE</div></td>
+      <td width="250"><div align="center">NAMA FASKES</div></td>
+      <td width="650"><div align="center">ALAMAT FASKES </div></td>
+
+    </tr>
+
+
+                </tbody></table>
+
+
+    <p></p>
+
+
+
+
+<!-- ------------------------------------------- -->
+<script type="text/javascript">
+    function createRequestObject() {
+        var ro;
+        var browser = navigator.appName;
+        if (browser == "Microsoft Internet Explorer") {
+            ro = new ActiveXObject("Microsoft.XMLHTTP");
+        } else {
+            ro = new XMLHttpRequest();
+        }
+        return ro;
+    }
+
+    var xmlhttp = createRequestObject();
+
+    function rubah(combobox)
+    {
+        var kode = combobox.value;
+        if (!kode)
+            return;
+        xmlhttp.open('get', 'ambildata.php?kode=' + kode, true);
+        xmlhttp.onreadystatechange = function() {
+            if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200))
+                document.getElementById("divkedua").innerHTML = xmlhttp.responseText;
+            document.getElementById("divketiga").innerHTML = "";
+            return false;
+        }
+        xmlhttp.send(null);
+    }
+
+    function rubah2(combobox)
+    {
+        var kode2 = combobox.value;
+        if (!kode2)
+            return;
+        xmlhttp.open('get', 'ambildata2.php?kode=' + kode2, true);
+        xmlhttp.onreadystatechange = function() {
+            if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200))
+                document.getElementById("divketiga").innerHTML = xmlhttp.responseText;
+            return false;
+        }
+        xmlhttp.send(null);
+    }
+
+</script>
+<p></p>
+
+</div></div></body></html>
