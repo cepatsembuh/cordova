@@ -5,9 +5,10 @@
 One stop healthcare service mobile application, berisi data pribadi pasien, sistem pendaftaran otomatis, dan informasi booking tempat tidur inap rumah sakit. Dengan klik CEPAT SEMBUH, semua pasien (wajah yang menderita) menjadi cepat sembuh (wajah yang tersenyum)
     </description>
     <author email="mercysmartacademy@gmail.com" href="http://mercysmart.github.io">
-        Apache Cordova Team
+        MercySmart
     </author>
     <content src="index.html" />
+    <icon src="www/img/logo.png" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
