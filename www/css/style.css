@@ -39,3 +39,7 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+.hospital {
+  width: 284px;
+  height: 200px;
+}
