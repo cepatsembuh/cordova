@@ -36,17 +36,19 @@
           <div class="page-content">
           <form action="mailto:tobatmailid@gmail.com">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="title" name="subject">
-                <label class="mdl-textfield__label" for="title">Nomor BPJS</label>
-              </div><br>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="nama" name="subject">
-                <label class="mdl-textfield__label" for="nama">NIK</label>
-              </div><br>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="nama" name="subject">
                 <label class="mdl-textfield__label" for="nama">Nama</label>
               </div><br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="title" name="subject">
+                <label class="mdl-textfield__label" for="title">Nomor BPJS</label>
+              </div><br>
+              <select class="form-control" style="width:300px;">
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select><br>
+              <input type="date" class="form-control" style="width:300px;">
+              <br>
               <select class="form-control" style="width:300px;">
                 <option value="">DKI Jakarta</option>
               </select><br>
@@ -57,12 +59,6 @@
                 <option>Jakarta Pusat</option>
                 <option>Jakarta Selatan</option>
               </select><br>
-              <select class="form-control" style="width:300px;">
-                <option>Laki-laki</option>
-                <option>Perempuan</option>
-              </select><br>
-              <input type="date" class="form-control" style="width:300px;">
-              <br>
               <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit" onclick="valid()">
             </form>
           </div>
