@@ -1,7 +1,7 @@
 function mail(){
-	var nama =
-	var no-bpjs =  
-	var sex = 
-	var state = 
-	var province = 
+	var nama = getElementById('nama')
+	var no-bpjs = getElementById('no-bpjs') 
+	var sex = getElementById('sex')
+	var state = getElementById('state')
+	var province = getElementById('province')
 }
