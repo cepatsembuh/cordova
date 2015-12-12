@@ -4,4 +4,5 @@ function mail(){
 	var sex = getElementById('sex')
 	var state = getElementById('state')
 	var province = getElementById('province')
+	var date = getElementById('date')
 }
