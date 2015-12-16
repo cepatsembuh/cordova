@@ -17,6 +17,9 @@ One stop healthcare service mobile application, berisi data pribadi pasien, sist
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <feature name="storage">
+        <param name="android-package" value="org.apache.cordova.Storage"/>
+    </feature>
     <platform name="android">
         <allow-intent href="market:*" />
         <icon src="www/img/logo.png" />
