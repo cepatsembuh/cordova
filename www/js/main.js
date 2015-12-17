@@ -13,5 +13,6 @@ function login() {
 	};
 	else {
 		alert("Harap mendaftar terlebih dahulu")
+		return false;
 	}
 }
