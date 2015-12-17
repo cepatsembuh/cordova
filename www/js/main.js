@@ -9,6 +9,7 @@ function login() {
 
 	if ((nama == name) && (no-bpjs == bpjs-no)) {
 		window.location.href = "rs.html";
+		return true;
 	};
 	else {
 		alert("Harap mendaftar terlebih dahulu")
