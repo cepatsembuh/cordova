@@ -13,13 +13,22 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.2.0",
-    "cordova-sqlite-storage": "0.7.14"
+    "cordova-sqlite-storage": "0.7.14",
+    "cordova-plugin-splashscreen": "3.0.0"
 }
 // BOTTOM OF METADATA
 });

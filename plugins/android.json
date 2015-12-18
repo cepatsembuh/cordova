@@ -12,6 +12,9 @@
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "id.cepatsembuh"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "id.cepatsembuh"
         }
     },
     "dependent_plugins": {}
