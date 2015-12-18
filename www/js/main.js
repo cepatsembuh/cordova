@@ -1,3 +1,4 @@
+var cordova = require("cordova");
 window.onload = action
 var action = document.pesan.action = login();
 
