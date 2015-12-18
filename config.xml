@@ -18,11 +18,13 @@ One stop healthcare service mobile application, berisi data pribadi pasien, sist
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
+        <preference name="SplashScreen" value="www/img/logo.png" />
         <allow-intent href="market:*" />
         <icon src="www/img/logo.png" />
         <plugin name="SQLitePlugin" value="io.liteglue.SQLitePlugin"/>
     </platform>
     <platform name="ios">
+        <preference name="SplashScreen" value="www/img/logo.png" />
         <icon src="www/img/logo.png" />
         <plugin name="SQLitePlugin" value="io.liteglue.SQLitePlugin"/>
         <allow-intent href="itms:*" />
