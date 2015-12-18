@@ -14,4 +14,10 @@ function login() {
 			break;
 		};
 	};
+
+	if (valid) {
+		window.location.href='rs.html';
+	}; else {
+		alert("Please register first")
+	}
 }
