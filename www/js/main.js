@@ -5,7 +5,7 @@ function login() {
 	var nama = document.pesan.nama.value;
 	var name = "Andre Christoga";	
 
-	if ((nama == name)) {
+	if ((name == nama)) {
 		window.location.href = "rs.html";
 		return true;
 	};
