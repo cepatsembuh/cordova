@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="id.cepatsembuh" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <allow-intent href="market:*" />
+    <name>Cepat Sembuh</name>
+    <description>
+One stop healthcare service mobile application, berisi data pribadi pasien, sistem pendaftaran otomatis, dan informasi booking tempat tidur inap rumah sakit. Dengan klik CEPAT SEMBUH, semua pasien (wajah yang menderita) menjadi cepat sembuh (wajah yang tersenyum)
+    </description>
+    <author email="mercysmartacademy@gmail.com" href="http://mercysmart.github.io">
+        MercySmart
+    </author>
+    <content src="index.html" />
+    <icon src="www/img/logo.png" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SQLitePlugin">
+        <param name="android-package" value="io.liteglue.SQLitePlugin" />
+    </feature>
+</widget>

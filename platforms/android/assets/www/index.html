@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cepat Sembuh</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  </head>
+  <body align="center">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Tobat -->
+          <span class="mdl-layout-Tobat"><h4>Cepat Sembuh</h4></span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Daftar</a>
+          <!-- <a href="#fixed-tab-2" class="mdl-layout__tab">Rumah Sakit</a> -->
+          <!-- <a href="#fixed-tab-3" class="mdl-layout__tab">About</a> -->
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-Tobat"><h4>Cepat Sembuh</h4></span>
+        <h6><i class="fa fa-hospital-o"></i> <a href="faskes.html">Cek Faskes</a></h6>
+      </div>
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+          <center>
+          <div class="page-content">
+          <form method="get" name="pesan" action="rs.html">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="nama">
+                <label class="mdl-textfield__label" for="nama">Nama</label>
+              </div><br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="no-bpjs">
+                <label class="mdl-textfield__label" for="title">Nomor BPJS</label>
+              </div><br>
+              <select class="form-control" style="width:300px;" name="sex">
+                <option disabled>--Sex--</option>
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select><br>
+              <input type="date" class="form-control" style="width:300px;" name1="date">
+              <br>
+              <select class="form-control" style="width:300px;" name="state">
+                <option disabled>--State--</option>
+                <option value="">DKI Jakarta</option>
+              </select><br>
+              <select class="form-control" style="width:300px;" name="province">
+                <option disabled>--Province--</option>
+                <option>Jakarta Utara</option>
+                <option>Jakarta Barat</option>
+                <option>Jakarta Timur</option>
+                <option>Jakarta Pusat</option>
+                <option>Jakarta Selatan</option>
+              </select><br>
+              <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit">
+            </form>
+          </div>
+        </center>
+        </section>
+      </main>
+    </div>
+    <script src="js/material.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
