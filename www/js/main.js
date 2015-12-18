@@ -6,6 +6,12 @@ var rs = ["Royal Progress", "RSUP Dr Cipto Mangunkusumo", "RSUP Fatmawati", "RSU
 function login() {
 	var nama = document.pesan.nama.value;
 	var valid = false;
-	
+
 	var name = ["admin"];
+	for (var i = 0; i < name.length; i++) {
+		if ((nama == name[i]) {
+			valid = true;
+			break;
+		};
+	};
 }
