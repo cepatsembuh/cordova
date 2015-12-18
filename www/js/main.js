@@ -3,11 +3,9 @@ var action = document.pesan.action = login();
 
 function login() {
 	var nama = document.pesan.nama.value;
-	var no-bpjs = document.pesan.no-bpjs.value;
-	var name = "Andre Christoga";
-	var bpjs-no = "";
+	var name = "Andre Christoga";	
 
-	if ((nama == name) && (no-bpjs == bpjs-no)) {
+	if ((nama == name)) {
 		window.location.href = "rs.html";
 		return true;
 	};
