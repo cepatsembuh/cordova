@@ -18,6 +18,7 @@
   "dependencies": {
     "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#~4.5.0",
     "react": "~0.14.3",
-    "Chart.js": "~1.0.2"
+    "Chart.js": "~1.0.2",
+    "mustache.js": "mustache#~2.2.1"
   }
 }
