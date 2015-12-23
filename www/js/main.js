@@ -11,5 +11,3 @@ var tanggal-lahir = 20/08/1942
 
 var nik = document.getElementById('nik').value;
 var nikk = 
-
-var faskes1 = "Tanjung Priok"
