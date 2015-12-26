@@ -91,9 +91,18 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-#services i.fa{
+#services1 img{
   font-size: 40px;    
-  border:4px solid #38a4ab;
+  border:4px solid #1D365C;
+  width: 100px;
+  height: 100px;
+  padding: 27px 25px;
+  margin-bottom: 10px;
+  border-radius: 50%;  
+}
+#services2 img{
+  font-size: 40px;    
+  border:4px solid #E8472A;
   width: 100px;
   height: 100px;
   padding: 27px 25px;
