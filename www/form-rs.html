@@ -25,7 +25,7 @@
         <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
           <center>
           <div class="page-content">
-          <form method="get" id="hospital-form" action="state-rs.html" onsubmit="valid()">
+          <form method="get" id="form-puskesmas.html" action="state-puskesmas.html" name="puskes-form">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="nama">
                 <label class="mdl-textfield__label" for="nama">Nama</label>
@@ -64,6 +64,23 @@
         </section>
       </main>
     </div>
+    <script>
+      function valid() {
+          var valid = true;
+
+          // Validate Hospital
+          if (document.hospital-form.no-bpjs.value == "") {
+            alert("Mohon mengisi form dengan benar")
+            valid = false;
+          };
+
+          // Validate Puskesmas
+          if (document.puskes-form.no-bpjs.value == "") {
+            alert("Mohon mengisi form dengan benar")
+            valid = false;
+          };
+        }
+    </script>
     <script src="js/material.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
