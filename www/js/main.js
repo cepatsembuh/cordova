@@ -3,11 +3,11 @@ var rs = ["Royal Progress", "RSUP Dr Cipto Mangunkusumo", "RSUP Fatmawati", "RSU
 
 var input = document.getElementbyId('hospital-form').value;
 
-function validate() {
- if input == "" {
-  alert ("Please insert some input")
-  return false;
- };
+function checkTextField(input) {
+    if (input.value == '') {	
+        alert("Field is empty");
+    }
+}
 
 if (cordova.platformId == 'android') {
 	StatusBar.backgroundColorByHexString("#009688");

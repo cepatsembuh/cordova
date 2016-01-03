@@ -31,7 +31,7 @@
                 <label class="mdl-textfield__label" for="nama">Nama</label>
               </div><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="no-bpjs">
+                <input class="mdl-textfield__input" type="text" id="no-bpjs" onblur="checkTextField(this);"/>
                 <label class="mdl-textfield__label" for="title">Nomor BPJS</label>
               </div><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -63,18 +63,7 @@
         </center>
         </section>
       </main>
-    </div>
-    <script>
-      function valid() {
-          var valid = true;
-
-          // Validate Hospital
-          if (document.hospital-form.no-bpjs.value == "") {
-            alert("Mohon mengisi form dengan benar")
-            valid = false;
-          };
-        }
-    </script>
+    </div>    
     <script src="js/material.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
