@@ -7,9 +7,6 @@ function validate() {
  if input == "" {
   alert ("Please insert some input")
  };
- else {
-  return true;
-}
 
 if (cordova.platformId == 'android') {
 	StatusBar.backgroundColorByHexString("#009688");
