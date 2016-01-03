@@ -6,6 +6,7 @@ var input = document.getElementbyId('hospital-form');
 function validate() {
  if input == "" {
   alert ("Please insert some input")
+  return false;
  };
 
 if (cordova.platformId == 'android') {
