@@ -6,7 +6,7 @@ var input = document.getElementbyId('hospital-form');
 function validate() {
  if input == "" {
   alert ("Please insert some input")
- }
+ };
  else {
   return true;
 }
