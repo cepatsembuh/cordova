@@ -109,3 +109,6 @@
   margin-bottom: 10px;
   border-radius: 50%;  
 }
+#hospital1 {
+  background: url('img/puskesmas/keccempakaputih.jpg') center / cover;
+}
