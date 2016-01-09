@@ -17,6 +17,8 @@ One stop healthcare service mobile application, berisi data pribadi pasien, sist
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-intent href="*.firebaseio.com" />
+    <allow-intent href="auth.firebase.com" />
     <platform name="android">
         <preference name="SplashScreen" value="www/img/logo.png" />
         <allow-intent href="market:*" />
