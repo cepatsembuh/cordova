@@ -91,6 +91,10 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+.logo {
+  width: 150px;
+  height: 150px;
+}
 #services1 img{
   font-size: 40px;    
   border:4px solid #1D365C;
