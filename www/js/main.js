@@ -13,14 +13,14 @@ if (cordova.platformId == 'android') {
 	StatusBar.backgroundColorByHexString("#009688");
 };
 
-var ref = "https://cepatsembuh.firebaseio.com/";
-
 function data() {
-	var bpjs-rs = document.getElementbyId("bpjs-rs");
-	var bpjs-puskesmas = document.getElementbyId("bpjs-puskesmas");
+	var ref = new Firebase('https://cepatsembuh.firebaseio.com/');
+
+	var bpjs-rs = document.getElementbyId("bpjs-rs").value;
+	var bpjs-puskesmas = document.getElementbyId("bpjs-puskesmas").value;
 
 	ref.push(bpjs-rs);
 	ref.push(bpjs-puskesmas);
-	Firebase.goOnline
-
+	
+	Firebase.goOnline();
 }
