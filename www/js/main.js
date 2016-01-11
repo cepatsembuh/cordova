@@ -1,5 +1,3 @@
-var cordova = require('cordova')
-
 function data() {
 	var ref = new Firebase('https://cepatsembuh.firebaseio.com/');
 
