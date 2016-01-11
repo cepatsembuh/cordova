@@ -1,14 +1,6 @@
 var cordova = require('cordova')
 var rs = ["Royal Progress", "RSUP Dr Cipto Mangunkusumo", "RSUP Fatmawati", "RSUP Persahabatan"]
 
-var input = document.getElementbyId('hospital-form').value;
-
-function checkTextField(input) {
-    if (input.value == '') {	
-        alert("Field is empty");
-    }
-}
-
 function data() {
 	var ref = new Firebase('https://cepatsembuh.firebaseio.com/');
 
