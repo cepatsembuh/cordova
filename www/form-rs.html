@@ -26,15 +26,15 @@
           <div class="page-content">
           <form method="get" action="state-rs.html" id="hospital-form" onsubmit="data()">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="nama">
+                <input class="mdl-textfield__input" type="text" id="nama" required>
                 <label class="mdl-textfield__label" for="nama">Nama</label>
               </div><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="no-bpjs" onblur="checkTextField(this);" id="bpjs-rs" />
+                <input class="mdl-textfield__input" type="text" id="no-bpjs" onblur="checkTextField(this);" id="bpjs-rs" required>
                 <label class="mdl-textfield__label" for="title">Nomor BPJS</label>
               </div><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="nik">
+                <input class="mdl-textfield__input" type="text" id="nik" required>
                 <label class="mdl-textfield__label" for="title">NIK</label>
               </div><br>
               <select class="form-control" style="width:300px;" id="sex">
@@ -42,7 +42,7 @@
                 <option>Laki-laki</option>
                 <option>Perempuan</option>
               </select><br>
-              <input type="date" class="form-control" style="width:300px;" id="date">
+              <input type="date" class="form-control" style="width:300px;" id="date" required>
               <br>
               <!-- <select class="form-control" style="width:300px;" id="province">
                 <option disabled>--Province--</option>
@@ -56,7 +56,7 @@
                 <option value="index_japus.html">Jakarta Pusat</option>
                 <option value="index_jaksel.html">Jakarta Selatan</option>
               </select><br> -->
-              <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit">
+              <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit" required>
             </form>
           </div>
         </center>
