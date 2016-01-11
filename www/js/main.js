@@ -9,10 +9,6 @@ function checkTextField(input) {
     }
 }
 
-if (cordova.platformId == 'android') {
-	StatusBar.backgroundColorByHexString("#009688");
-};
-
 function data() {
 	var ref = new Firebase('https://cepatsembuh.firebaseio.com/');
 
