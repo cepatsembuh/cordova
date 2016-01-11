@@ -1,5 +1,4 @@
 var cordova = require('cordova')
-var rs = ["Royal Progress", "RSUP Dr Cipto Mangunkusumo", "RSUP Fatmawati", "RSUP Persahabatan"]
 
 function data() {
 	var ref = new Firebase('https://cepatsembuh.firebaseio.com/');
