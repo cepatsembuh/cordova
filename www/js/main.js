@@ -1,5 +1,6 @@
 function data() {
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
+	var url = "https://cepatsembuh.firebaseio.com/";
+	var ref = new Firebase(url);
 
 	var bpjs-rs = document.getElementbyId("bpjs-rs").value;
 	var bpjs-puskesmas = document.getElementbyId("bpjs-puskesmas").value;
