@@ -5,7 +5,5 @@ function data() {
 	var bpjs-puskesmas = document.getElementbyId("bpjs-puskesmas").value;
 
 	ref.push(bpjs-rs);
-	ref.push(bpjs-puskesmas);
-	
-	Firebase.goOnline();
+	ref.push(bpjs-puskesmas);	
 }
