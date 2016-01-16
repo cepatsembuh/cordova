@@ -5,5 +5,12 @@ function data() {
 	var bpjs-puskesmas = document.getElementbyId("bpjs-puskesmas").value;
 
 	ref.push(bpjs-rs);
-	ref.push(bpjs-puskesmas);	
+	ref.push(bpjs-puskesmas);
+
+	if (bpjs-rs == '') {
+		return false;
+	};	
+	else {
+		return true;
+	}
 }
