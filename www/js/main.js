@@ -8,7 +8,7 @@ function data() {
 	ref.push(bpjs-rs);
 	ref.push(bpjs-puskesmas);
 
-	if (bpjs-rs == '') {
+	if (var bpjs-rs == '') {
 		return false;
 	};	
 	else {
