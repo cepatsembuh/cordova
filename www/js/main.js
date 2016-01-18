@@ -14,4 +14,10 @@ function data() {
 	else {
 		return true;
 	}
+	if (var bpjs-puskesmas == '') {
+		return false;
+	};
+	else {
+		return true;
+	}
 }
