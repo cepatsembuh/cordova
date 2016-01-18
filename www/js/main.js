@@ -10,12 +10,14 @@ function data() {
 
 	if (var bpjs-rs == '') {
 		return false;
+		console.log('BPJS input is empty')
 	};	
 	else {
 		return true;
 	}
 	if (var bpjs-puskesmas == '') {
 		return false;
+		console.log('BPJS input is empty')
 	};
 	else {
 		return true;
