@@ -3,7 +3,7 @@ function data() {
 	var ref = new Firebase(url);
 	
 	// Hospital input
-	var bpjs-rs $('#name-rs').val();
+	var name-rs $('#name-rs').val();
 	var bpjs-rs $('#bpjs-rs').val();
 	var nik-rs $('#nik-rs').val();
 	var sex-rs $('#sex-rs').val();
