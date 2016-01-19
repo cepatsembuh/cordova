@@ -1,9 +1,9 @@
 function data() {
 	var url = "https://cepatsembuh.firebaseio.com/";
 	var ref = new Firebase(url);
-
-	var bpjs-rs = document.getElementbyId("bpjs-rs").value;
-	var bpjs-puskesmas = document.getElementbyId("bpjs-puskesmas").value;
+	
+	var bpjs-rs $('#bpjs-rs').val();
+	var bpjs-puskesmas $('#bpjs-puskesmas').val();
 
 	ref.push(bpjs-rs);
 	ref.push(bpjs-puskesmas);
