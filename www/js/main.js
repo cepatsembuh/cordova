@@ -31,8 +31,7 @@ function data() {
 	    date: date-rs,
 	  },	  
 	});
-
-	Firebase person object for hospital
+	
 	var puskesmas = ref.child("puskesmas");
 	puskesmas.set({	  
 	  person: {
@@ -44,14 +43,14 @@ function data() {
 	  },	  
 	});
 
-	if (var bpjs-rs == '') {
+	if (var rs == '') {
 		return false;
 		console.log('BPJS input is empty')
 	};	
 	else {
 		return true;
 	}
-	if (var bpjs-puskesmas == '') {
+	if (var puskesmas == '') {
 		return false;
 		console.log('BPJS input is empty')
 	};
