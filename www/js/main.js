@@ -10,6 +10,7 @@ function data() {
 	var date-rs = document.getElementById('date-rs').value();
 
 	// Puskesmas input
+	var puskesmas = document.getElementById('puskesmas-form').value;
 	var name-puskesmas = document.getElementById('name-puskesmas').value();
 	var bpjs-puskesmas = document.getElementById('bpjs-puskesmas').value();
 	var nik-puskesmas = document.getElementById('nik-puskesmas').value();
