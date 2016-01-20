@@ -32,6 +32,18 @@ function data() {
 	  },	  
 	});
 
+	Firebase person object for hospital
+	var puskesmas = ref.child("puskesmas");
+	puskesmas.set({	  
+	  person: {
+	    nama: name-puskesmas,
+	    bpjs: bpjs-puskesmas,
+	    nik: nik-puskesmas,
+	    sex: sex-puskesmas,
+	    date: date-puskesmas,
+	  },	  
+	});
+
 	if (var bpjs-rs == '') {
 		return false;
 		console.log('BPJS input is empty')
