@@ -3,18 +3,18 @@ function data() {
 	var ref = new Firebase(url);
 	
 	// Hospital input
-	var name-rs $('#name-rs').val();
-	var bpjs-rs $('#bpjs-rs').val();
-	var nik-rs $('#nik-rs').val();
-	var sex-rs $('#sex-rs').val();
-	var date-rs $('#date-rs').val();
+	var name-rs = $('#name-rs').val();
+	var bpjs-rs = $('#bpjs-rs').val();
+	var nik-rs = $('#nik-rs').val();
+	var sex-rs = $('#sex-rs').val();
+	var date-rs = $('#date-rs').val();
 
 	// Puskesmas input
-	var name-puskesmas $('#name-puskesmas').val();
-	var bpjs-puskesmas $('#bpjs-puskesmas').val();
-	var nik-puskesmas $('#nik-puskesmas').val();
-	var sex-puskesmas $('#sex-puskesmas').val();
-	var date-puskesmas $('#date-puskesmas').val();
+	var name-puskesmas = $('#name-puskesmas').val();
+	var bpjs-puskesmas = $('#bpjs-puskesmas').val();
+	var nik-puskesmas = $('#nik-puskesmas').val();
+	var sex-puskesmas = $('#sex-puskesmas').val();
+	var date-puskesmas = $('#date-puskesmas').val();
 
 	ref.push(bpjs-rs);
 	ref.push(bpjs-puskesmas);
