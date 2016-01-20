@@ -21,6 +21,17 @@ function data() {
 	ref.push(bpjs-rs);
 	ref.push(bpjs-puskesmas);
 
+	var rs = ref.child("rs");
+	rs.set({	  
+	  person: {
+	    nama: name-rs,
+	    bpjs: bpjs-rs,
+	    nik: nik-rs,
+	    sex: sex-rs,
+	    date: date-rs,
+	  },	  
+	});
+
 	if (var bpjs-rs == '') {
 		return false;
 		console.log('BPJS input is empty')
