@@ -3,18 +3,18 @@ function data() {
 	var ref = new Firebase(url);
 	
 	// Hospital input
-	var name-rs = $('#name-rs').val();
-	var bpjs-rs = $('#bpjs-rs').val();
-	var nik-rs = $('#nik-rs').val();
-	var sex-rs = $('#sex-rs').val();
-	var date-rs = $('#date-rs').val();
+	var name-rs = document.getElementById('name-rs').value();
+	var bpjs-rs = document.getElementById('bpjs-rs').value();
+	var nik-rs = document.getElementById('nik-rs').value();
+	var sex-rs = document.getElementById('sex-rs').value();
+	var date-rs = document.getElementById('date-rs').value();
 
 	// Puskesmas input
-	var name-puskesmas = $('#name-puskesmas').val();
-	var bpjs-puskesmas = $('#bpjs-puskesmas').val();
-	var nik-puskesmas = $('#nik-puskesmas').val();
-	var sex-puskesmas = $('#sex-puskesmas').val();
-	var date-puskesmas = $('#date-puskesmas').val();
+	var name-puskesmas = document.getElementById('name-puskesmas').value();
+	var bpjs-puskesmas = document.getElementById('bpjs-puskesmas').value();
+	var nik-puskesmas = document.getElementById('nik-puskesmas').value();
+	var sex-puskesmas = document.getElementById('sex-puskesmas').value();
+	var date-puskesmas = document.getElementById('date-puskesmas').value();
 
 	ref.push(bpjs-rs);
 	ref.push(bpjs-puskesmas);
