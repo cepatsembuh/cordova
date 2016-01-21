@@ -18,9 +18,6 @@ function data() {
 	var sex_puskesmas = document.getElementById('sex_puskesmas').value();
 	var date_puskesmas = document.getElementById('date_puskesmas').value();
 
-	ref.push(bpjs_rs);
-	ref.push(bpjs_puskesmas);
-
 	var rs = ref.child("rs");
 	rs.set({	  
 	  person: {
