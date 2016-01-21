@@ -3,7 +3,7 @@ function data() {
 	var ref = new Firebase(url);
 	
 	// Hospital input
-	var rs = document.getElementById('hospital-form').value)();
+	var rs = document.getElementById('hospital-form').value();
 	var name-rs = document.getElementById('name-rs').value();
 	var bpjs-rs = document.getElementById('bpjs-rs').value();
 	var nik-rs = document.getElementById('nik-rs').value();
