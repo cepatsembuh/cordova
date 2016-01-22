@@ -1,9 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="id.cepatsembuh" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Cepat Sembuh</name>
-    <description>
-One stop healthcare service mobile application, berisi data pribadi pasien, sistem pendaftaran otomatis, dan informasi booking tempat tidur inap rumah sakit. Dengan klik CEPAT SEMBUH, semua pasien (wajah yang menderita) menjadi cepat sembuh (wajah yang tersenyum)
-    </description>
+    <name>Cepat Sembuh</name>    
     <author email="mercysmartacademy@gmail.com" href="http://mercysmart.github.io">
         MercySmart
     </author>
