@@ -10,9 +10,7 @@ One stop healthcare service mobile application, berisi data pribadi pasien, sist
     <content src="index.html" />
     <icon src="www/img/logo.png" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    <access origin="*" />    
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
