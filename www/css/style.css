@@ -1,3 +1,48 @@
+.logo {
+  width: 150px;
+  height: 150px;
+}
+#services1 img {
+  font-size: 40px;    
+  border:4px solid #1D365C;
+  width: 100px;
+  height: 100px;
+  padding: 27px 25px;
+  margin-bottom: 10px;
+  border-radius: 50%;  
+}
+#services2 img {
+  font-size: 40px;    
+  border:4px solid #E8472A;
+  width: 100px;
+  height: 100px;
+  padding: 27px 25px;
+  margin-bottom: 10px;
+  border-radius: 50%;  
+}
+.text {
+  font-size: 1.1em;
+  height: 20px;
+}          
+i.fa {
+  color: #009688;
+  font-size: 1.1em;
+}             
+.mdl-card--border {
+  color: rgba(0,0,0,.54);
+  font-size: 0.9em;
+}
+i.fa-map-marker {
+  font-size: 1.3em;                  
+}
+i.icon {
+  text-align: right;
+  float: right;
+  font-size: 1.3em;
+}
+i.fa-times {
+  color: #FF5252;                  
+}   
 /* cyrillic-ext */
 @font-face {
   font-family: 'Roboto';
@@ -91,48 +136,3 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-.logo {
-  width: 150px;
-  height: 150px;
-}
-#services1 img {
-  font-size: 40px;    
-  border:4px solid #1D365C;
-  width: 100px;
-  height: 100px;
-  padding: 27px 25px;
-  margin-bottom: 10px;
-  border-radius: 50%;  
-}
-#services2 img {
-  font-size: 40px;    
-  border:4px solid #E8472A;
-  width: 100px;
-  height: 100px;
-  padding: 27px 25px;
-  margin-bottom: 10px;
-  border-radius: 50%;  
-}
-.text {
-  font-size: 1.1em;
-  height: 20px;
-}          
-i.fa {
-  color: #009688;
-  font-size: 1.1em;
-}             
-.mdl-card--border {
-  color: rgba(0,0,0,.54);
-  font-size: 0.9em;
-}
-i.fa-map-marker {
-  font-size: 1.3em;                  
-}
-i.icon {
-  text-align: right;
-  float: right;
-  font-size: 1.3em;
-}
-i.fa-times {
-  color: #FF5252;                  
-}   
