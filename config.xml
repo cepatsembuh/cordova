@@ -13,8 +13,7 @@
     <access origin="*" />    
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <allow-intent href="mailto:*" />    
     <allow-intent href="*.firebaseio.com" />
     <allow-intent href="auth.firebase.com" />
     <platform name="android">        
