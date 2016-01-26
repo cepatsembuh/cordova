@@ -5,7 +5,7 @@
         MercySmart
     </author>
     <content src="index.html" />
-    <icon src="www/img/logo.png" />
+    <icon src="www/img/icon.png" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />    
     <allow-intent href="tel:*" />
