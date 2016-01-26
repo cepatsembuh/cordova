@@ -16,7 +16,7 @@
     <allow-intent href="auth.firebase.com" />
     <platform name="android">        
         <allow-intent href="market:*" />
-        <icon src="www/img/logo.png" />        
+        <icon src="www/img/icon.png" />        
     </platform>
     <platform name="ios">        
         <icon src="www/img/logo.png" />        
