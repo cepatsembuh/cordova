@@ -19,7 +19,7 @@
         <icon src="www/img/icon.png" />        
     </platform>
     <platform name="ios">        
-        <icon src="www/img/logo.png" />        
+        <icon src="www/img/icon.png" />        
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
