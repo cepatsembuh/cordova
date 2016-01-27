@@ -1,45 +1,16 @@
-<!-- <?xml version='1.0' encoding='utf-8'?>
-<widget id="id.cepatsembuh" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Cepat Sembuh</name>    
-    <author email="mercysmartacademy@gmail.com" href="http://mercysmart.github.io">
-        MercySmart
-    </author>    
-    <description>
-        An app to help people to find the nearest faskes in their location
-    </description>
-    <icon src="www/img/icon.png" />
-    <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <access origin="*" />    
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />    
-    <allow-intent href="*.firebaseio.com" />
-    <allow-intent href="auth.firebase.com" />
-    <platform name="android">        
-        <allow-intent href="market:*" />        
-    </platform>
-    <platform name="ios">                    
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
-</widget>
- -->
- <?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <widget id="id.cepatsembuh" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Cepat Sembuh</name>
     <description>
       Sekarang, siapapun bisa mengontrol penggunaan uang rakyat di APBN dan APBD
     </description>
-    <author email="tobatmailid@gmail.com" href="http://tobathq.github.io">
+    <author>
         An app to help people to find the nearest faskes in their location
     </author>
     <icon src="www/img/icon.png" />
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <access origin="*" />    
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    <access origin="*" />        
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />   
