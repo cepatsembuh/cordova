@@ -18,8 +18,8 @@ function data() {
 	var sex_puskesmas = document.getElementById('sex_puskesmas').value();
 	var date_puskesmas = document.getElementById('date_puskesmas').value();
 
-	var rs = ref.child("rs");
-	rs.set({	  
+	var rs-all = ref.child("rs");
+	rs-all.set({	  
 	  person: {
 	    nama: name_rs,
 	    bpjs: bpjs_rs,
@@ -29,8 +29,8 @@ function data() {
 	  },	  
 	});
 	
-	var puskesmas = ref.child("puskesmas");
-	puskesmas.set({	  
+	var puskesmas-all = ref.child("puskesmas");
+	puskesmas-all.set({	  
 	  person: {
 	    nama: name_puskesmas,
 	    bpjs: bpjs_puskesmas,
