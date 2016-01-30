@@ -42,14 +42,14 @@ function data() {
 
 	if (var rs == '') {
 		return false;
-		console.log('BPJS input is empty')
+		console.log('Input is empty')
 	};	
 	else {
 		return true;
 	}
 	if (var puskesmas == '') {
 		return false;
-		console.log('BPJS input is empty')
+		console.log('Input is empty')
 	};
 	else {
 		return true;
