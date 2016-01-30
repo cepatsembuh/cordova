@@ -40,14 +40,14 @@ function data() {
 	  },	  
 	});
 
-	if (var rs == '') {
+	if (var rs-all == '') {
 		return false;
 		console.log('Input is empty')
 	};	
 	else {
 		return true;
 	}
-	if (var puskesmas == '') {
+	if (var puskesmas-all == '') {
 		return false;
 		console.log('Input is empty')
 	};
