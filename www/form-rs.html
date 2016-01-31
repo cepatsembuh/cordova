@@ -25,7 +25,7 @@
           <center>
           <div class="page-content">
           <form method="get" action="state-rs.html" id="hospital-form" onsubmit="data()">
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="name-rs" required>
                 <label class="mdl-textfield__label" for="nama">Nama</label>
               </div><br>
@@ -44,11 +44,11 @@
               </select><br>
               <input type="date" class="form-control" style="width:300px;" id="date-rs" required>
               <br>
-              <!-- <select class="form-control" style="width:300px;" id="province">
+              <select class="form-control" style="width:300px;" id="province">
                 <option disabled>--Province--</option>
                 <option value="">DKI Jakarta</option>
-              </select><br> -->
-              <!-- <select class="form-control" style="width:300px;" id="state" onchange="gotoPage(this)">
+              </select><br>
+              <select class="form-control" style="width:300px;" id="state" onchange="gotoPage(this)">
                 <option disabled>--State--</option>
                 <option value="index_jakut.html">Jakarta Utara</option>
                 <option value="index_jakbar.html">Jakarta Barat</option>
@@ -56,6 +56,16 @@
                 <option value="index_japus.html">Jakarta Pusat</option>
                 <option value="index_jaksel.html">Jakarta Selatan</option>
               </select><br> -->
+              <br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows= "3" id="text-area" name="body"
+                >
+Nama =
+No BPJS =
+                </textarea>
+                <label class="mdl-textfield__label" for="text-area"></label>
+                </div><br>
+              <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit" required>
               <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit" required>
             </form>
           </div>
