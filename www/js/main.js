@@ -1,6 +1,5 @@
-function data() {
-	var url = "https://cepatsembuh.firebaseio.com/";
-	var ref = new Firebase(url);
+function data() {	
+	var ref = new Firebase('https://cepatsembuh.firebaseio.com/');
 	
 	// Hospital input
 	var rs = document.getElementById('hospital_form').value();
