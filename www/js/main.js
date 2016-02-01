@@ -18,8 +18,8 @@ function data() {
 	var sex_puskesmas = document.getElementById('sex_puskesmas').value();
 	var date_puskesmas = document.getElementById('date_puskesmas').value();
 
-	var rs-all = ref.child("rs");
-	rs-all.set({	  
+	var rs_all = ref.child("rs");
+	rs_all.set({	  
 	  person: {
 	    nama: name_rs,
 	    bpjs: bpjs_rs,
@@ -29,8 +29,8 @@ function data() {
 	  },	  
 	});
 	
-	var puskesmas-all = ref.child("puskesmas");
-	puskesmas-all.set({	  
+	var puskesmas_all = ref.child("puskesmas");
+	puskesmas_all.set({	  
 	  person: {
 	    nama: name_puskesmas,
 	    bpjs: bpjs_puskesmas,
@@ -40,14 +40,14 @@ function data() {
 	  },	  
 	});
 
-	if (var rs-all == '') {
+	if (var rs_all == '') {
 		return false;
 		console.log('Input is empty')
 	};	
 	else {
 		return true;
 	}
-	if (var puskesmas-all == '') {
+	if (var puskesmas_all == '') {
 		return false;
 		console.log('Input is empty')
 	};
