@@ -55,3 +55,15 @@ function data() {
 		return true;
 	}
 }
+
+function mail() {
+	// Hospital form
+	if (window.location == 'form-rs.html') {
+		window.location.href = 'state-rs.html';
+	};
+	
+	// Puskesmas form
+	if (window.location ==  'form-puskesmas.html') {
+		window.location.href = 'state-puskesmas.html';
+	};	
+}
