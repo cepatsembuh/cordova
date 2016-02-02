@@ -55,6 +55,7 @@ function data() {
 	}
 }
 
+/*
 function mail() {
 	// Hospital form
 	if (window.location == 'form-rs.html') {
@@ -70,4 +71,22 @@ function mail() {
 	else {
 		alert("Please fill out the input again");
 	}
+}
+*/
+
+$('#rs').on('submit') {
+	if (window.location == 'form-rs.html') {
+		window.location.href = 'state-rs.html';
+	};
+	else {
+		alert("Please fill out the input again");
+	}		
+}
+$('#puskesmas').on('submit') {
+	if (window.location == 'form-puskesmas.html') {
+		window.location.href = 'state-puskesmas.html';
+	};
+	else {
+		alert("Please fill out the input again");
+	}		
 }
