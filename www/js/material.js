@@ -94,7 +94,6 @@ componentHandler = (function() {
   /** @type {!Array<componentHandler.Component>} */
   var createdComponents_ = [];
 
-  var downgradeMethod_ = 'mdlDowngrade_';
   var componentConfigProperty_ = 'mdlComponentConfigInternal_';
 
   /**
@@ -228,7 +227,7 @@ componentHandler = (function() {
         }
       } else {
         throw new Error(
-          'Unable to find a registered component for the given class.');
+            'Unable to find a registered component for the given class.');
       }
 
       var ev = document.createEvent('Events');
@@ -339,46 +338,24 @@ componentHandler = (function() {
   }
 
   /**
-   * Finds a created component by a given DOM node.
-   *
-   * @param {!Node} node
-   * @return {*}
-   */
-  function findCreatedComponentByNodeInternal(node) {
-    for (var n = 0; n < createdComponents_.length; n++) {
-      var component = createdComponents_[n];
-      if (component.element_ === node) {
-        return component;
-      }
-    }
-  }
-
-  /**
    * Check the component for the downgrade method.
    * Execute if found.
    * Remove component from createdComponents list.
    *
-   * @param {*} component
+   * @param {?componentHandler.Component} component
    */
   function deconstructComponentInternal(component) {
-    if (component &&
-        component[componentConfigProperty_]
-          .classConstructor.prototype
-          .hasOwnProperty(downgradeMethod_)) {
-      component[downgradeMethod_]();
-      var componentIndex = createdComponents_.indexOf(component);
-      createdComponents_.splice(componentIndex, 1);
+    var componentIndex = createdComponents_.indexOf(component);
+    createdComponents_.splice(componentIndex, 1);
 
-      var upgrades = component.element_.getAttribute('data-upgraded').split(',');
-      var componentPlace = upgrades.indexOf(
-          component[componentConfigProperty_].classAsString);
-      upgrades.splice(componentPlace, 1);
-      component.element_.setAttribute('data-upgraded', upgrades.join(','));
+    var upgrades = component.element_.getAttribute('data-upgraded').split(',');
+    var componentPlace = upgrades.indexOf(component[componentConfigProperty_].classAsString);
+    upgrades.splice(componentPlace, 1);
+    component.element_.setAttribute('data-upgraded', upgrades.join(','));
 
-      var ev = document.createEvent('Events');
-      ev.initEvent('mdl-componentdowngraded', true, true);
-      component.element_.dispatchEvent(ev);
-    }
+    var ev = document.createEvent('Events');
+    ev.initEvent('mdl-componentdowngraded', true, true);
+    component.element_.dispatchEvent(ev);
   }
 
   /**
@@ -392,7 +369,9 @@ componentHandler = (function() {
      * @param  {!Node} node the node to be downgraded
      */
     var downgradeNode = function(node) {
-      deconstructComponentInternal(findCreatedComponentByNodeInternal(node));
+      createdComponents_.filter(function(item) {
+        return item.element_ === node;
+      }).forEach(deconstructComponentInternal);
     };
     if (nodes instanceof Array || nodes instanceof NodeList) {
       for (var n = 0; n < nodes.length; n++) {
@@ -642,18 +621,6 @@ MaterialButton.prototype.init = function () {
         this.element_.addEventListener('mouseleave', this.boundButtonBlurHandler);
     }
 };
-/**
-   * Downgrade the element.
-   *
-   * @private
-   */
-MaterialButton.prototype.mdlDowngrade_ = function () {
-    if (this.rippleElement_) {
-        this.rippleElement_.removeEventListener('mouseup', this.boundRippleBlurHandler);
-    }
-    this.element_.removeEventListener('mouseup', this.boundButtonBlurHandler);
-    this.element_.removeEventListener('mouseleave', this.boundButtonBlurHandler);
-};
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
 componentHandler.register({
@@ -886,20 +853,6 @@ MaterialCheckbox.prototype.init = function () {
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
 };
-/**
-   * Downgrade the component.
-   *
-   * @private
-   */
-MaterialCheckbox.prototype.mdlDowngrade_ = function () {
-    if (this.rippleContainerElement_) {
-        this.rippleContainerElement_.removeEventListener('mouseup', this.boundRippleMouseUp);
-    }
-    this.inputElement_.removeEventListener('change', this.boundInputOnChange);
-    this.inputElement_.removeEventListener('focus', this.boundInputOnFocus);
-    this.inputElement_.removeEventListener('blur', this.boundInputOnBlur);
-    this.element_.removeEventListener('mouseup', this.boundElementMouseUp);
-};
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
 componentHandler.register({
@@ -1119,20 +1072,6 @@ MaterialIconToggle.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-/**
-   * Downgrade the component
-   *
-   * @private
-   */
-MaterialIconToggle.prototype.mdlDowngrade_ = function () {
-    if (this.rippleContainerElement_) {
-        this.rippleContainerElement_.removeEventListener('mouseup', this.boundRippleMouseUp);
-    }
-    this.inputElement_.removeEventListener('change', this.boundInputOnChange);
-    this.inputElement_.removeEventListener('focus', this.boundInputOnFocus);
-    this.inputElement_.removeEventListener('blur', this.boundInputOnBlur);
-    this.element_.removeEventListener('mouseup', this.boundElementOnMouseUp);
-};
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
 componentHandler.register({
@@ -1245,7 +1184,7 @@ MaterialMenu.prototype.init = function () {
         this.outline_ = outline;
         container.insertBefore(outline, this.element_);
         // Find the "for" element and bind events to it.
-        var forElId = this.element_.getAttribute('for');
+        var forElId = this.element_.getAttribute('for') || this.element_.getAttribute('data-mdl-for');
         var forEl = null;
         if (forElId) {
             forEl = document.getElementById(forElId);
@@ -1256,15 +1195,15 @@ MaterialMenu.prototype.init = function () {
             }
         }
         var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
-        this.boundItemKeydown = this.handleItemKeyboardEvent_.bind(this);
-        this.boundItemClick = this.handleItemClick_.bind(this);
+        this.boundItemKeydown_ = this.handleItemKeyboardEvent_.bind(this);
+        this.boundItemClick_ = this.handleItemClick_.bind(this);
         for (var i = 0; i < items.length; i++) {
             // Add a listener to each menu item.
-            items[i].addEventListener('click', this.boundItemClick);
+            items[i].addEventListener('click', this.boundItemClick_);
             // Add a tab index to each menu item.
             items[i].tabIndex = '-1';
             // Add a keyboard listener to each menu item.
-            items[i].addEventListener('keydown', this.boundItemKeydown);
+            items[i].addEventListener('keydown', this.boundItemKeydown_);
         }
         // Add ripple classes to each item, if the user has enabled ripples.
         if (this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)) {
@@ -1399,7 +1338,7 @@ MaterialMenu.prototype.handleItemKeyboardEvent_ = function (evt) {
    * @private
    */
 MaterialMenu.prototype.handleItemClick_ = function (evt) {
-    if (evt.target.getAttribute('disabled') !== null) {
+    if (evt.target.hasAttribute('disabled')) {
         evt.stopPropagation();
     } else {
         // Wait some time before closing menu, so the user can see the ripple.
@@ -1438,19 +1377,22 @@ MaterialMenu.prototype.applyClip_ = function (height, width) {
     }
 };
 /**
+   * Cleanup function to remove animation listeners.
+   *
+   * @param {Event} evt
+   * @private
+   */
+MaterialMenu.prototype.removeAnimationEndListener_ = function (evt) {
+    evt.target.classList.remove(MaterialMenu.prototype.CssClasses_.IS_ANIMATING);
+};
+/**
    * Adds an event listener to clean up after the animation ends.
    *
    * @private
    */
 MaterialMenu.prototype.addAnimationEndListener_ = function () {
-    var cleanup = function () {
-        this.element_.removeEventListener('transitionend', cleanup);
-        this.element_.removeEventListener('webkitTransitionEnd', cleanup);
-        this.element_.classList.remove(this.CssClasses_.IS_ANIMATING);
-    }.bind(this);
-    // Remove animation class once the transition is done.
-    this.element_.addEventListener('transitionend', cleanup);
-    this.element_.addEventListener('webkitTransitionEnd', cleanup);
+    this.element_.addEventListener('transitionend', this.removeAnimationEndListener_);
+    this.element_.addEventListener('webkitTransitionEnd', this.removeAnimationEndListener_);
 };
 /**
    * Displays the menu.
@@ -1497,7 +1439,9 @@ MaterialMenu.prototype.show = function (evt) {
             // displayed the menu in the first place. If so, do nothing.
             // Also check to see if the menu is in the process of closing itself, and
             // do nothing in that case.
-            if (e !== evt && !this.closing_) {
+            // Also check if the clicked element is a menu item
+            // if so, do nothing.
+            if (e !== evt && !this.closing_ && e.target.parentNode !== this.element_) {
                 document.removeEventListener('click', callback);
                 this.hide();
             }
@@ -1516,11 +1460,12 @@ MaterialMenu.prototype.hide = function () {
         var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
         // Remove all transition delays; menu items fade out concurrently.
         for (var i = 0; i < items.length; i++) {
-            items[i].style.transitionDelay = null;
+            items[i].style.removeProperty('transition-delay');
         }
         // Measure the inner element.
-        var height = this.element_.getBoundingClientRect().height;
-        var width = this.element_.getBoundingClientRect().width;
+        var rect = this.element_.getBoundingClientRect();
+        var height = rect.height;
+        var width = rect.width;
         // Turn on animation, and apply the final clip. Also make invisible.
         // This triggers the transitions.
         this.element_.classList.add(this.CssClasses_.IS_ANIMATING);
@@ -1544,18 +1489,6 @@ MaterialMenu.prototype.toggle = function (evt) {
     }
 };
 MaterialMenu.prototype['toggle'] = MaterialMenu.prototype.toggle;
-/**
-   * Downgrade the component.
-   *
-   * @private
-   */
-MaterialMenu.prototype.mdlDowngrade_ = function () {
-    var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
-    for (var i = 0; i < items.length; i++) {
-        items[i].removeEventListener('click', this.boundItemClick);
-        items[i].removeEventListener('keydown', this.boundItemKeydown);
-    }
-};
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
 componentHandler.register({
@@ -1655,16 +1588,6 @@ MaterialProgress.prototype.init = function () {
         this.bufferbar_.style.width = '100%';
         this.auxbar_.style.width = '0%';
         this.element_.classList.add('is-upgraded');
-    }
-};
-/**
-   * Downgrade the component
-   *
-   * @private
-   */
-MaterialProgress.prototype.mdlDowngrade_ = function () {
-    while (this.element_.firstChild) {
-        this.element_.removeChild(this.element_.firstChild);
     }
 };
 // The component registers itself. It can assume componentHandler is available
@@ -1874,6 +1797,10 @@ MaterialRadio.prototype['uncheck'] = MaterialRadio.prototype.uncheck;
 MaterialRadio.prototype.init = function () {
     if (this.element_) {
         this.btnElement_ = this.element_.querySelector('.' + this.CssClasses_.RADIO_BTN);
+        this.boundChangeHandler_ = this.onChange_.bind(this);
+        this.boundFocusHandler_ = this.onChange_.bind(this);
+        this.boundBlurHandler_ = this.onBlur_.bind(this);
+        this.boundMouseUpHandler_ = this.onMouseup_.bind(this);
         var outerCircle = document.createElement('span');
         outerCircle.classList.add(this.CssClasses_.RADIO_OUTER_CIRCLE);
         var innerCircle = document.createElement('span');
@@ -1887,16 +1814,16 @@ MaterialRadio.prototype.init = function () {
             rippleContainer.classList.add(this.CssClasses_.RIPPLE_CONTAINER);
             rippleContainer.classList.add(this.CssClasses_.RIPPLE_EFFECT);
             rippleContainer.classList.add(this.CssClasses_.RIPPLE_CENTER);
-            rippleContainer.addEventListener('mouseup', this.onMouseup_.bind(this));
+            rippleContainer.addEventListener('mouseup', this.boundMouseUpHandler_);
             var ripple = document.createElement('span');
             ripple.classList.add(this.CssClasses_.RIPPLE);
             rippleContainer.appendChild(ripple);
             this.element_.appendChild(rippleContainer);
         }
-        this.btnElement_.addEventListener('change', this.onChange_.bind(this));
-        this.btnElement_.addEventListener('focus', this.onFocus_.bind(this));
-        this.btnElement_.addEventListener('blur', this.onBlur_.bind(this));
-        this.element_.addEventListener('mouseup', this.onMouseup_.bind(this));
+        this.btnElement_.addEventListener('change', this.boundChangeHandler_);
+        this.btnElement_.addEventListener('focus', this.boundFocusHandler_);
+        this.btnElement_.addEventListener('blur', this.boundBlurHandler_);
+        this.element_.addEventListener('mouseup', this.boundMouseUpHandler_);
         this.updateClasses_();
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
@@ -2116,23 +2043,184 @@ MaterialSlider.prototype.init = function () {
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
 };
-/**
-   * Downgrade the component
-   *
-   * @private
-   */
-MaterialSlider.prototype.mdlDowngrade_ = function () {
-    this.element_.removeEventListener('input', this.boundInputHandler);
-    this.element_.removeEventListener('change', this.boundChangeHandler);
-    this.element_.removeEventListener('mouseup', this.boundMouseUpHandler);
-    this.element_.parentElement.removeEventListener('mousedown', this.boundContainerMouseDownHandler);
-};
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
 componentHandler.register({
     constructor: MaterialSlider,
     classAsString: 'MaterialSlider',
     cssClass: 'mdl-js-slider',
+    widget: true
+});
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+   * Class constructor for Snackbar MDL component.
+   * Implements MDL component design pattern defined at:
+   * https://github.com/jasonmayes/mdl-component-design-pattern
+   *
+   * @constructor
+   * @param {HTMLElement} element The element that will be upgraded.
+   */
+var MaterialSnackbar = function MaterialSnackbar(element) {
+    this.element_ = element;
+    this.textElement_ = this.element_.querySelector('.' + this.cssClasses_.MESSAGE);
+    this.actionElement_ = this.element_.querySelector('.' + this.cssClasses_.ACTION);
+    if (!this.textElement_) {
+        throw new Error('There must be a message element for a snackbar.');
+    }
+    if (!this.actionElement_) {
+        throw new Error('There must be an action element for a snackbar.');
+    }
+    this.active = false;
+    this.actionHandler_ = undefined;
+    this.message_ = undefined;
+    this.actionText_ = undefined;
+    this.queuedNotifications_ = [];
+    this.setActionHidden_(true);
+};
+window['MaterialSnackbar'] = MaterialSnackbar;
+/**
+   * Store constants in one place so they can be updated easily.
+   *
+   * @enum {string | number}
+   * @private
+   */
+MaterialSnackbar.prototype.Constant_ = {
+    // The duration of the snackbar show/hide animation, in ms.
+    ANIMATION_LENGTH: 250
+};
+/**
+   * Store strings for class names defined by this component that are used in
+   * JavaScript. This allows us to simply change it in one place should we
+   * decide to modify at a later date.
+   *
+   * @enum {string}
+   * @private
+   */
+MaterialSnackbar.prototype.cssClasses_ = {
+    SNACKBAR: 'mdl-snackbar',
+    MESSAGE: 'mdl-snackbar__text',
+    ACTION: 'mdl-snackbar__action',
+    ACTIVE: 'mdl-snackbar--active'
+};
+/**
+   * Display the snackbar.
+   *
+   * @private
+   */
+MaterialSnackbar.prototype.displaySnackbar_ = function () {
+    this.element_.setAttribute('aria-hidden', 'true');
+    if (this.actionHandler_) {
+        this.actionElement_.textContent = this.actionText_;
+        this.actionElement_.addEventListener('click', this.actionHandler_);
+        this.setActionHidden_(false);
+    }
+    this.textElement_.textContent = this.message_;
+    this.element_.classList.add(this.cssClasses_.ACTIVE);
+    this.element_.setAttribute('aria-hidden', 'false');
+    setTimeout(this.cleanup_.bind(this), this.timeout_);
+};
+/**
+   * Show the snackbar.
+   *
+   * @param {Object} data The data for the notification.
+   * @public
+   */
+MaterialSnackbar.prototype.showSnackbar = function (data) {
+    if (data === undefined) {
+        throw new Error('Please provide a data object with at least a message to display.');
+    }
+    if (data['message'] === undefined) {
+        throw new Error('Please provide a message to be displayed.');
+    }
+    if (data['actionHandler'] && !data['actionText']) {
+        throw new Error('Please provide action text with the handler.');
+    }
+    if (this.active) {
+        this.queuedNotifications_.push(data);
+    } else {
+        this.active = true;
+        this.message_ = data['message'];
+        if (data['timeout']) {
+            this.timeout_ = data['timeout'];
+        } else {
+            this.timeout_ = 2750;
+        }
+        if (data['actionHandler']) {
+            this.actionHandler_ = data['actionHandler'];
+        }
+        if (data['actionText']) {
+            this.actionText_ = data['actionText'];
+        }
+        this.displaySnackbar_();
+    }
+};
+MaterialSnackbar.prototype['showSnackbar'] = MaterialSnackbar.prototype.showSnackbar;
+/**
+   * Check if the queue has items within it.
+   * If it does, display the next entry.
+   *
+   * @private
+   */
+MaterialSnackbar.prototype.checkQueue_ = function () {
+    if (this.queuedNotifications_.length > 0) {
+        this.showSnackbar(this.queuedNotifications_.shift());
+    }
+};
+/**
+   * Cleanup the snackbar event listeners and accessiblity attributes.
+   *
+   * @private
+   */
+MaterialSnackbar.prototype.cleanup_ = function () {
+    this.element_.classList.remove(this.cssClasses_.ACTIVE);
+    setTimeout(function () {
+        this.element_.setAttribute('aria-hidden', 'true');
+        this.textElement_.textContent = '';
+        if (!Boolean(this.actionElement_.getAttribute('aria-hidden'))) {
+            this.setActionHidden_(true);
+            this.actionElement_.textContent = '';
+            this.actionElement_.removeEventListener('click', this.actionHandler_);
+        }
+        this.actionHandler_ = undefined;
+        this.message_ = undefined;
+        this.actionText_ = undefined;
+        this.active = false;
+        this.checkQueue_();
+    }.bind(this), this.Constant_.ANIMATION_LENGTH);
+};
+/**
+   * Set the action handler hidden state.
+   *
+   * @param {boolean} value
+   * @private
+   */
+MaterialSnackbar.prototype.setActionHidden_ = function (value) {
+    if (value) {
+        this.actionElement_.setAttribute('aria-hidden', 'true');
+    } else {
+        this.actionElement_.removeAttribute('aria-hidden');
+    }
+};
+// The component registers itself. It can assume componentHandler is available
+// in the global scope.
+componentHandler.register({
+    constructor: MaterialSnackbar,
+    classAsString: 'MaterialSnackbar',
+    cssClass: 'mdl-js-snackbar',
     widget: true
 });
 /**
@@ -2484,20 +2572,6 @@ MaterialSwitch.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-/**
-   * Downgrade the component.
-   *
-   * @private
-   */
-MaterialSwitch.prototype.mdlDowngrade_ = function () {
-    if (this.rippleContainerElement_) {
-        this.rippleContainerElement_.removeEventListener('mouseup', this.boundMouseUpHandler);
-    }
-    this.inputElement_.removeEventListener('change', this.boundChangeHandler);
-    this.inputElement_.removeEventListener('focus', this.boundFocusHandler);
-    this.inputElement_.removeEventListener('blur', this.boundBlurHandler);
-    this.element_.removeEventListener('mouseup', this.boundMouseUpHandler);
-};
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
 componentHandler.register({
@@ -2528,7 +2602,7 @@ componentHandler.register({
    * https://github.com/jasonmayes/mdl-component-design-pattern
    *
    * @constructor
-   * @param {HTMLElement} element The element that will be upgraded.
+   * @param {Element} element The element that will be upgraded.
    */
 var MaterialTabs = function MaterialTabs(element) {
     // Stores the HTML element.
@@ -2612,7 +2686,7 @@ MaterialTabs.prototype.init = function () {
    * Constructor for an individual tab.
    *
    * @constructor
-   * @param {HTMLElement} tab The HTML element for the tab.
+   * @param {Element} tab The HTML element for the tab.
    * @param {MaterialTabs} ctx The MaterialTabs object that owns the tab.
    */
 function MaterialTab(tab, ctx) {
@@ -2735,6 +2809,15 @@ MaterialTextfield.prototype.onBlur_ = function (event) {
     this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
 };
 /**
+   * Handle reset event from out side.
+   *
+   * @param {Event} event The event that fired.
+   * @private
+   */
+MaterialTextfield.prototype.onReset_ = function (event) {
+    this.updateClasses_();
+};
+/**
    * Handle class updates.
    *
    * @private
@@ -2743,6 +2826,7 @@ MaterialTextfield.prototype.updateClasses_ = function () {
     this.checkDisabled();
     this.checkValidity();
     this.checkDirty();
+    this.checkFocus();
 };
 // Public methods.
 /**
@@ -2759,15 +2843,30 @@ MaterialTextfield.prototype.checkDisabled = function () {
 };
 MaterialTextfield.prototype['checkDisabled'] = MaterialTextfield.prototype.checkDisabled;
 /**
+  * Check the focus state and update field accordingly.
+  *
+  * @public
+  */
+MaterialTextfield.prototype.checkFocus = function () {
+    if (Boolean(this.element_.querySelector(':focus'))) {
+        this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
+    } else {
+        this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
+    }
+};
+MaterialTextfield.prototype['checkFocus'] = MaterialTextfield.prototype.checkFocus;
+/**
    * Check the validity state and update field accordingly.
    *
    * @public
    */
 MaterialTextfield.prototype.checkValidity = function () {
-    if (this.input_.validity.valid) {
-        this.element_.classList.remove(this.CssClasses_.IS_INVALID);
-    } else {
-        this.element_.classList.add(this.CssClasses_.IS_INVALID);
+    if (this.input_.validity) {
+        if (this.input_.validity.valid) {
+            this.element_.classList.remove(this.CssClasses_.IS_INVALID);
+        } else {
+            this.element_.classList.add(this.CssClasses_.IS_INVALID);
+        }
     }
 };
 MaterialTextfield.prototype['checkValidity'] = MaterialTextfield.prototype.checkValidity;
@@ -2811,11 +2910,7 @@ MaterialTextfield.prototype['enable'] = MaterialTextfield.prototype.enable;
    * @public
    */
 MaterialTextfield.prototype.change = function (value) {
-    if (value) {
-        this.input_.value = value;
-    } else {
-        this.input_.value = '';
-    }
+    this.input_.value = value || '';
     this.updateClasses_();
 };
 MaterialTextfield.prototype['change'] = MaterialTextfield.prototype.change;
@@ -2836,31 +2931,28 @@ MaterialTextfield.prototype.init = function () {
             this.boundUpdateClassesHandler = this.updateClasses_.bind(this);
             this.boundFocusHandler = this.onFocus_.bind(this);
             this.boundBlurHandler = this.onBlur_.bind(this);
+            this.boundResetHandler = this.onReset_.bind(this);
             this.input_.addEventListener('input', this.boundUpdateClassesHandler);
             this.input_.addEventListener('focus', this.boundFocusHandler);
             this.input_.addEventListener('blur', this.boundBlurHandler);
+            this.input_.addEventListener('reset', this.boundResetHandler);
             if (this.maxRows !== this.Constant_.NO_MAX_ROWS) {
                 // TODO: This should handle pasting multi line text.
                 // Currently doesn't.
                 this.boundKeyDownHandler = this.onKeyDown_.bind(this);
                 this.input_.addEventListener('keydown', this.boundKeyDownHandler);
             }
+            var invalid = this.element_.classList.contains(this.CssClasses_.IS_INVALID);
             this.updateClasses_();
             this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
+            if (invalid) {
+                this.element_.classList.add(this.CssClasses_.IS_INVALID);
+            }
+            if (this.input_.hasAttribute('autofocus')) {
+                this.element_.focus();
+                this.checkFocus();
+            }
         }
-    }
-};
-/**
-   * Downgrade the component
-   *
-   * @private
-   */
-MaterialTextfield.prototype.mdlDowngrade_ = function () {
-    this.input_.removeEventListener('input', this.boundUpdateClassesHandler);
-    this.input_.removeEventListener('focus', this.boundFocusHandler);
-    this.input_.removeEventListener('blur', this.boundBlurHandler);
-    if (this.boundKeyDownHandler) {
-        this.input_.removeEventListener('keydown', this.boundKeyDownHandler);
     }
 };
 // The component registers itself. It can assume componentHandler is available
@@ -2916,7 +3008,13 @@ MaterialTooltip.prototype.Constant_ = {};
    * @enum {string}
    * @private
    */
-MaterialTooltip.prototype.CssClasses_ = { IS_ACTIVE: 'is-active' };
+MaterialTooltip.prototype.CssClasses_ = {
+    IS_ACTIVE: 'is-active',
+    BOTTOM: 'mdl-tooltip--bottom',
+    LEFT: 'mdl-tooltip--left',
+    RIGHT: 'mdl-tooltip--right',
+    TOP: 'mdl-tooltip--top'
+};
 /**
    * Handle mouseenter for tooltip.
    *
@@ -2924,33 +3022,47 @@ MaterialTooltip.prototype.CssClasses_ = { IS_ACTIVE: 'is-active' };
    * @private
    */
 MaterialTooltip.prototype.handleMouseEnter_ = function (event) {
-    event.stopPropagation();
     var props = event.target.getBoundingClientRect();
     var left = props.left + props.width / 2;
+    var top = props.top + props.height / 2;
     var marginLeft = -1 * (this.element_.offsetWidth / 2);
-    if (left + marginLeft < 0) {
-        this.element_.style.left = 0;
-        this.element_.style.marginLeft = 0;
+    var marginTop = -1 * (this.element_.offsetHeight / 2);
+    if (this.element_.classList.contains(this.CssClasses_.LEFT) || this.element_.classList.contains(this.CssClasses_.RIGHT)) {
+        left = props.width / 2;
+        if (top + marginTop < 0) {
+            this.element_.style.top = 0;
+            this.element_.style.marginTop = 0;
+        } else {
+            this.element_.style.top = top + 'px';
+            this.element_.style.marginTop = marginTop + 'px';
+        }
     } else {
-        this.element_.style.left = left + 'px';
-        this.element_.style.marginLeft = marginLeft + 'px';
+        if (left + marginLeft < 0) {
+            this.element_.style.left = 0;
+            this.element_.style.marginLeft = 0;
+        } else {
+            this.element_.style.left = left + 'px';
+            this.element_.style.marginLeft = marginLeft + 'px';
+        }
     }
-    this.element_.style.top = props.top + props.height + 10 + 'px';
+    if (this.element_.classList.contains(this.CssClasses_.TOP)) {
+        this.element_.style.top = props.top - this.element_.offsetHeight - 10 + 'px';
+    } else if (this.element_.classList.contains(this.CssClasses_.RIGHT)) {
+        this.element_.style.left = props.left + props.width + 10 + 'px';
+    } else if (this.element_.classList.contains(this.CssClasses_.LEFT)) {
+        this.element_.style.left = props.left - this.element_.offsetWidth - 10 + 'px';
+    } else {
+        this.element_.style.top = props.top + props.height + 10 + 'px';
+    }
     this.element_.classList.add(this.CssClasses_.IS_ACTIVE);
-    window.addEventListener('scroll', this.boundMouseLeaveHandler, false);
-    window.addEventListener('touchmove', this.boundMouseLeaveHandler, false);
 };
 /**
    * Handle mouseleave for tooltip.
    *
-   * @param {Event} event The event that fired.
    * @private
    */
-MaterialTooltip.prototype.handleMouseLeave_ = function (event) {
-    event.stopPropagation();
+MaterialTooltip.prototype.handleMouseLeave_ = function () {
     this.element_.classList.remove(this.CssClasses_.IS_ACTIVE);
-    window.removeEventListener('scroll', this.boundMouseLeaveHandler);
-    window.removeEventListener('touchmove', this.boundMouseLeaveHandler, false);
 };
 /**
    * Initialize element.
@@ -2962,31 +3074,17 @@ MaterialTooltip.prototype.init = function () {
             this.forElement_ = document.getElementById(forElId);
         }
         if (this.forElement_) {
-            // Tabindex needs to be set for `blur` events to be emitted
-            if (!this.forElement_.getAttribute('tabindex')) {
+            // It's left here because it prevents accidental text selection on Android
+            if (!this.forElement_.hasAttribute('tabindex')) {
                 this.forElement_.setAttribute('tabindex', '0');
             }
             this.boundMouseEnterHandler = this.handleMouseEnter_.bind(this);
             this.boundMouseLeaveHandler = this.handleMouseLeave_.bind(this);
             this.forElement_.addEventListener('mouseenter', this.boundMouseEnterHandler, false);
-            this.forElement_.addEventListener('click', this.boundMouseEnterHandler, false);
-            this.forElement_.addEventListener('blur', this.boundMouseLeaveHandler);
-            this.forElement_.addEventListener('touchstart', this.boundMouseEnterHandler, false);
-            this.forElement_.addEventListener('mouseleave', this.boundMouseLeaveHandler);
+            this.forElement_.addEventListener('touchend', this.boundMouseEnterHandler, false);
+            this.forElement_.addEventListener('mouseleave', this.boundMouseLeaveHandler, false);
+            window.addEventListener('touchstart', this.boundMouseLeaveHandler);
         }
-    }
-};
-/**
-   * Downgrade the component
-   *
-   * @private
-   */
-MaterialTooltip.prototype.mdlDowngrade_ = function () {
-    if (this.forElement_) {
-        this.forElement_.removeEventListener('mouseenter', this.boundMouseEnterHandler, false);
-        this.forElement_.removeEventListener('click', this.boundMouseEnterHandler, false);
-        this.forElement_.removeEventListener('touchstart', this.boundMouseEnterHandler, false);
-        this.forElement_.removeEventListener('mouseleave', this.boundMouseLeaveHandler);
     }
 };
 // The component registers itself. It can assume componentHandler is available
@@ -3035,9 +3133,20 @@ window['MaterialLayout'] = MaterialLayout;
 MaterialLayout.prototype.Constant_ = {
     MAX_WIDTH: '(max-width: 1024px)',
     TAB_SCROLL_PIXELS: 100,
-    MENU_ICON: 'menu',
+    MENU_ICON: '&#xE5D2;',
     CHEVRON_LEFT: 'chevron_left',
     CHEVRON_RIGHT: 'chevron_right'
+};
+/**
+   * Keycodes, for code readability.
+   *
+   * @enum {number}
+   * @private
+   */
+MaterialLayout.prototype.Keycodes_ = {
+    ENTER: 13,
+    ESCAPE: 27,
+    SPACE: 32
 };
 /**
    * Modes.
@@ -3115,6 +3224,17 @@ MaterialLayout.prototype.contentScrollHandler_ = function () {
     }
 };
 /**
+   * Handles a keyboard event on the drawer.
+   *
+   * @param {Event} evt The event that fired.
+   * @private
+   */
+MaterialLayout.prototype.keyboardEventHandler_ = function (evt) {
+    if (evt.keyCode === this.Keycodes_.ESCAPE) {
+        this.toggleDrawer();
+    }
+};
+/**
    * Handles changes in screen size.
    *
    * @private
@@ -3127,16 +3247,27 @@ MaterialLayout.prototype.screenSizeHandler_ = function () {
         // Collapse drawer (if any) when moving to a large screen size.
         if (this.drawer_) {
             this.drawer_.classList.remove(this.CssClasses_.IS_DRAWER_OPEN);
+            this.obfuscator_.classList.remove(this.CssClasses_.IS_DRAWER_OPEN);
         }
     }
 };
 /**
-   * Handles toggling of the drawer.
+   * Handles events of drawer button.
    *
+   * @param {Event} evt The event that fired.
    * @private
    */
-MaterialLayout.prototype.drawerToggleHandler_ = function () {
-    this.drawer_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
+MaterialLayout.prototype.drawerToggleHandler_ = function (evt) {
+    if (evt && evt.type === 'keydown') {
+        if (evt.keyCode === this.Keycodes_.SPACE || evt.keyCode === this.Keycodes_.ENTER) {
+            // prevent scrolling in drawer nav
+            evt.preventDefault();
+        } else {
+            // prevent other keys
+            return;
+        }
+    }
+    this.toggleDrawer();
 };
 /**
    * Handles (un)setting the `is-animating` class
@@ -3178,6 +3309,25 @@ MaterialLayout.prototype.resetPanelState_ = function (panels) {
     }
 };
 /**
+  * Toggle drawer state
+  *
+  * @public
+  */
+MaterialLayout.prototype.toggleDrawer = function () {
+    var drawerButton = this.element_.querySelector('.' + this.CssClasses_.DRAWER_BTN);
+    this.drawer_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
+    this.obfuscator_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
+    // Set accessibility properties.
+    if (this.drawer_.classList.contains(this.CssClasses_.IS_DRAWER_OPEN)) {
+        this.drawer_.setAttribute('aria-hidden', 'false');
+        drawerButton.setAttribute('aria-expanded', 'true');
+    } else {
+        this.drawer_.setAttribute('aria-hidden', 'true');
+        drawerButton.setAttribute('aria-expanded', 'false');
+    }
+};
+MaterialLayout.prototype['toggleDrawer'] = MaterialLayout.prototype.toggleDrawer;
+/**
    * Initialize element.
    */
 MaterialLayout.prototype.init = function () {
@@ -3188,7 +3338,8 @@ MaterialLayout.prototype.init = function () {
         this.element_.parentElement.removeChild(this.element_);
         container.appendChild(this.element_);
         var directChildren = this.element_.childNodes;
-        for (var c = 0; c < directChildren.length; c++) {
+        var numChildren = directChildren.length;
+        for (var c = 0; c < numChildren; c++) {
             var child = directChildren[c];
             if (child.classList && child.classList.contains(this.CssClasses_.HEADER)) {
                 this.header_ = child;
@@ -3200,15 +3351,20 @@ MaterialLayout.prototype.init = function () {
                 this.content_ = child;
             }
         }
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                // when page is loaded from back/forward cache
+                // trigger repaint to let layout scroll in safari
+                this.element_.style.overflowY = 'hidden';
+                requestAnimationFrame(function () {
+                    this.element_.style.overflowY = '';
+                }.bind(this));
+            }
+        }.bind(this), false);
         if (this.header_) {
             this.tabBar_ = this.header_.querySelector('.' + this.CssClasses_.TAB_BAR);
         }
         var mode = this.Mode_.STANDARD;
-        // Keep an eye on screen size, and add/remove auxiliary class for styling
-        // of small screens.
-        this.screenSizeMediaQuery_ = window.matchMedia(this.Constant_.MAX_WIDTH);
-        this.screenSizeMediaQuery_.addListener(this.screenSizeHandler_.bind(this));
-        this.screenSizeHandler_();
         if (this.header_) {
             if (this.header_.classList.contains(this.CssClasses_.HEADER_SEAMED)) {
                 mode = this.Mode_.SEAMED;
@@ -3238,22 +3394,18 @@ MaterialLayout.prototype.init = function () {
                 this.contentScrollHandler_();
             }
         }
-        /**
-       * Prevents an event from triggering the default behaviour.
-       * @param  {Event} ev the event to eat.
-       */
-        var eatEvent = function (ev) {
-            ev.preventDefault();
-        };
         // Add drawer toggling button to our layout, if we have an openable drawer.
         if (this.drawer_) {
             var drawerButton = this.element_.querySelector('.' + this.CssClasses_.DRAWER_BTN);
-            if (typeof drawerButton === 'undefined' || drawerButton === null) {
+            if (!drawerButton) {
                 drawerButton = document.createElement('div');
+                drawerButton.setAttribute('aria-expanded', 'false');
+                drawerButton.setAttribute('role', 'button');
+                drawerButton.setAttribute('tabindex', '0');
                 drawerButton.classList.add(this.CssClasses_.DRAWER_BTN);
                 var drawerButtonIcon = document.createElement('i');
                 drawerButtonIcon.classList.add(this.CssClasses_.ICON);
-                drawerButtonIcon.textContent = this.Constant_.MENU_ICON;
+                drawerButtonIcon.innerHTML = this.Constant_.MENU_ICON;
                 drawerButton.appendChild(drawerButtonIcon);
             }
             if (this.drawer_.classList.contains(this.CssClasses_.ON_LARGE_SCREEN)) {
@@ -3264,11 +3416,11 @@ MaterialLayout.prototype.init = function () {
                 drawerButton.classList.add(this.CssClasses_.ON_SMALL_SCREEN);
             }
             drawerButton.addEventListener('click', this.drawerToggleHandler_.bind(this));
+            drawerButton.addEventListener('keydown', this.drawerToggleHandler_.bind(this));
             // Add a class if the layout has a drawer, for altering the left padding.
             // Adds the HAS_DRAWER to the elements since this.header_ may or may
             // not be present.
             this.element_.classList.add(this.CssClasses_.HAS_DRAWER);
-            this.drawer_.addEventListener('mousewheel', eatEvent);
             // If we have a fixed header, add the button to the header rather than
             // the layout.
             if (this.element_.classList.contains(this.CssClasses_.FIXED_HEADER)) {
@@ -3280,8 +3432,15 @@ MaterialLayout.prototype.init = function () {
             obfuscator.classList.add(this.CssClasses_.OBFUSCATOR);
             this.element_.appendChild(obfuscator);
             obfuscator.addEventListener('click', this.drawerToggleHandler_.bind(this));
-            obfuscator.addEventListener('mousewheel', eatEvent);
+            this.obfuscator_ = obfuscator;
+            this.drawer_.addEventListener('keydown', this.keyboardEventHandler_.bind(this));
+            this.drawer_.setAttribute('aria-hidden', 'true');
         }
+        // Keep an eye on screen size, and add/remove auxiliary class for styling
+        // of small screens.
+        this.screenSizeMediaQuery_ = window.matchMedia(this.Constant_.MAX_WIDTH);
+        this.screenSizeMediaQuery_.addListener(this.screenSizeHandler_.bind(this));
+        this.screenSizeHandler_();
         // Initialize tabs, if any.
         if (this.header_ && this.tabBar_) {
             this.element_.classList.add(this.CssClasses_.HAS_TABS);
@@ -3351,27 +3510,44 @@ MaterialLayout.prototype.init = function () {
    * @param {MaterialLayout} layout The MaterialLayout object that owns the tab.
    */
 function MaterialLayoutTab(tab, tabs, panels, layout) {
-    if (tab) {
-        if (layout.tabBar_.classList.contains(layout.CssClasses_.JS_RIPPLE_EFFECT)) {
-            var rippleContainer = document.createElement('span');
-            rippleContainer.classList.add(layout.CssClasses_.RIPPLE_CONTAINER);
-            rippleContainer.classList.add(layout.CssClasses_.JS_RIPPLE_EFFECT);
-            var ripple = document.createElement('span');
-            ripple.classList.add(layout.CssClasses_.RIPPLE);
-            rippleContainer.appendChild(ripple);
-            tab.appendChild(rippleContainer);
-        }
-        tab.addEventListener('click', function (e) {
-            e.preventDefault();
-            var href = tab.href.split('#')[1];
-            var panel = layout.content_.querySelector('#' + href);
-            layout.resetTabState_(tabs);
-            layout.resetPanelState_(panels);
-            tab.classList.add(layout.CssClasses_.IS_ACTIVE);
-            panel.classList.add(layout.CssClasses_.IS_ACTIVE);
-        });
+    /**
+     * Auxiliary method to programmatically select a tab in the UI.
+     */
+    function selectTab() {
+        var href = tab.href.split('#')[1];
+        var panel = layout.content_.querySelector('#' + href);
+        layout.resetTabState_(tabs);
+        layout.resetPanelState_(panels);
+        tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+        panel.classList.add(layout.CssClasses_.IS_ACTIVE);
     }
+    if (layout.tabBar_.classList.contains(layout.CssClasses_.JS_RIPPLE_EFFECT)) {
+        var rippleContainer = document.createElement('span');
+        rippleContainer.classList.add(layout.CssClasses_.RIPPLE_CONTAINER);
+        rippleContainer.classList.add(layout.CssClasses_.JS_RIPPLE_EFFECT);
+        var ripple = document.createElement('span');
+        ripple.classList.add(layout.CssClasses_.RIPPLE);
+        rippleContainer.appendChild(ripple);
+        tab.appendChild(rippleContainer);
+    }
+    tab.addEventListener('click', function (e) {
+        if (tab.getAttribute('href').charAt(0) === '#') {
+            e.preventDefault();
+            selectTab();
+        }
+    });
+    tab.show = selectTab;
+    tab.addEventListener('click', function (e) {
+        e.preventDefault();
+        var href = tab.href.split('#')[1];
+        var panel = layout.content_.querySelector('#' + href);
+        layout.resetTabState_(tabs);
+        layout.resetPanelState_(panels);
+        tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+        panel.classList.add(layout.CssClasses_.IS_ACTIVE);
+    });
 }
+window['MaterialLayoutTab'] = MaterialLayoutTab;
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
 componentHandler.register({
@@ -3401,7 +3577,7 @@ componentHandler.register({
    * https://github.com/jasonmayes/mdl-component-design-pattern
    *
    * @constructor
-   * @param {HTMLElement} element The element that will be upgraded.
+   * @param {Element} element The element that will be upgraded.
    */
 var MaterialDataTable = function MaterialDataTable(element) {
     this.element_ = element;
@@ -3427,6 +3603,7 @@ MaterialDataTable.prototype.Constant_ = {};
 MaterialDataTable.prototype.CssClasses_ = {
     DATA_TABLE: 'mdl-data-table',
     SELECTABLE: 'mdl-data-table--selectable',
+    SELECT_ELEMENT: 'mdl-data-table__select',
     IS_SELECTED: 'is-selected',
     IS_UPGRADED: 'is-upgraded'
 };
@@ -3435,7 +3612,7 @@ MaterialDataTable.prototype.CssClasses_ = {
    * single row (or multiple rows).
    *
    * @param {Element} checkbox Checkbox that toggles the selection state.
-   * @param {HTMLElement} row Row to toggle when checkbox changes.
+   * @param {Element} row Row to toggle when checkbox changes.
    * @param {(Array<Object>|NodeList)=} opt_rows Rows to toggle when checkbox changes.
    * @private
    */
@@ -3473,20 +3650,24 @@ MaterialDataTable.prototype.selectRow_ = function (checkbox, row, opt_rows) {
    * Creates a checkbox for a single or or multiple rows and hooks up the
    * event handling.
    *
-   * @param {HTMLElement} row Row to toggle when checkbox changes.
+   * @param {Element} row Row to toggle when checkbox changes.
    * @param {(Array<Object>|NodeList)=} opt_rows Rows to toggle when checkbox changes.
    * @private
    */
 MaterialDataTable.prototype.createCheckbox_ = function (row, opt_rows) {
     var label = document.createElement('label');
-    label.classList.add('mdl-checkbox');
-    label.classList.add('mdl-js-checkbox');
-    label.classList.add('mdl-js-ripple-effect');
-    label.classList.add('mdl-data-table__select');
+    var labelClasses = [
+        'mdl-checkbox',
+        'mdl-js-checkbox',
+        'mdl-js-ripple-effect',
+        this.CssClasses_.SELECT_ELEMENT
+    ];
+    label.className = labelClasses.join(' ');
     var checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.classList.add('mdl-checkbox__input');
     if (row) {
+        checkbox.checked = row.classList.contains(this.CssClasses_.IS_SELECTED);
         checkbox.addEventListener('change', this.selectRow_(checkbox, row));
     } else if (opt_rows) {
         checkbox.addEventListener('change', this.selectRow_(checkbox, null, opt_rows));
@@ -3501,7 +3682,9 @@ MaterialDataTable.prototype.createCheckbox_ = function (row, opt_rows) {
 MaterialDataTable.prototype.init = function () {
     if (this.element_) {
         var firstHeader = this.element_.querySelector('th');
-        var rows = this.element_.querySelector('tbody').querySelectorAll('tr');
+        var bodyRows = Array.prototype.slice.call(this.element_.querySelectorAll('tbody tr'));
+        var footRows = Array.prototype.slice.call(this.element_.querySelectorAll('tfoot tr'));
+        var rows = bodyRows.concat(footRows);
         if (this.element_.classList.contains(this.CssClasses_.SELECTABLE)) {
             var th = document.createElement('th');
             var headerCheckbox = this.createCheckbox_(null, rows);
@@ -3511,13 +3694,15 @@ MaterialDataTable.prototype.init = function () {
                 var firstCell = rows[i].querySelector('td');
                 if (firstCell) {
                     var td = document.createElement('td');
-                    var rowCheckbox = this.createCheckbox_(rows[i]);
-                    td.appendChild(rowCheckbox);
+                    if (rows[i].parentNode.nodeName.toUpperCase() === 'TBODY') {
+                        var rowCheckbox = this.createCheckbox_(rows[i]);
+                        td.appendChild(rowCheckbox);
+                    }
                     rows[i].insertBefore(td, firstCell);
                 }
             }
+            this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
         }
-        this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
 };
 // The component registers itself. It can assume componentHandler is available
@@ -3639,14 +3824,13 @@ MaterialRipple.prototype.downHandler_ = function (event) {
 MaterialRipple.prototype.upHandler_ = function (event) {
     // Don't fire for the artificial "mouseup" generated by a double-click.
     if (event && event.detail !== 2) {
-        this.rippleElement_.classList.remove(this.CssClasses_.IS_VISIBLE);
+        // Allow a repaint to occur before removing this class, so the animation
+        // shows for tap events, which seem to trigger a mouseup too soon after
+        // mousedown.
+        window.setTimeout(function () {
+            this.rippleElement_.classList.remove(this.CssClasses_.IS_VISIBLE);
+        }.bind(this), 0);
     }
-    // Allow a repaint to occur before removing this class, so the animation
-    // shows for tap events, which seem to trigger a mouseup too soon after
-    // mousedown.
-    window.setTimeout(function () {
-        this.rippleElement_.classList.remove(this.CssClasses_.IS_VISIBLE);
-    }.bind(this), 0);
 };
 /**
    * Initialize element.
@@ -3745,19 +3929,6 @@ MaterialRipple.prototype.init = function () {
             };
         }
     }
-};
-/**
-   * Downgrade the component
-   *
-   * @private
-   */
-MaterialRipple.prototype.mdlDowngrade_ = function () {
-    this.element_.removeEventListener('mousedown', this.boundDownHandler);
-    this.element_.removeEventListener('touchstart', this.boundDownHandler);
-    this.element_.removeEventListener('mouseup', this.boundUpHandler);
-    this.element_.removeEventListener('mouseleave', this.boundUpHandler);
-    this.element_.removeEventListener('touchend', this.boundUpHandler);
-    this.element_.removeEventListener('blur', this.boundUpHandler);
 };
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
