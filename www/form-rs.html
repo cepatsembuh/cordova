@@ -24,25 +24,29 @@
         <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
           <center>
           <div class="page-content">
-          <form method="get" action="state-rs.html" id="hospital-form" onsubmit="mail()" id="rs">
-              <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="name-rs" required>
+          <form method="get" action="state-rs.html" id="hospital-form" onsubmit="send()">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="name-rs">
                 <label class="mdl-textfield__label" for="nama">Nama</label>
               </div><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="number" id="bpjs-rs" required>
+                <input class="mdl-textfield__input" type="number" id="bpjs-rs">
                 <label class="mdl-textfield__label" for="title">Nomor BPJS</label>
               </div><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="number" id="nik" id="nik-rs" required>
+                <input class="mdl-textfield__input" type="number" id="nik" id="nik-rs">
                 <label class="mdl-textfield__label" for="title">NIK</label>
+              </div><br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="number" id="input">
+                <label class="mdl-textfield__label" for="title">Input</label>
               </div><br>
               <select class="form-control" style="width:300px;" id="sex-rs">
                 <option disabled>--Sex--</option>
                 <option>Laki-laki</option>
                 <option>Perempuan</option>
               </select><br>
-              <input type="date" class="form-control" style="width:300px;" id="date-rs" required>
+              <!-- <input type="date" class="form-control" style="width:300px;" id="date-rs">
               <br>
               <select class="form-control" style="width:300px;" id="province">
                 <option disabled>--Province--</option>
@@ -58,20 +62,29 @@
               </select><br> -->
               <br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <textarea class="mdl-textfield__input" type="text" rows="2" id="text-area" name="body"
+                <!-- <textarea class="mdl-textfield__input" type="text" rows="2" id="text-area" name="body"
                 >
 Nama =
 No BPJS =
-                </textarea>
+                </textarea> -->
                 <label class="mdl-textfield__label" for="text-area"></label>
                 </div><br>              
-              <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit">
+              <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit" onclick="send()">
             </form>
           </div>
         </center>
         </section>
       </main>
     </div>        
+    <script>
+    function send() {    
+      var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
+      var input = $('#input').val;    
+
+      ref.push(input);
+      Firebase.goOnline();
+    }
+    </script>
     <script src="js/firebase.js"></script>
     <script src="js/material.js"></script>
     <script src="js/bootstrap.js"></script>
