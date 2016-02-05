@@ -26,7 +26,11 @@
           <div class="page-content">
           <form method="get" action="state-rs.html" id="hospital-form" onsubmit="send()">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="name-rs">
+                <input class="mdl-textfield__input" type="text" id="name-rs-1">
+                <label class="mdl-textfield__label" for="nama">Nama</label>
+              </div><br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="name-rs-2">
                 <label class="mdl-textfield__label" for="nama">Nama</label>
               </div><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -79,12 +83,13 @@ No BPJS =
     <script>
     function send() {    
       var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-      var input = $('#input').val;    
+      // var input = $('#input').val;    
 
-      ref.push(input);
-      Firebase.goOnline();
+      // ref.push(input);
+      // Firebase.goOnline();
     }
     </script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/firebase.js"></script>
     <script src="js/material.js"></script>
     <script src="js/bootstrap.js"></script>
