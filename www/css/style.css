@@ -128,7 +128,7 @@ i.fa {
 .mdl-card--border {
   color: rgba(0,0,0,.54);
   font-size: 0.9em;
-  text-align: left;
+  text-align: left;  
 }
 i.fa-map-marker {
   font-size: 1.3em;                  
@@ -141,6 +141,11 @@ i.icon {
 i.fa-times {
   color: #FF5252;                  
 }   
+
+.faskes-desc {
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+}
 
 /* Poli layout */
 .poli {
