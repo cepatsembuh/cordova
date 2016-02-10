@@ -153,9 +153,3 @@ i.fa-times {
 .dokter {
   margin-left: 1em;
 }
-.mdl-list__item-avatar {
-  font-size: 1.8em !important;
-  text-align: center !important;
-  float: left !important;
-  visibility: none;
-}
