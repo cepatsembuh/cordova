@@ -44,6 +44,11 @@ i.icon {
 i.fa-times {
   color: #FF5252;                  
 }   
+.poli {
+ text-align: right;
+ float: right;
+ font-size: 1.2em; 
+}
 /* cyrillic-ext */
 @font-face {
   font-family: 'Roboto';
