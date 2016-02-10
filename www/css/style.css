@@ -95,6 +95,8 @@
   width: 150px;
   height: 150px;
 }
+
+/* Services */
 #services1 img {
   font-size: 40px;    
   border:4px solid #1D365C;
@@ -113,6 +115,8 @@
   margin-bottom: 10px;
   border-radius: 50%;  
 }
+
+/* Layout icon */
 .text {
   font-size: 1.1em;
   height: 20px;
@@ -137,6 +141,8 @@ i.icon {
 i.fa-times {
   color: #FF5252;                  
 }   
+
+/* Poli layout */
 .poli {
  text-align: right;
  float: right;
