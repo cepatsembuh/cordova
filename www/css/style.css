@@ -173,7 +173,7 @@ i.fa-times {
 
 .poli_title { 
   color: #90A4AE; 
-  font-size: 1.1em;
+  font-size: 1.1em;  
 }
 
 .poli_time { 
@@ -184,8 +184,8 @@ i.fa-times {
   margin-left: 1em;
 }
 
-.demo-list-action {
+.demo-list-two {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
