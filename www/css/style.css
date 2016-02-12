@@ -163,7 +163,6 @@ i.fa-times {
   margin-right: 0.8em;
 }
 
-
 /* Poli layout */
 .poli {
  text-align: right;
@@ -189,3 +188,7 @@ i.fa-times {
   height: 400px;
 }
 
+.mdl-card__supporting-text {
+  text-align: left; 
+  width: 100%;               
+}
