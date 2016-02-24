@@ -105,6 +105,15 @@
   height: 150px;
 }
 
+.demo-card-wide > .mdl-card__title {
+  color: #fff !important;
+  height: 176px !important;
+  background: teal center / cover !important;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff !important;
+}
+
 /* Services */
 #services1 img {
   font-size: 40px;    
