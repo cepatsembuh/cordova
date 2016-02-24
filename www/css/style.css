@@ -174,9 +174,14 @@ i.fa-times {
 
 /* Poli layout */
 .poli {
- text-align: right;
- float: right;
+ /*text-align: right;
+ float: right;*/
  font-size: 1.2em; 
+}
+
+ul.poli {
+  list-style: none;
+  display: block;
 }
 
 .poli_title { 
@@ -184,12 +189,13 @@ i.fa-times {
   font-size: 1.1em;  
 }
 
-.poli_time { 
-  margin-top: 1.5em; 
+.time { 
+  margin-left: 1.5em; 
+  font-size: 0.8em;
 }
 
 .dokter {
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 .demo-list-two {
