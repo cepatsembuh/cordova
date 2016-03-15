@@ -18,19 +18,19 @@ function puskesmas() {
 			// Get madya dropdown value
 			switch (madya_puskesmas) {
 				case "jakut":
-					window.location.href = 'jakpus-puskesmas.html';
+					 window.location.href = 'available.html';
 					break;
 				case "jakbar":
-					window.location.href = 'jakbar-puskesmas.html';
+					 window.location.href = 'available.html';
 					break;
 				case "jakpus":
-					window.location.href = 'jakpus-puskesmas.html'
+					 window.location.href = 'available.html';
 					break;
 				case "jaktim":
-					window.location.href = 'jaktim-puskesmas.html';
+					 window.location.href = 'available.html';
 					break;
 				case "jaksel":
-					window.location.href = 'jaksel-puskesmas.html';
+					 window.location.href = 'available.html';
 					break;
 		 }
 	}
@@ -57,19 +57,19 @@ function rsud() {
 			// Get madya dropdown value
 			switch (madya_rsud) {
 				case "jakut":
-					link = window.location.href = 'jakpus-rsud.html';
+					window.location.href = 'available.html';
 					break;
 				case "jakbar":
-					link = window.location.href = 'jakbar-rsud.html';
+					window.location.href = 'available.html';
 					break;
 				case "jakpus":
-					link = window.location.href = 'jakpus-rsud.html'
+					window.location.href = 'available.html';
 				 	break;
 				case "jaktim":
-					link = window.location.href = 'jaktim-rsud.html';
+					window.location.href = 'available.html';
 					break;
 				case "jaksel":
-					link = window.location.href = 'jaksel-rsud.html';
+					window.location.href = 'available.html';
 					break;
 		 }
 	}
@@ -77,7 +77,7 @@ function rsud() {
 	// Log input value for testing
 	console.log('No Rujuk: ' + rujuk_rsud);
 	console.log('NIK: ' + nik_rsud);
-	console.log('Lokasi: ' + madya_rsud);	
+	console.log('Lokasi: ' + madya_rsud);
 };
 
 // RSUK form action
@@ -95,19 +95,19 @@ function rsuk() {
 				// Get madya dropdown value
 				switch (madya_rsuk) {
 					case "jakut":
-						link = window.location.href = 'jakpus-rsuk.html';
+						window.location.href = 'available.html';
 						break;
 					case "jakbar":
-						link = window.location.href = 'jakbar-rsuk.html';
+						window.location.href = 'available.html';
 						break;
 					case "jakpus":
-						link = window.location.href = 'jakpus-rsuk.html'
+						window.location.href = 'available.html';
 					 	break;
 					case "jaktim":
-						link = window.location.href = 'jaktim-rsuk.html';
+						window.location.href = 'available.html';
 						break;
 					case "jaksel":
-						link = window.location.href = 'jaksel-rsuk.html';
+						window.location.href = 'available.html';
 						break;
 			 }
 	}
@@ -115,5 +115,5 @@ function rsuk() {
 	// Log input value for testing
 	console.log('No Rujuk: ' + rujuk_rsuk);
 	console.log('NIK: ' + nik_rsuk);
-	console.log('Lokasi: ' + madya_rsuk);	
+	console.log('Lokasi: ' + madya_rsuk);
 };
