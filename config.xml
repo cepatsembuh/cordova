@@ -2,20 +2,18 @@
 <widget id="id.cepatsembuh" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Cepat Sembuh</name>
     <description>
-      Sekarang, siapapun bisa mengontrol penggunaan uang rakyat di APBN dan APBD
+      An app to help people to find the nearest faskes in their location
     </description>
     <author>
-        An app to help people to find the nearest faskes in their location
+        Andre Christoga
     </author>
     <icon src="www/img/icon.png" />
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <access origin="*" />        
+    <access origin="*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />   
-    <allow-intent href="*.firebaseio.com" />
-    <allow-intent href="auth.firebase.com" /> 
+    <allow-intent href="mailto:*" />    
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
