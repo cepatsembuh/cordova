@@ -4,7 +4,7 @@
 */
 
 // Puskesmas form action
-function puskesmas() {	
+function puskesmas() {
 	// Input value
 	var nama_puskesmas = $('#nama_puskesmas').val();
 	var nik_puskesmas = $('#nik_puskesmas').val();
@@ -39,17 +39,11 @@ function puskesmas() {
 	console.log('Nama: ' + nama_puskesmas);
 	console.log('NIK: ' + nik_puskesmas);
 	console.log('Lokasi: ' + madya_puskesmas);
-
-	// Push input value to firebase
-	puskesmas.push().set({
-		nama: nama_puskesmas,
-		nik: nik_puskesmas,
-		lokasi: madya_puskesmas
-	});
+// Push input value to firebase
 };
 
 // RSUD form action
-function rsud() {	
+function rsud() {
 	// Input value
 	var rujuk_rsud = $('#rujuk_rsud').val();
 	var nik_rsud = $('#nik_rsud').val();
@@ -83,18 +77,11 @@ function rsud() {
 	// Log input value for testing
 	console.log('No Rujuk: ' + rujuk_rsud);
 	console.log('NIK: ' + nik_rsud);
-	console.log('Lokasi: ' + madya_rsud);
-
-	// Push input value to firebase
-	rsud.push().set({
-		no_rujuk: rujuk_rsud,
-		nik: nik_rsud,
-		lokasi: madya_rsud
-	});
+	console.log('Lokasi: ' + madya_rsud);	
 };
 
 // RSUK form action
-function rsuk() {	
+function rsuk() {
 	// Input value
 	var rujuk_rsuk = $('#rujuk_rsuk').val();
 	var nik_rsuk = $('#nik_rsuk').val();
@@ -128,12 +115,5 @@ function rsuk() {
 	// Log input value for testing
 	console.log('No Rujuk: ' + rujuk_rsuk);
 	console.log('NIK: ' + nik_rsuk);
-	console.log('Lokasi: ' + madya_rsuk);
-
-	// Push input value to firebase
-	rsuk.push().set({
-		no_rujuk: rujuk_rsuk,
-		nik: nik_rsuk,
-		lokasi: madya_rsuk
-	});
+	console.log('Lokasi: ' + madya_rsuk);	
 };
