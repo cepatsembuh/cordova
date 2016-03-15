@@ -4,11 +4,7 @@
 */
 
 // Puskesmas form action
-function puskesmas() {
-	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-	var puskesmas = ref.child("puskesmas");
-
+function puskesmas() {	
 	// Input value
 	var nama_puskesmas = $('#nama_puskesmas').val();
 	var nik_puskesmas = $('#nik_puskesmas').val();
@@ -53,11 +49,7 @@ function puskesmas() {
 };
 
 // RSUD form action
-function rsud() {
-	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-	var rsud = ref.child("rsud");
-
+function rsud() {	
 	// Input value
 	var rujuk_rsud = $('#rujuk_rsud').val();
 	var nik_rsud = $('#nik_rsud').val();
@@ -102,11 +94,7 @@ function rsud() {
 };
 
 // RSUK form action
-function rsuk() {
-	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-	var rsuk = ref.child("rsuk");
-
+function rsuk() {	
 	// Input value
 	var rujuk_rsuk = $('#rujuk_rsuk').val();
 	var nik_rsuk = $('#nik_rsuk').val();
