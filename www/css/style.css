@@ -51,6 +51,7 @@ h3.daftar {
 }
 
 .faskes {
+	background-image: url(../img/faskes.png);
 	margin-bottom: 15px;
 	width: 290px;
 }
