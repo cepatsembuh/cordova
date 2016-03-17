@@ -117,3 +117,7 @@ function rsuk() {
 	console.log('NIK: ' + nik_rsuk);
 	console.log('Lokasi: ' + madya_rsuk);
 };
+
+$('#pesan').on('click', function(){
+	window.location.href = 'faskes.html'
+});
