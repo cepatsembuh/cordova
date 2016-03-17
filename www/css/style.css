@@ -73,7 +73,7 @@ i.fa-check {
 
 .poli_title {
   color: #90A4AE;
-  font-size: 1em;	
+  font-size: 1em;
 }
 
 .time {
@@ -85,8 +85,7 @@ i.fa-check {
   margin-left: 0.5em;
 }
 
-.faskes {
-	background-image: url(../img/faskes.png);
+.faskes {	
 	margin-bottom: 15px;
 	width: 290px;
 }
