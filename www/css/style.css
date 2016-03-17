@@ -50,6 +50,41 @@ h3.daftar {
   color: #424242;
 }
 
+.icon {
+	text-align: right;
+  float: right;
+  font-size: 1.3em;
+}
+
+i.fa-check {
+	color: #009688;
+}
+
+.poli {
+ /*text-align: right;
+ float: right;*/
+ font-size: 1.2em;
+}
+
+ul.poli {
+  list-style: none;
+  display: block;
+}
+
+.poli_title {
+  color: #90A4AE;
+  font-size: 1.1em;
+}
+
+.time {
+  margin-left: 1.5em;
+  font-size: 0.8em;
+}
+
+.dokter {
+  margin-left: 0.5em;
+}
+
 .faskes {
 	background-image: url(../img/faskes.png);
 	margin-bottom: 15px;
