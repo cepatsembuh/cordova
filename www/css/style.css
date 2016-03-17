@@ -66,18 +66,18 @@ i.fa-check {
  font-size: 1.2em;
 }
 
-ul.poli {
+.poli {
   list-style: none;
   display: block;
 }
 
 .poli_title {
   color: #90A4AE;
-  font-size: 1.1em;
+  font-size: 1em;	
 }
 
 .time {
-  margin-left: 1.5em;
+  margin-left: 0.6em;
   font-size: 0.8em;
 }
 
