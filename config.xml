@@ -14,11 +14,11 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <platform name="android">
-        <icon src="www/img/icon.png" />
+        <icon src="img/icon.png" />
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
-        <icon src="www/img/icon.png" />
+        <icon src="img/icon.png" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
