@@ -14,12 +14,11 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <preference name="Orientation" value="portrait" />
+    <icon src="img/icon.png" />
     <platform name="android">
-        <icon src="img/icon.png" />
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
-        <icon src="img/icon.png" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
