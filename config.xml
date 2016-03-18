@@ -13,6 +13,7 @@
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
+    <preference name="Orientation" value="portrait" />
     <platform name="android">
         <icon src="img/icon.png" />
         <allow-intent href="market:*" />
