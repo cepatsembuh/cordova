@@ -13,6 +13,7 @@
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
+    <allow-intent href="*.firebaseio.com" />
     <preference name="Orientation" value="portrait" />
     <icon src="img/icon.png" />
     <platform name="android">
