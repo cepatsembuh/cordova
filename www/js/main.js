@@ -8,6 +8,7 @@ function puskesmas() {
 	// Firebase
 	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 	var puskesmas = ref.child("puskesmas");
+	var pasien = puskesmas.child("pasien")
 
 	// Input value
 	var nama_puskesmas = $('#nama_puskesmas').val();
@@ -48,7 +49,7 @@ function puskesmas() {
 	console.log('Lokasi: ' + madya_puskesmas);
 
 	// Push input value to firebase
-	puskesmas.push().set({
+	pasien.push().set({
 		nama: nama_puskesmas,
 		nik: nik_puskesmas,
 		lokasi: madya_puskesmas
@@ -60,6 +61,7 @@ function rsud() {
 	// Firebase
 	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 	var rsud = ref.child("rsud");
+	var pasien = rsud.child("pasien")
 
 	// Input value
 	var rujuk_rsud = $('#rujuk_rsud').val();
@@ -100,7 +102,7 @@ function rsud() {
 	console.log('Lokasi: ' + madya_rsud);
 
 	// Push input value to firebase
-	rsud.push().set({
+	pasien.push().set({
 		no_rujuk: rujuk_rsud,
 		nik: nik_rsud,
 		lokasi: madya_rsud
@@ -112,6 +114,7 @@ function rsuk() {
 	// Firebase
 	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 	var rsuk = ref.child("rsuk");
+	var pasien = rsuk.child("pasien");
 
 	// Input value
 	var rujuk_rsuk = $('#rujuk_rsuk').val();
@@ -152,7 +155,7 @@ function rsuk() {
 	console.log('Lokasi: ' + madya_rsuk);
 
 	// Push input value to firebase
-	rsuk.push().set({
+	pasien.push().set({
 		no_rujuk: rujuk_rsuk,
 		nik: nik_rsuk,
 		lokasi: madya_rsuk
