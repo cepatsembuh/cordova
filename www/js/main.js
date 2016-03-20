@@ -46,7 +46,13 @@ function puskesmas() {
 	console.log('Nama: ' + nama_puskesmas);
 	console.log('NIK: ' + nik_puskesmas);
 	console.log('Lokasi: ' + madya_puskesmas);
-// Push input value to firebase
+
+	// Push input value to firebase
+	puskesmas.push().set({
+		nama: nama_puskesmas,
+		nik: nik_puskesmas,
+		lokasi: madya_puskesmas
+	});
 };
 
 // RSUD form action
@@ -92,6 +98,13 @@ function rsud() {
 	console.log('No Rujuk: ' + rujuk_rsud);
 	console.log('NIK: ' + nik_rsud);
 	console.log('Lokasi: ' + madya_rsud);
+
+	// Push input value to firebase
+	rsud.push().set({
+		no_rujuk: rujuk_rsud,
+		nik: nik_rsud,
+		lokasi: madya_rsud
+	})
 };
 
 // RSUK form action
@@ -137,6 +150,13 @@ function rsuk() {
 	console.log('No Rujuk: ' + rujuk_rsuk);
 	console.log('NIK: ' + nik_rsuk);
 	console.log('Lokasi: ' + madya_rsuk);
+
+	// Push input value to firebase
+	rsuk.push().set({
+		no_rujuk: rujuk_rsuk,
+		nik: nik_rsuk,
+		lokasi: madya_rsuk
+	})
 };
 
 $('#pesan').on('click', function(){
