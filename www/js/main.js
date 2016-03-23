@@ -165,3 +165,6 @@ function rsuk() {
 $('#pesan').on('click', function(){
 	window.location.href = 'faskes.html'
 });
+$('#not-available').on('click', function() {
+	alert("Faskes is not available")
+})
