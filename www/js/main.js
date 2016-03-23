@@ -162,9 +162,7 @@ function rsuk() {
 	})
 };
 
-$('#pesan').on('click', function(){
-	window.location.href = 'faskes.html'
-});
+// Not available faskes
 $('#not-available').on('click', function() {
 	alert("Faskes is not available")
 })
