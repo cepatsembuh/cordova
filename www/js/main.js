@@ -22,21 +22,6 @@ function puskesmas() {
 	} else {
 			// Get madya dropdown value
 			switch (madya_puskesmas) {
-				/* case "jakut":
-					window.location.href = 'available.html';
-					break;
-				case "jakbar":
-					window.location.href = 'available.html';
-					break;
-				case "jakpus":
-					window.location.href = 'available.html';
-					break;
-				case "jaktim":
-					window.location.href = 'available.html';
-					break;
-				case "jaksel":
-					window.location.href = 'available.html';
-					break; */
 				default:
 					window.location.href = 'available.html';
 					break;
@@ -75,21 +60,6 @@ function rsud() {
 	} else {
 			// Get madya dropdown value
 			switch (madya_rsud) {
-				/* case "jakut":
-					window.location.href = 'available.html';
-					break;
-				case "jakbar":
-					window.location.href = 'available.html';
-					break;
-				case "jakpus":
-					window.location.href = 'available.html';
-					break;
-				case "jaktim":
-					window.location.href = 'available.html';
-					break;
-				case "jaksel":
-					window.location.href = 'available.html';
-					break; */
 				default:
 					window.location.href = 'available.html';
 					break;
@@ -127,22 +97,7 @@ function rsuk() {
 		alert('Input is not filled');
 	} else {
 				// Get madya dropdown value
-				switch (madya_rsuk) {
-					/* case "jakut":
-						window.location.href = 'available.html';
-						break;
-					case "jakbar":
-						window.location.href = 'available.html';
-						break;
-					case "jakpus":
-						window.location.href = 'available.html';
-					 	break;
-					case "jaktim":
-						window.location.href = 'available.html';
-						break;
-					case "jaksel":
-						window.location.href = 'available.html';
-						break; */
+				switch (madya_rsuk) {					
 					default:
 						window.location.href = 'available.html';
 						break;
