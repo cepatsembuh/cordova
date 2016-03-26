@@ -97,7 +97,7 @@ function rsuk() {
 		alert('Input is not filled');
 	} else {
 				// Get madya dropdown value
-				switch (madya_rsuk) {					
+				switch (madya_rsuk) {
 					default:
 						window.location.href = 'available.html';
 						break;
@@ -114,6 +114,44 @@ function rsuk() {
 		no_rujuk: rujuk_rsuk,
 		nik: nik_rsuk,
 		lokasi: madya_rsuk
+	})
+};
+
+// RSS form action
+function rss() {
+	// Firebase
+	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
+	var rss = ref.child("rss");
+	var pasien = rss.child("pasien");
+
+	// Input value
+	var rujuk_rss = $('#rujuk_rss').val();
+	var nik_rss = $('#nik_rss').val();
+	var madya_rss = $('#madya_rss').val();
+	var input_rss = $('.input-rss').val();
+
+	if (input_rss == '') {
+		// Validate rujuk rss input
+		alert('Input is not filled');
+	} else {
+				// Get madya dropdown value
+				switch (madya_rss) {
+					default:
+						window.location.href = 'available.html';
+						break;
+			 }
+	}
+
+	// Log input value for testing
+	console.log('No Rujuk: ' + rujuk_rss);
+	console.log('NIK: ' + nik_rss);
+	console.log('Lokasi: ' + madya_rss);
+
+	// Push input value to firebase
+	pasien.push().set({
+		no_rujuk: rujuk_rss,
+		nik: nik_rss,
+		lokasi: madya_rss
 	})
 };
 
