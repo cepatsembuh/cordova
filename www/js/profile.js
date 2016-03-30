@@ -3,7 +3,7 @@ $('#not-available').on('click', function() {
 	alert("Faskes is not available")
 })
 
-function faskesLink(username) {
+function selectFaskes(username) {
   window.location.href = 'faskes/' + username + '.html'
 }
 
