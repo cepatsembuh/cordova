@@ -3,6 +3,10 @@ $('#not-available').on('click', function() {
 	alert("Faskes is not available")
 })
 
+function faskesLink(username) {
+  window.location.href = 'faskes/' + username + '.html'
+}
+
 function doctorProfile(nama, gambar, lulusan, tahun) {
   swal({
     title: "dr. " + nama,
