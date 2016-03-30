@@ -99,3 +99,12 @@ i.fa-check {
 	margin-bottom: 15px;
 	width: 290px;
 }
+
+.time {
+	text-align: right;
+  float: right;
+}
+
+.day {
+	margin-left: 0.7em;
+}
