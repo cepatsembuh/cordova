@@ -86,11 +86,6 @@ i.fa-check {
   font-size: 1em;
 }
 
-.time {
-  margin-left: 0.6em;
-  font-size: 0.8em;
-}
-
 .dokter {
   margin-left: 0.5em;
 	font-weight: bold;
@@ -104,6 +99,8 @@ i.fa-check {
 .time {
 	text-align: right;
   float: right;
+	margin-left: 0.6em;
+  font-size: 0.8em;
 }
 
 .day {
