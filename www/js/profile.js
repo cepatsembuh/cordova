@@ -3,10 +3,12 @@ $('#not-available').on('click', function() {
 	alert("Faskes is not available")
 })
 
+// Select faskes function
 function selectFaskes(username) {
   window.location.href = 'faskes/' + username + '.html'
 }
 
+// Doctor profile using SweetAlert
 function doctorProfile(nama, gambar, lulusan, tahun) {
   swal({
     title: "dr. " + nama,
