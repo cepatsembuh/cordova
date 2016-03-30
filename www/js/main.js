@@ -153,9 +153,4 @@ function rss() {
 		nik: nik_rss,
 		lokasi: madya_rss
 	})
-};
-
-// Not available faskes
-$('#not-available').on('click', function() {
-	alert("Faskes is not available")
-})
+}

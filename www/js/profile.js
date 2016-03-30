@@ -1,3 +1,8 @@
+// Not available faskes
+$('#not-available').on('click', function() {
+	alert("Faskes is not available")
+})
+
 function doctorProfile(nama, gambar, lulusan, tahun) {
   swal({
     title: "dr. " + nama,
