@@ -7,7 +7,7 @@
     <author>
       Andre Christoga
     </author>
-    <content src="index.html" />
+    <content src="www/index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="tel:*" />
@@ -15,7 +15,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="*.firebaseio.com" />
     <preference name="Orientation" value="portrait" />
-    <icon src="img/icon.png" />
+    <icon src="www/img/icon.png" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
