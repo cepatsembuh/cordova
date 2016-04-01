@@ -25,7 +25,7 @@ function doctorProfile(nama, gambar, lulusan, tahun) {
 
 function getNoAntri(tipe, username) {
   var ref = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
-  console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
+  console.log('Url : ' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
   ref.on("value", function(snapshot) {
     swal({
       title: "Selamat!",
