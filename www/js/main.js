@@ -125,17 +125,17 @@ function rss() {
 	var pasien = rss.child("pasien");
 
 	// Input value
-	var rujuk_rss = $('#rujuk_rss').val();
-	var nik_rss = $('#nik_rss').val();
-	var madya_rss = $('#madya_rss').val();
-	var input_rss = $('.input-rss').val();
+	var rujuk = $('#rujuk').val();
+	var nik = $('#nik').val();
+	var madya = $('#madya').val();
+	var input = $('.input-rss').val();
 
-	if (input_rss == '') {
+	if (input == '') {
 		// Validate rujuk rss input
 		alert('Input is not filled');
 	} else {
 				// Get madya dropdown value
-				switch (madya_rss) {
+				switch (madya) {
 					default:
 						window.location.href = 'available.html';
 						break;
@@ -143,14 +143,14 @@ function rss() {
 	}
 
 	// Log input value for testing
-	console.log('No Rujuk: ' + rujuk_rss);
-	console.log('NIK: ' + nik_rss);
-	console.log('Lokasi: ' + madya_rss);
+	console.log('No Rujuk: ' + rujuk);
+	console.log('NIK: ' + nik);
+	console.log('Lokasi: ' + madya);
 
 	// Push input value to firebase
 	pasien.push().set({
-		no_rujuk: rujuk_rss,
-		nik: nik_rss,
-		lokasi: madya_rss
+		no_rujuk: rujuk,
+		nik: nik,
+		lokasi: madya
 	})
 }
