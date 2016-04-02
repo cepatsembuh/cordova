@@ -5,5 +5,5 @@ $('#not-available').on('click', function() {
 
 // Select faskes function
 function selectFaskes(username) {
-  window.location.href = 'faskes/' + username + '.html'
+  window.location.href = '../' + 'faskes/' + username + '.html'
 }
