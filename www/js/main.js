@@ -11,17 +11,17 @@ function puskesmas() {
 	var pasien = puskesmas.child("pasien")
 
 	// Input value
-	var nama_puskesmas = $('#nama_puskesmas').val();
-	var nik_puskesmas = $('#nik_puskesmas').val();
-	var madya_puskesmas = $('#madya_puskesmas').val();
-	var input_puskesmas = $('.input-puskesmas').val();
+	var nama = $('#nama').val();
+	var nik = $('#nik').val();
+	var madya = $('#madya').val();
+	var input = $('.input-puskesmas').val();
 
-	if (input_puskesmas == '') {
+	if (input == '') {
 		// Validate name input
 		alert('Input is not filled');
 	} else {
 			// Get madya dropdown value
-			switch (madya_puskesmas) {
+			switch (madya) {
 				default:
 					window.location.href = 'available.html';
 					break;
@@ -29,15 +29,15 @@ function puskesmas() {
 	}
 
 	// Log input value for testing
-	console.log('Nama: ' + nama_puskesmas);
-	console.log('NIK: ' + nik_puskesmas);
-	console.log('Lokasi: ' + madya_puskesmas);
+	console.log('Nama: ' + nama);
+	console.log('NIK: ' + nik);
+	console.log('Lokasi: ' + madya);
 
 	// Push input value to firebase
 	pasien.push().set({
-		nama: nama_puskesmas,
-		nik: nik_puskesmas,
-		lokasi: madya_puskesmas
+		nama: nama,
+		nik: nik,
+		lokasi: madya
 	});
 };
 
@@ -49,17 +49,17 @@ function rsud() {
 	var pasien = rsud.child("pasien")
 
 	// Input value
-	var rujuk_rsud = $('#rujuk_rsud').val();
-	var nik_rsud = $('#nik_rsud').val();
-	var madya_rsud = $('#madya_rsud').val();
-	var input_rsud = $('.input-rsud').val();
+	var rujuk = $('#rujuk').val();
+	var nik = $('#nik').val();
+	var madya = $('#madya').val();
+	var input = $('.input-rsud').val();
 
-	if (input_rsud == '') {
+	if (input == '') {
 		// Validate rujuk rsud input
 		alert('Input is not filled');
 	} else {
 			// Get madya dropdown value
-			switch (madya_rsud) {
+			switch (madya) {
 				default:
 					window.location.href = 'available.html';
 					break;
@@ -67,15 +67,15 @@ function rsud() {
 	}
 
 	// Log input value for testing
-	console.log('No Rujuk: ' + rujuk_rsud);
-	console.log('NIK: ' + nik_rsud);
-	console.log('Lokasi: ' + madya_rsud);
+	console.log('No Rujuk: ' + rujuk);
+	console.log('NIK: ' + nik);
+	console.log('Lokasi: ' + madya);
 
 	// Push input value to firebase
 	pasien.push().set({
-		no_rujuk: rujuk_rsud,
-		nik: nik_rsud,
-		lokasi: madya_rsud
+		no_rujuk: rujuk,
+		nik: nik,
+		lokasi: madya
 	})
 };
 
@@ -87,17 +87,17 @@ function rsuk() {
 	var pasien = rsuk.child("pasien");
 
 	// Input value
-	var rujuk_rsuk = $('#rujuk_rsuk').val();
-	var nik_rsuk = $('#nik_rsuk').val();
-	var madya_rsuk = $('#madya_rsuk').val();
-	var input_rsuk = $('.input-rsuk').val();
+	var rujuk = $('#rujuk').val();
+	var nik = $('#nik').val();
+	var madya = $('#madya').val();
+	var input = $('.input-rsuk').val();
 
-	if (input_rsuk == '') {
+	if (input == '') {
 		// Validate rujuk rsuk input
 		alert('Input is not filled');
 	} else {
 				// Get madya dropdown value
-				switch (madya_rsuk) {
+				switch (madya) {
 					default:
 						window.location.href = 'available.html';
 						break;
@@ -105,15 +105,15 @@ function rsuk() {
 	}
 
 	// Log input value for testing
-	console.log('No Rujuk: ' + rujuk_rsuk);
-	console.log('NIK: ' + nik_rsuk);
-	console.log('Lokasi: ' + madya_rsuk);
+	console.log('No Rujuk: ' + rujuk);
+	console.log('NIK: ' + nik);
+	console.log('Lokasi: ' + madya);
 
 	// Push input value to firebase
 	pasien.push().set({
-		no_rujuk: rujuk_rsuk,
-		nik: nik_rsuk,
-		lokasi: madya_rsuk
+		no_rujuk: rujuk,
+		nik: nik,
+		lokasi: madya
 	})
 };
 
