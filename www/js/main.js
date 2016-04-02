@@ -23,7 +23,7 @@ function puskesmas() {
 			// Get madya dropdown value
 			switch (madya) {
 				default:
-					window.location.href = 'available.html';
+					window.location.href = 'option/' + 'available.html';
 					break;
 		 }
 	}
@@ -61,7 +61,7 @@ function rsud() {
 			// Get madya dropdown value
 			switch (madya) {
 				default:
-					window.location.href = 'available.html';
+					window.location.href = 'option/' + 'available.html';
 					break;
 		 }
 	}
@@ -99,7 +99,7 @@ function rsuk() {
 				// Get madya dropdown value
 				switch (madya) {
 					default:
-						window.location.href = 'available.html';
+						window.location.href = 'option/' + 'available.html';
 						break;
 			 }
 	}
@@ -137,7 +137,7 @@ function rss() {
 				// Get madya dropdown value
 				switch (madya) {
 					default:
-						window.location.href = 'available.html';
+						window.location.href = 'option/' + 'available.html';
 						break;
 			 }
 	}
