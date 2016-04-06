@@ -3,7 +3,7 @@
 * Copyright 2016 Cepat Sembuh
 */
 
-// Firebase go online
+// Firebase go online whenever the application is open
 document.addEventListener("deviceready", function () {
     Firebase.goOnline();
 });
