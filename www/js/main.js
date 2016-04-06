@@ -3,6 +3,11 @@
 * Copyright 2016 Cepat Sembuh
 */
 
+// Firebase go online
+document.addEventListener("deviceready", function () {
+    Firebase.goOnline();
+});
+
 // Puskesmas form action
 function puskesmas() {
 	// Firebase
@@ -154,7 +159,3 @@ function rss() {
 		lokasi: lokasi
 	})
 }
-
-document.addEventListener("deviceready", function () {
-    Firebase.goOnline();
-});
