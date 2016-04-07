@@ -13,7 +13,7 @@
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
-    <allow-intent href="*.firebaseio.com" />
+    <allow-intent href="https://cepatsembuh.firebaseio.com" />
     <preference name="Orientation" value="portrait" />
     <icon src="www/img/icon.png" />
     <platform name="android">
