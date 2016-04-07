@@ -1,4 +1,5 @@
-# Cepat Sembuh
-Cepat Sembuh is still building under progress by [Andre Christoga](http://christoga.github.io).
+# CepatSembuh
+Repo for CepatSembuh cordova version.
+
 ## License
-Cepat Sembuh is licensed under MIT.
+MIT Licensed.
