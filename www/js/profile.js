@@ -13,6 +13,7 @@ function selectFaskes(username) {
   window.location.href = '../' + 'faskes/' + username + '.html'
 }
 
+// Get no antrian function
 function getNoAntri(tipe, username) {
   var ref = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
   console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
