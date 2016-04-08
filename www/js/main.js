@@ -30,20 +30,20 @@ function puskesmas() {
 				default:
 					window.location.href = 'option/' + 'available.html';
 					break;
-		 }
+		  }
+
+     // Log input value for testing
+   	console.log('Nama: ' + nama);
+   	console.log('NIK: ' + nik);
+   	console.log('Lokasi: ' + lokasi);
+
+   	// Push input value to firebase
+   	pasien.push().set({
+   		nama: nama,
+   		nik: nik,
+      lokasi: lokasi
+   	});
 	}
-
-	// Log input value for testing
-	console.log('Nama: ' + nama);
-	console.log('NIK: ' + nik);
-	console.log('Lokasi: ' + lokasi);
-
-	// Push input value to firebase
-	pasien.push().set({
-		nama: nama,
-		nik: nik,
-		lokasi: lokasi
-	});
 };
 
 // RSUD form action
