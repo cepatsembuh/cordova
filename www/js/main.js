@@ -25,24 +25,24 @@ function puskesmas() {
 		// Validate name input
 		alert('Input is not filled');
 	} else {
+      // Log input value for testing
+      console.log('Nama: ' + nama);
+      console.log('NIK: ' + nik);
+      console.log('Lokasi: ' + lokasi);
+
+      // Push input value to firebase
+      pasien.push().set({
+        nama: nama,
+        nik: nik,
+       lokasi: lokasi
+      });
+
 			// Get lokasi dropdown value
 			switch (lokasi) {
 				default:
 					window.location.href = 'option/' + 'available.html';
 					break;
 		  }
-
-     // Log input value for testing
-   	console.log('Nama: ' + nama);
-   	console.log('NIK: ' + nik);
-   	console.log('Lokasi: ' + lokasi);
-
-   	// Push input value to firebase
-   	pasien.push().set({
-   		nama: nama,
-   		nik: nik,
-      lokasi: lokasi
-   	});
 	}
 };
 
