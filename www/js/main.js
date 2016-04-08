@@ -35,7 +35,7 @@ function puskesmas() {
         nama: nama,
         nik: nik,
        lokasi: lokasi
-      });
+     });
 
 			// Get lokasi dropdown value
 			switch (lokasi) {
@@ -73,7 +73,7 @@ function rsud() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
-      })
+      });
 
 			// Get lokasi dropdown value
 			switch (lokasi) {
@@ -111,7 +111,7 @@ function rsuk() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
-      })
+      });
 				// Get lokasi dropdown value
 				switch (lokasi) {
 					default:
@@ -148,7 +148,7 @@ function rss() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
-      })
+      });
 				// Get lokasi dropdown value
 				switch (lokasi) {
 					default:
