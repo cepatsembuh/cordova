@@ -63,6 +63,18 @@ function rsud() {
 		// Validate rujuk rsud input
 		alert('Input is not filled');
 	} else {
+      // Log input value for testing
+      console.log('No Rujuk: ' + rujuk);
+      console.log('NIK: ' + nik);
+      console.log('Lokasi: ' + lokasi);
+
+      // Push input value to firebase
+      pasien.push().set({
+        no_rujuk: rujuk,
+        nik: nik,
+        lokasi: lokasi
+      })
+
 			// Get lokasi dropdown value
 			switch (lokasi) {
 				default:
@@ -70,18 +82,6 @@ function rsud() {
 					break;
 		 }
 	}
-
-	// Log input value for testing
-	console.log('No Rujuk: ' + rujuk);
-	console.log('NIK: ' + nik);
-	console.log('Lokasi: ' + lokasi);
-
-	// Push input value to firebase
-	pasien.push().set({
-		no_rujuk: rujuk,
-		nik: nik,
-		lokasi: lokasi
-	})
 };
 
 // RSUK form action
@@ -101,6 +101,17 @@ function rsuk() {
 		// Validate rujuk rsuk input
 		alert('Input is not filled');
 	} else {
+      // Log input value for testing
+      console.log('No Rujuk: ' + rujuk);
+      console.log('NIK: ' + nik);
+      console.log('Lokasi: ' + lokasi);
+
+      // Push input value to firebase
+      pasien.push().set({
+        no_rujuk: rujuk,
+        nik: nik,
+        lokasi: lokasi
+      })
 				// Get lokasi dropdown value
 				switch (lokasi) {
 					default:
@@ -108,18 +119,6 @@ function rsuk() {
 						break;
 			 }
 	}
-
-	// Log input value for testing
-	console.log('No Rujuk: ' + rujuk);
-	console.log('NIK: ' + nik);
-	console.log('Lokasi: ' + lokasi);
-
-	// Push input value to firebase
-	pasien.push().set({
-		no_rujuk: rujuk,
-		nik: nik,
-		lokasi: lokasi
-	})
 };
 
 // RSS form action
@@ -139,6 +138,17 @@ function rss() {
 		// Validate rujuk rss input
 		alert('Input is not filled');
 	} else {
+      // Log input value for testing
+      console.log('No Rujuk: ' + rujuk);
+      console.log('NIK: ' + nik);
+      console.log('Lokasi: ' + lokasi);
+
+      // Push input value to firebase
+      pasien.push().set({
+        no_rujuk: rujuk,
+        nik: nik,
+        lokasi: lokasi
+      })
 				// Get lokasi dropdown value
 				switch (lokasi) {
 					default:
@@ -146,16 +156,4 @@ function rss() {
 						break;
 			 }
 	}
-
-	// Log input value for testing
-	console.log('No Rujuk: ' + rujuk);
-	console.log('NIK: ' + nik);
-	console.log('Lokasi: ' + lokasi);
-
-	// Push input value to firebase
-	pasien.push().set({
-		no_rujuk: rujuk,
-		nik: nik,
-		lokasi: lokasi
-	})
 }
