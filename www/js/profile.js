@@ -17,6 +17,7 @@ function selectFaskes(username) {
 function getNoAntri(tipe, username) {
   var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
   console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
+	alert('Fitur ini membutuhkan internet untuk mengambil data..');
   faskesRef.on("value", function(snapshot) {
     alert('No antrian: ' + snapshot.val());
   });
