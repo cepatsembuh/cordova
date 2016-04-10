@@ -18,9 +18,11 @@
     <icon src="www/img/icon.png" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <splash src="img/splash.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <splash src="img/splash.png" />
     </platform>
 </widget>
