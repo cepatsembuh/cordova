@@ -25,4 +25,5 @@
         <allow-intent href="itms-apps:*" />
         <splash src="img/splash.png" />
     </platform>
+    <preference name="SplashScreenDelay" value="3000" />
 </widget>
