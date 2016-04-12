@@ -42,7 +42,7 @@ function puskesmas() {
 				default:
 					window.location.href = 'option/' + 'available.html';
 					break;
-		  }
+		  };
 	}
 };
 
@@ -80,7 +80,7 @@ function rsud() {
 				default:
 					window.location.href = 'option/' + 'available.html';
 					break;
-		 }
+		 };
 	}
 };
 
@@ -117,7 +117,7 @@ function rsuk() {
 					default:
 						window.location.href = 'option/' + 'available.html';
 						break;
-			 }
+			 };
 	}
 };
 
@@ -154,6 +154,6 @@ function rss() {
 					default:
 						window.location.href = 'option/' + 'available.html';
 						break;
-			 }
+			 };
 	}
 }
