@@ -10,20 +10,15 @@
     <content src="www/index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
+    <allow-intent href="tel:*" />         
     <allow-intent href="https://cepatsembuh.firebaseio.com" />
     <preference name="Orientation" value="portrait" />
     <preference name="SplashScreenDelay" value="3000" />
     <icon src="www/img/icon.png" />
     <platform name="android">
-        <allow-intent href="market:*" />
         <splash src="img/splash.png" />
     </platform>
     <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
         <splash src="img/splash.png" />
     </platform>
 </widget>
