@@ -3,6 +3,11 @@
 * Copyright 2016 Cepat Sembuh
 */
 
+// Firebase go online whenever the application is open
+document.addEventListener("deviceready", function () {
+    Firebase.goOnline();
+});
+
 // Not available faskes
 $('#not-available').on('click', function() {
 	alert("Faskes is not available")
