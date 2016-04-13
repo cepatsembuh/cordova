@@ -1,3 +1,4 @@
+
 /*
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
@@ -156,4 +157,9 @@ function rss() {
 						break;
 			 };
 	}
+}
+
+function pilihFaskes(tipe) {
+  console.log('User choose: ' + tipe);
+  window.location.href = tipe + '/index.html';
 }
