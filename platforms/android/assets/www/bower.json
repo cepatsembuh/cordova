@@ -1,0 +1,21 @@
+{
+  "name": "CepatSembuh - Cordova",
+  "homepage": "https://github.com/mercysmart/cepatsembuh",
+  "authors": [
+    "Andre Christoga <andrechristoga@gmail.com>"
+  ],
+  "description": "Cepat Sembuh in Cordova mode",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sweetalert": "~1.1.3"
+  }
+}

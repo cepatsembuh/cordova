@@ -18,7 +18,4 @@
     <platform name="android">
         <splash src="img/splash.png" />
     </platform>
-    <platform name="ios">
-        <splash src="img/splash.png" />
-    </platform>
 </widget>
