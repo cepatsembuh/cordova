@@ -9,6 +9,16 @@ document.addEventListener("deviceready", function () {
     Firebase.goOnline();
 });
 
+function pilihFaskes(tipe) {
+  console.log('User choose: ' + tipe);
+  window.location.href = tipe + '/index.html';
+}
+
+// Select faskes function
+function selectFaskes(username) {
+  window.location.href = '../' + 'faskes/' + username + '.html'
+}
+
 // Puskesmas form action
 function puskesmas() {
 	// Firebase
@@ -157,14 +167,4 @@ function rss() {
 						break;
 			 };
 	}
-}
-
-function pilihFaskes(tipe) {
-  console.log('User choose: ' + tipe);
-  window.location.href = tipe + '/index.html';
-}
-
-// Select faskes function
-function selectFaskes(username) {
-  window.location.href = '../' + 'faskes/' + username + '.html'
 }
