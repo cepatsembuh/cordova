@@ -27,8 +27,8 @@ function selectFaskes(username) {
 function puskesmas() {
   'use strict';
 	// Firebase
-	var puskesmas = ref.child("puskesmas");
-	var pasien = puskesmas.child("pasien")
+	puskesmas = ref.child("puskesmas");
+	pasien = puskesmas.child("pasien")
 
 	// Input value
 	var nama = $('#nama').val();
@@ -65,8 +65,8 @@ function puskesmas() {
 function rsud() {
   'use strict';
 	// Firebase
-	var rsud = ref.child("rsud");
-	var pasien = rsud.child("pasien")
+	rsud = ref.child("rsud");
+	pasien = rsud.child("pasien")
 
 	// Input value
 	var rujuk = $('#rujuk').val();
@@ -103,8 +103,8 @@ function rsud() {
 function rsuk() {
   'use strict';
 	// Firebase
-	var rsuk = ref.child("rsuk");
-	var pasien = rsuk.child("pasien");
+	rsuk = ref.child("rsuk");
+	pasien = rsuk.child("pasien");
 
 	// Input value
 	var rujuk = $('#rujuk').val();
@@ -140,8 +140,8 @@ function rsuk() {
 function rss() {
   'use strict';
 	// Firebase
-	var rss = ref.child("rss");
-	var pasien = rss.child("pasien");
+	rss = ref.child("rss");
+	pasien = rss.child("pasien");
 
 	// Input value
 	var rujuk = $('#rujuk').val();
