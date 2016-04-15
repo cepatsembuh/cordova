@@ -163,3 +163,8 @@ function pilihFaskes(tipe) {
   console.log('User choose: ' + tipe);
   window.location.href = tipe + '/index.html';
 }
+
+// Select faskes function
+function selectFaskes(username) {
+  window.location.href = '../' + 'faskes/' + username + '.html'
+}

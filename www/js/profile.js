@@ -13,11 +13,6 @@ $('#not-available').on('click', function() {
 	alert("Faskes is not available")
 })
 
-// Select faskes function
-function selectFaskes(username) {
-  window.location.href = '../' + 'faskes/' + username + '.html'
-}
-
 // Get no antrian function
 function getNoAntri(tipe, username) {
   var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
