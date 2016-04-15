@@ -1,4 +1,3 @@
-
 /*
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
