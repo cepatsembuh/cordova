@@ -2,6 +2,9 @@
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
 */
+'use strict';
+// Firebase var
+var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 
 // Firebase go online whenever the application is open
 document.addEventListener("deviceready", function () {
@@ -22,8 +25,8 @@ function selectFaskes(username) {
 
 // Puskesmas form action
 function puskesmas() {
+  'use strict';
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 	var puskesmas = ref.child("puskesmas");
 	var pasien = puskesmas.child("pasien")
 
@@ -60,8 +63,8 @@ function puskesmas() {
 
 // RSUD form action
 function rsud() {
+  'use strict';
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 	var rsud = ref.child("rsud");
 	var pasien = rsud.child("pasien")
 
@@ -98,8 +101,8 @@ function rsud() {
 
 // RSUK form action
 function rsuk() {
+  'use strict';
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 	var rsuk = ref.child("rsuk");
 	var pasien = rsuk.child("pasien");
 
@@ -135,8 +138,8 @@ function rsuk() {
 
 // RSS form action
 function rss() {
+  'use strict';
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
 	var rss = ref.child("rss");
 	var pasien = rss.child("pasien");
 
