@@ -9,7 +9,7 @@ document.addEventListener("deviceready", function () {
     Firebase.goOnline();
 });
 
-function pilihFaskes(tipe) {
+function selectServices(tipe) {
   console.log('User choose: ' + tipe);
   window.location.href = tipe + '/index.html';
 }
