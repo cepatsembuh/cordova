@@ -9,6 +9,7 @@ document.addEventListener("deviceready", function () {
     Firebase.goOnline();
 });
 
+// Select the services
 function selectServices(tipe) {
   console.log('User choose: ' + tipe);
   window.location.href = tipe + '/index.html';
