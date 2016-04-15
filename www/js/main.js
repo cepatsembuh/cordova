@@ -17,7 +17,8 @@ function selectServices(tipe) {
 
 // Select faskes function
 function selectFaskes(username) {
-  window.location.href = '../' + 'faskes/' + username + '.html'
+  url = '../faskes/' + username + '.html';
+  window.location.href = url;
 }
 
 // Puskesmas form action
