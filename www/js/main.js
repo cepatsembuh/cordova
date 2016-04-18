@@ -70,12 +70,11 @@ function rsud() {
   var nama = $('#nama').val(),
 	rujuk = $('#rujuk').val(),
 	nik = $('#nik').val(),
-	lokasi = $('#lokasi').val(),
-	input = $('.input-rsud').val();
+	lokasi = $('#lokasi').val();
 
-	if (input == '') {
-		// Validate rujuk rsud input
-		alert('Input is not filled');
+	if (nama == '') {
+		// Validate name input
+		alert('Nama anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else if (nik != 16) {
@@ -114,12 +113,11 @@ function rsuk() {
   var nama = $('#nama').val(),
 	rujuk = $('#rujuk').val(),
 	nik = $('#nik').val(),
-	lokasi = $('#lokasi').val(),
-	input = $('.input-rsuk').val();
+	lokasi = $('#lokasi').val();
 
-	if (input == '') {
-		// Validate rujuk rsuk input
-		alert('Input is not filled');
+	if (nama == '') {
+		// Validate name input
+		alert('Nama anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else if (nik != 16) {
@@ -157,12 +155,11 @@ function rss() {
   var nama = $('#nama').val(),
 	rujuk = $('#rujuk').val(),
 	nik = $('#nik').val(),
-	lokasi = $('#lokasi').val(),
-	input = $('.input-rss').val();
+	lokasi = $('#lokasi').val();
 
-	if (input == '') {
-		// Validate rujuk rss input
-		alert('Input is not filled');
+	if (nama == '') {
+		// Validate name input
+		alert('Nama anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else if (nik != 16) {
