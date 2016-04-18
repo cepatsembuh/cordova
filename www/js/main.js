@@ -83,6 +83,8 @@ function rsud() {
 	  alert('NIK anda kurang panjang');
 	} else if (nik > 16) {
 	  alert('NIK anda terlalu panjang');
+	} else if (rujuk != 20) {
+	  alert('Nomor rujuk anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
@@ -127,6 +129,8 @@ function rsuk() {
 	  alert('NIK anda kurang panjang');
 	} else if (nik > 16) {
 	  alert('NIK anda terlalu panjang');
+	} else if (rujuk != 20) {
+	  alert('Nomor rujuk anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
@@ -170,6 +174,8 @@ function rss() {
 	  alert('NIK anda kurang panjang');
 	} else if (nik > 16) {
 	  alert('NIK anda terlalu panjang');
+	} else if (rujuk != 20) {
+	  alert('Nomor rujuk anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
