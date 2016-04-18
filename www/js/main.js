@@ -38,8 +38,12 @@ function puskesmas() {
 	} else if (nik < 16) {
 	  // Validate nik input
     alert('NIK anda kurang panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else if (nik > 16) {
 	  alert('NIK anda terlalu panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else {
       // Log input value for testing
       console.log('Nama: ' + nama);
@@ -81,8 +85,12 @@ function rsud() {
 		alert('Input is not filled');
 	} else if (nik < 16) {
 	  alert('NIK anda kurang panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else if (nik > 16) {
 	  alert('NIK anda terlalu panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else {
@@ -127,8 +135,12 @@ function rsuk() {
 		alert('Input is not filled');
 	} else if (nik < 16) {
 	  alert('NIK anda kurang panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else if (nik > 16) {
 	  alert('NIK anda terlalu panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else {
@@ -172,8 +184,12 @@ function rss() {
 		alert('Input is not filled');
 	} else if (nik < 16) {
 	  alert('NIK anda kurang panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else if (nik > 16) {
 	  alert('NIK anda terlalu panjang');
+    // Log for testing
+    console.log('NIK length: ' + nik.length);
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else {
