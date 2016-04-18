@@ -70,7 +70,8 @@ function rsud() {
 	pasien = rsud.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val(),
+  var nama = $('#nama').val(),
+	rujuk = $('#rujuk').val(),
 	nik = $('#nik').val(),
 	lokasi = $('#lokasi').val(),
 	input = $('.input-rsud').val();
@@ -86,6 +87,7 @@ function rsud() {
 
       // Push input value to firebase
       pasien.push().set({
+        nama: nama,
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
@@ -108,7 +110,8 @@ function rsuk() {
 	pasien = rsuk.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val(),
+  var nama = $('#nama').val(),
+	rujuk = $('#rujuk').val(),
 	nik = $('#nik').val(),
 	lokasi = $('#lokasi').val(),
 	input = $('.input-rsuk').val();
@@ -124,6 +127,7 @@ function rsuk() {
 
       // Push input value to firebase
       pasien.push().set({
+        nama: nama,
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
@@ -145,7 +149,8 @@ function rss() {
 	pasien = rss.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val(),
+  var nama = $('#nama').val(),
+	rujuk = $('#rujuk').val(),
 	nik = $('#nik').val(),
 	lokasi = $('#lokasi').val(),
 	input = $('.input-rss').val();
@@ -161,6 +166,7 @@ function rss() {
 
       // Push input value to firebase
       pasien.push().set({
+        nama: nama,
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
