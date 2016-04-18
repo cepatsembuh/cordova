@@ -76,10 +76,10 @@ function rsud() {
 	if (input == '') {
 		// Validate rujuk rsud input
 		alert('Input is not filled');
-	} else if (nik != 16) {
-	  alert('NIK anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
+	} else if (nik != 16) {
+	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
@@ -120,10 +120,10 @@ function rsuk() {
 	if (input == '') {
 		// Validate rujuk rsuk input
 		alert('Input is not filled');
-	} else if (nik != 16) {
-	  alert('NIK anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
+	} else if (nik != 16) {
+	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
@@ -163,10 +163,10 @@ function rss() {
 	if (input == '') {
 		// Validate rujuk rss input
 		alert('Input is not filled');
-	} else if (nik != 16) {
-	  alert('NIK anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
+	} else if (nik != 16) {
+	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
