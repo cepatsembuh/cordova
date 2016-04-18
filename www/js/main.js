@@ -31,11 +31,10 @@ function puskesmas() {
 	var nama = $('#nama').val();
 	var nik = $('#nik').val();
 	var lokasi = $('#lokasi').val();
-	var input = $('.input-puskesmas').val();
 
-	if (input == '') {
+	if (nama == '' || nik.length < 16) {
 		// Validate name input
-		alert('Input is not filled');
+		alert('Nama is not filled');
 	} else {
       // Log input value for testing
       console.log('Nama: ' + nama);
