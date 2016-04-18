@@ -28,9 +28,9 @@ function puskesmas() {
 	pasien = puskesmas.child("pasien");
 
 	// Input value
-	var nama = $('#nama').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
+	var nama = $('#nama').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val();
 
 	if (nama == '') {
 		// Validate name input
@@ -65,13 +65,13 @@ function rsud() {
 	// Firebase
   var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
 	rsud = ref.child("rsud"),
-	pasien = rsud.child("pasien")
+	pasien = rsud.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
-	var input = $('.input-rsud').val();
+	var rujuk = $('#rujuk').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val(),
+	input = $('.input-rsud').val();
 
 	if (input == '') {
 		// Validate rujuk rsud input
@@ -106,10 +106,10 @@ function rsuk() {
 	pasien = rsuk.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
-	var input = $('.input-rsuk').val();
+	var rujuk = $('#rujuk').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val(),
+	input = $('.input-rsuk').val();
 
 	if (input == '') {
 		// Validate rujuk rsuk input
@@ -143,10 +143,10 @@ function rss() {
 	pasien = rss.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
-	var input = $('.input-rss').val();
+	var rujuk = $('#rujuk').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val(),
+	input = $('.input-rss').val();
 
 	if (input == '') {
 		// Validate rujuk rss input
