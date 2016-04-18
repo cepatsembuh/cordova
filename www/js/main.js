@@ -35,16 +35,9 @@ function puskesmas() {
 	if (nama == '') {
 		// Validate name input
 		alert('Nama is not filled');
-	} else if (nik < 16) {
-	  // Validate nik input
-    alert('NIK anda kurang panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
-	} else if (nik > 16) {
-	  alert('NIK anda terlalu panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
-	} else {
+	} else if (nik != 16) {
+	    alert('NIK anda tidak valid');
+	  } else {
       // Log input value for testing
       console.log('Nama: ' + nama);
       console.log('NIK: ' + nik);
@@ -83,14 +76,8 @@ function rsud() {
 	if (input == '') {
 		// Validate rujuk rsud input
 		alert('Input is not filled');
-	} else if (nik < 16) {
-	  alert('NIK anda kurang panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
-	} else if (nik > 16) {
-	  alert('NIK anda terlalu panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
+	} else if (nik != 16) {
+	  alert('NIK anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else {
@@ -133,14 +120,8 @@ function rsuk() {
 	if (input == '') {
 		// Validate rujuk rsuk input
 		alert('Input is not filled');
-	} else if (nik < 16) {
-	  alert('NIK anda kurang panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
-	} else if (nik > 16) {
-	  alert('NIK anda terlalu panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
+	} else if (nik != 16) {
+	  alert('NIK anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else {
@@ -182,14 +163,8 @@ function rss() {
 	if (input == '') {
 		// Validate rujuk rss input
 		alert('Input is not filled');
-	} else if (nik < 16) {
-	  alert('NIK anda kurang panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
-	} else if (nik > 16) {
-	  alert('NIK anda terlalu panjang');
-    // Log for testing
-    console.log('NIK length: ' + nik.length);
+	} else if (nik != 16) {
+	  alert('NIK anda tidak valid');
 	} else if (rujuk != 20) {
 	  alert('Nomor rujuk anda tidak valid');
 	} else {
