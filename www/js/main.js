@@ -32,9 +32,12 @@ function puskesmas() {
 	var nik = $('#nik').val();
 	var lokasi = $('#lokasi').val();
 
-	if (nama == '' || nik.length < 16) {
+	if (nama == '') {
 		// Validate name input
 		alert('Nama is not filled');
+	} else if (nik != 16) {
+	  // Validate nik input
+    alert('NIK anda kurang panjang')
 	} else {
       // Log input value for testing
       console.log('Nama: ' + nama);
