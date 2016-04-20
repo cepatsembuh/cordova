@@ -35,7 +35,7 @@ function puskesmas() {
 	if (nama == '') {
 		// Validate name input
 		alert('Nama is not filled');
-	} else if (nik != 16) {
+	} else if (nik.length != 16) {
 	    alert('NIK anda tidak valid');
 	  } else {
       // Log input value for testing
@@ -76,8 +76,8 @@ function rsud() {
 		// Validate name input
 		alert('Nama anda tidak valid');
 	} else if (rujuk != 20) {
-	  alert('Nomor rujuk anda tidak valid');
-	} else if (nik != 16) {
+	  alert('Nomor r.lengthujuk anda tidak valid');
+	} else if (nik.length != 16) {
 	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
@@ -118,9 +118,9 @@ function rsuk() {
 	if (nama == '') {
 		// Validate name input
 		alert('Nama anda tidak valid');
-	} else if (rujuk != 20) {
+	} else if (rujuk.length != 20) {
 	  alert('Nomor rujuk anda tidak valid');
-	} else if (nik != 16) {
+	} else if (nik.length != 16) {
 	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
@@ -160,9 +160,9 @@ function rss() {
 	if (nama == '') {
 		// Validate name input
 		alert('Nama anda tidak valid');
-	} else if (rujuk != 20) {
+	} else if (rujuk.length != 20) {
 	  alert('Nomor rujuk anda tidak valid');
-	} else if (nik != 16) {
+	} else if (nik.length != 16) {
 	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
