@@ -14,7 +14,7 @@ $('#not-available').on('click', function() {
 })
 
 // Get no antrian function
-function getNoAntri(tipe, username, name) {  
+function getNoAntri(tipe, username, name) {
   var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
   console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
 	alert('Fitur ini membutuhkan internet untuk mengambil data');
@@ -30,7 +30,7 @@ function updateData(tipe, username, name) {
     plus = 1;
     glee = data + plus
     console.log('Updating data.. ');
-    kelapa_gading.set({
+    faskesRef.set({
       antrian: glee,
       nama: name
     });
