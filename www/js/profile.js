@@ -14,11 +14,19 @@ $('#not-available').on('click', function() {
 })
 
 // Get no antrian function
-function getNoAntri(tipe, username) {
+function getNoAntri(tipe, username, name) {
   var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
   console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
 	alert('Fitur ini membutuhkan internet untuk mengambil data');
   faskesRef.on("value", function(snapshot) {
     alert('No antrian: ' + snapshot.val());
+    var data = snapshot.val().antrian;
+    var plus = 1;
+    var glee = data + plus
+    console.log('Updating data.. ');
+    username.set({
+      antrian: glee,
+      nama: name
+    });
   });
 }
