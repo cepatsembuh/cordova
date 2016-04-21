@@ -13,18 +13,8 @@ $('#not-available').on('click', function() {
 	alert("Faskes is not available")
 })
 
-// Get no antrian function
-function getNoAntri(tipe, username, name) {
-  var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
-  console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
-	alert('Fitur ini membutuhkan internet untuk mengambil data');
-  faskesRef.on("value", function(snapshot) {
-    alert('No antrian: ' + snapshot.val());
-  });
-}
-
 function updateData(tipe, username, name) {
-  var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
+  var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username);
   faskesRef.on("value", function(snapshot) {
     data = snapshot.val().antrian;
     plus = 1;
@@ -35,4 +25,16 @@ function updateData(tipe, username, name) {
       nama: name
     });
   })
+}
+
+
+// Get no antrian function
+function getNoAntri(tipe, username, name) {
+  var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username);
+  console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username);
+	alert('Fitur ini membutuhkan internet untuk mengambil data');
+  faskesRef.on("value", function(snapshot) {
+    alert('No antrian: ' + snapshot.val().antrian);
+  });
+  updateData(tipe, username, name);
 }
