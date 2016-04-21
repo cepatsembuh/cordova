@@ -30,10 +30,18 @@ $('#not-available').on('click', function() {
 
 // Get no antrian function
 function getNoAntri(tipe, username, name) {
+  // Define firebase URL
   var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username);
+
+  // Log firebase URL
   console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username);
+
+  // Warn user that this fiture need internet
 	alert('Fitur ini membutuhkan internet untuk mengambil data');
+
+  // Initialize data
   faskesRef.on("value", function(snapshot) {
+    // Print data
     alert('No antrian: ' + snapshot.val().antrian);
   });
   // updateData(tipe, username, name);
