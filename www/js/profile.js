@@ -14,19 +14,25 @@ $('#not-available').on('click', function() {
 })
 
 // Get no antrian function
-function getNoAntri(tipe, username, name) {
+function getNoAntri(tipe, username, name) {  
   var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
   console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
 	alert('Fitur ini membutuhkan internet untuk mengambil data');
   faskesRef.on("value", function(snapshot) {
     alert('No antrian: ' + snapshot.val());
-    var data = snapshot.val().antrian;
-    var plus = 1;
-    var glee = data + plus
+  });
+}
+
+function updateData(tipe, username, name) {
+  var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
+  faskesRef.on("value", function(snapshot) {
+    data = snapshot.val().antrian;
+    plus = 1;
+    glee = data + plus
     console.log('Updating data.. ');
-    username.set({
+    kelapa_gading.set({
       antrian: glee,
       nama: name
     });
-  });
+  })
 }
