@@ -43,10 +43,15 @@ function getNoAntri(tipe, username, name) {
   alert("Mohon konfirmasi ulang");
   var nama = prompt("Masukan nama");
   if (nama != "") {
+    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/pasien/');
     // Initialize data
     faskesRef.on("value", function(snapshot) {
       // Print data
       alert('No antrian: ' + snapshot.val().antrian);
+      pasien.push().set({
+        nama: nama,
+        nomor_antrian: snapshot.val().antrian
+      })
     });
   } else if (nama = "") {
     alert("Insert your fucking ugly name.");
