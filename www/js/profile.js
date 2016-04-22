@@ -39,10 +39,17 @@ function getNoAntri(tipe, username, name) {
   // Warn user that this fiture need internet
 	alert('Fitur ini membutuhkan internet untuk mengambil data');
 
-  // Initialize data
-  faskesRef.on("value", function(snapshot) {
-    // Print data
-    alert('No antrian: ' + snapshot.val().antrian);
-  });
+  // Confirmation
+  alert("Mohon konfirmasi ulang");
+  var nama = prompt("Masukan nama");
+  if (nama != "") {
+    // Initialize data
+    faskesRef.on("value", function(snapshot) {
+      // Print data
+      alert('No antrian: ' + snapshot.val().antrian);
+    });
+  } else if (nama = "") {
+    alert("Insert your fucking ugly name.");
+  }
   // updateData(tipe, username, name);
 }
