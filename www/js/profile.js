@@ -41,6 +41,7 @@ function getNoAntri(tipe, username, name) {
         nomor_antrian: snapshot.val().antrian
       })
 
+      // Updated variables
       var data = snapshot.val().antrian;
       var one = 1;
       var sum = data + one;
