@@ -45,6 +45,7 @@ function getNoAntri(tipe, username, name) {
       var one = 1;
       var sum = data + one;
 
+      // Update nomor antrian
       faskesRef.update({
         nama: name,
         antrian: sum
