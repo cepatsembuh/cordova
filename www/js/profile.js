@@ -39,7 +39,7 @@ function getNoAntri(tipe, username, name) {
       })
     });
   } else {
-    alert("Insert your fucking ugly name.");
+    alert("Nama anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
   }
   // updateData(tipe, username, name);
 }
