@@ -27,7 +27,8 @@ function getNoAntri(tipe, username, name) {
   // Confirmation
   alert("Mohon konfirmasi ulang");
   var nama = prompt("Masukan nama");
-  if (nama != "") {
+  var nik = prompt("Masukan NIK:")
+  if (nama != "" || nik.length != 16) {
     var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/pasien/');
     // Initialize data
     faskesRef.on("value", function(snapshot) {
@@ -42,6 +43,6 @@ function getNoAntri(tipe, username, name) {
     });
   } else {
     // Error message
-    alert("Nama anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
+    alert("Input anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
   }
 }
