@@ -40,6 +40,15 @@ function getNoAntri(tipe, username, name) {
         nama: nama,
         nomor_antrian: snapshot.val().antrian
       })
+
+      var data = snapshot.val().antrian;
+      var one = 1;
+      var sum = data + one;
+
+      faskesRef.update({
+        nama: name,
+        antrian: sum
+      });
     });
   } else {
     // Error message
