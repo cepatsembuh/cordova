@@ -26,8 +26,8 @@ function getNoAntri(tipe, username, name) {
 
   // Confirmation
   alert("Mohon konfirmasi ulang");
-  var nama = prompt("Masukan nama");
-  var nik = prompt("Masukan NIK:")
+  var nama = prompt("Masukan nama"),
+  nik = prompt("Masukan NIK:")
   if (nama != "" || nik.length != 16) {
     var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/pasien/');
     // Initialize data
@@ -42,9 +42,9 @@ function getNoAntri(tipe, username, name) {
       })
 
       // Updated variables
-      var data = snapshot.val().antrian;
-      var one = 1;
-      var sum = data + one;
+      var data = snapshot.val().antrian,
+      one = 1,
+      sum = data + one;
 
       // Update nomor antrian
       faskesRef.update({
