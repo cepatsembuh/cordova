@@ -38,7 +38,7 @@ function getNoAntri(tipe, username, name) {
         nomor_antrian: snapshot.val().antrian
       })
     });
-  } else if (nama = "") {
+  } else {
     alert("Insert your fucking ugly name.");
   }
   // updateData(tipe, username, name);
