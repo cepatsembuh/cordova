@@ -17,14 +17,15 @@
   <body>
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
-        <a class="navbar-brand">Cepat Sembuh</a>
+        <a class="navbar-brand">CepatSembuh</a>
       </div>
       </div>
     </nav>
     <div class="form" align="center">
-      <input type="number" class="form-control input-rss" placeholder="No Rujukan" id="rujuk" /><br>
-      <input type="number" class="form-control input-rss" placeholder="NIK" id="nik" /><br>
-      <select class="form-control input-puskesmas" id="lokasi">
+      <input type="text" class="form-control" placeholder="Nama" id="nama" /><br>
+      <input type="number" class="form-control" placeholder="No Rujukan" id="rujuk" /><br>
+      <input type="number" class="form-control" placeholder="NIK" id="nik" /><br>
+      <select class="form-control" id="lokasi">
         <optgroup label="Jakarta Utara">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -68,7 +69,7 @@
           <option value="5">5</option>
         </optgroup>
       </select><br>
-      <button class="btn btn-primary" onclick="rss()" id="rss">Submit</button>
+      <button class="btn btn-info btn-embossed" onclick="rss()" id="rss">Submit</button>
     </div>
 
     <!-- JS -->

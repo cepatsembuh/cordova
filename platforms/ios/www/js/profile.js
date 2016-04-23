@@ -13,17 +13,47 @@ $('#not-available').on('click', function() {
 	alert("Faskes is not available")
 })
 
-// Select faskes function
-function selectFaskes(username) {
-  window.location.href = '../' + 'faskes/' + username + '.html'
-}
-
 // Get no antrian function
-function getNoAntri(tipe, username) {
-  var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
-  console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/antrian');
-	alert('Fitur ini membutuhkan internet untuk mengambil data..');
-  faskesRef.on("value", function(snapshot) {
-    alert('No antrian: ' + snapshot.val());
-  });
+function getNoAntri(tipe, username, name) {
+  // Define firebase URL
+  var faskesRef = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username);
+
+  // Log firebase URL
+  console.log('Url :' + "https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username);
+
+  // Warn user that this fiture need internet
+	alert('Fitur ini membutuhkan internet untuk mengambil data');
+
+  // Confirmation
+  alert("Mohon konfirmasi ulang");
+  var nama = prompt("Masukan nama"),
+  nik = prompt("Masukan NIK:")
+  if (nama != "" || nik.length != 16) {
+    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/pasien/');
+    // Initialize data
+    faskesRef.on("value", function(snapshot) {
+      // Print data
+      alert('No antrian: ' + snapshot.val().antrian);
+
+      // Push data to firebase
+      pasien.push().set({
+        nama: nama,
+        nomor_antrian: snapshot.val().antrian
+      })
+
+      // Updated variables
+      var data = snapshot.val().antrian,
+      one = 1,
+      sum = data + one;
+
+      // Update nomor antrian
+      faskesRef.update({
+        nama: name,
+        antrian: sum
+      });
+    });
+  } else {
+    // Error message
+    alert("Input anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
+  }
 }

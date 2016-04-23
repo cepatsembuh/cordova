@@ -1,4 +1,3 @@
-
 /*
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
@@ -9,23 +8,36 @@ document.addEventListener("deviceready", function () {
     Firebase.goOnline();
 });
 
+// Select the services
+function selectServices(tipe) {
+  console.log('User choose: ' + tipe);
+  window.location.href = tipe + '/index.html';
+}
+
+// Select faskes function
+function selectFaskes(username) {
+  url = '../faskes/' + username + '.html';
+  window.location.href = url;
+}
+
 // Puskesmas form action
 function puskesmas() {
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-	var puskesmas = ref.child("puskesmas");
-	var pasien = puskesmas.child("pasien")
+  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+	puskesmas = ref.child("puskesmas"),
+	pasien = puskesmas.child("pasien");
 
 	// Input value
-	var nama = $('#nama').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
-	var input = $('.input-puskesmas').val();
+	var nama = $('#nama').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val();
 
-	if (input == '') {
+	if (nama == '') {
 		// Validate name input
-		alert('Input is not filled');
-	} else {
+		alert('Nama is not filled');
+	} else if (nik.length != 16) {
+	    alert('NIK anda tidak valid');
+	  } else {
       // Log input value for testing
       console.log('Nama: ' + nama);
       console.log('NIK: ' + nik);
@@ -50,19 +62,23 @@ function puskesmas() {
 // RSUD form action
 function rsud() {
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-	var rsud = ref.child("rsud");
-	var pasien = rsud.child("pasien")
+  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+	rsud = ref.child("rsud"),
+	pasien = rsud.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
-	var input = $('.input-rsud').val();
+  var nama = $('#nama').val(),
+	rujuk = $('#rujuk').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val();
 
-	if (input == '') {
-		// Validate rujuk rsud input
-		alert('Input is not filled');
+	if (nama == '') {
+		// Validate name input
+		alert('Nama anda tidak valid');
+	} else if (rujuk != 20) {
+	  alert('Nomor r.lengthujuk anda tidak valid');
+	} else if (nik.length != 16) {
+	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
@@ -71,6 +87,7 @@ function rsud() {
 
       // Push input value to firebase
       pasien.push().set({
+        nama: nama,
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
@@ -88,19 +105,23 @@ function rsud() {
 // RSUK form action
 function rsuk() {
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-	var rsuk = ref.child("rsuk");
-	var pasien = rsuk.child("pasien");
+  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+	rsuk = ref.child("rsuk"),
+	pasien = rsuk.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
-	var input = $('.input-rsuk').val();
+  var nama = $('#nama').val(),
+	rujuk = $('#rujuk').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val();
 
-	if (input == '') {
-		// Validate rujuk rsuk input
-		alert('Input is not filled');
+	if (nama == '') {
+		// Validate name input
+		alert('Nama anda tidak valid');
+	} else if (rujuk.length != 20) {
+	  alert('Nomor rujuk anda tidak valid');
+	} else if (nik.length != 16) {
+	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
@@ -109,6 +130,7 @@ function rsuk() {
 
       // Push input value to firebase
       pasien.push().set({
+        nama: nama,
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
@@ -125,19 +147,23 @@ function rsuk() {
 // RSS form action
 function rss() {
 	// Firebase
-	var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
-	var rss = ref.child("rss");
-	var pasien = rss.child("pasien");
+  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+	rss = ref.child("rss"),
+	pasien = rss.child("pasien");
 
 	// Input value
-	var rujuk = $('#rujuk').val();
-	var nik = $('#nik').val();
-	var lokasi = $('#lokasi').val();
-	var input = $('.input-rss').val();
+  var nama = $('#nama').val(),
+	rujuk = $('#rujuk').val(),
+	nik = $('#nik').val(),
+	lokasi = $('#lokasi').val();
 
-	if (input == '') {
-		// Validate rujuk rss input
-		alert('Input is not filled');
+	if (nama == '') {
+		// Validate name input
+		alert('Nama anda tidak valid');
+	} else if (rujuk.length != 20) {
+	  alert('Nomor rujuk anda tidak valid');
+	} else if (nik.length != 16) {
+	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
       console.log('No Rujuk: ' + rujuk);
@@ -146,6 +172,7 @@ function rss() {
 
       // Push input value to firebase
       pasien.push().set({
+        nama: nama,
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
@@ -157,9 +184,4 @@ function rss() {
 						break;
 			 };
 	}
-}
-
-function pilihFaskes(tipe) {
-  console.log('User choose: ' + tipe);
-  window.location.href = tipe + '/index.html';
 }

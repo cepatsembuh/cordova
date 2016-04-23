@@ -3,6 +3,6 @@ $(document).ready(function() {
       costumizedWidth = width - 25,
       faskesImage = $('.faskes');
       ads = $('.ads')
-  faskesImage.css('width', costumizedWidth)
+  faskesImage.css('width', costumizedWidth - 5)
   ads.css('width', costumizedWidth)
 });
