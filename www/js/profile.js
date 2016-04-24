@@ -27,21 +27,12 @@ function getNoAntri(tipe, username, name) {
   // Confirmation
   alert("Mohon konfirmasi ulang");
   var nama = prompt("Masukan nama"),
-  nik = prompt("Masukan NIK:")
+  nik = prompt("Masukan NIK:");
   if (nama != "" || nik.length != 16) {
     var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/pasien/');
     // Initialize data
     faskesRef.on("value", function(snapshot) {
-      // Print data
-      alert('No antrian: ' + snapshot.val().antrian);
-
-      // Push data to firebase
-      pasien.push().set({
-        nama: nama,
-        nomor_antrian: snapshot.val().antrian
-      })
-
-      // Updated variables
+      // Update variables
       var data = snapshot.val().antrian,
       one = 1,
       sum = data + one;
@@ -51,6 +42,15 @@ function getNoAntri(tipe, username, name) {
         nama: name,
         antrian: sum
       });
+
+      // Print data
+      alert('No antrian: ' + snapshot.val().antrian);
+
+      // Push data to firebase
+      pasien.push().set({
+        nama: nama,
+        nomor_antrian: snapshot.val().antrian
+      })
     });
   } else {
     // Error message
