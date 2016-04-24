@@ -76,7 +76,7 @@ function rsud() {
 		// Validate name input
 		alert('Nama anda tidak valid');
 	} else if (rujuk != 20) {
-	  alert('Nomor r.lengthujuk anda tidak valid');
+	  alert('Nomor rujuk anda tidak valid');
 	} else if (nik.length != 16) {
 	  alert('NIK anda tidak valid');
 	} else {
