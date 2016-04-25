@@ -59,10 +59,11 @@ function getNoAntri(tipe, username, name) {
 }
 
 function doctorProfile(nama, gambar, lulusan, tahun) {
+  giant = "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun;
   swal({
     title: "Dr. " + nama,
     imageUrl: "../../img/" + gambar,
-    text: "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun,
+    text: giant,
     html: true
   })
   console.log('Gambar: ' + gambar)
