@@ -61,7 +61,7 @@ function getNoAntri(tipe, username, name) {
 function doctorProfile(nama, gambar, lulusan, tahun) {
   swal({
     title: "Dr. " + nama,
-    imageUrl: gambar,
+    imageUrl: "../../img/" + gambar,
     text: "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun,
     html: true
   })
