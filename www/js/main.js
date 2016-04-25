@@ -48,6 +48,12 @@ function puskesmas() {
         nama: nama,
         nik: nik,
        lokasi: lokasi
+     }, function(error) {
+       if (!error) {
+          // Handler if data is inserted
+       } else {
+          alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
+       }
      });
 
 			// Get lokasi dropdown value
@@ -93,6 +99,12 @@ function rsud() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
+      }, function(error) {
+        if (!error) {
+            // Handler if data is inserted
+        } else {
+            alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
+        }
       });
 
 			// Get lokasi dropdown value
@@ -138,6 +150,12 @@ function rsuk() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
+      }, function(error) {
+        if (!error) {
+            // Handler if data is inserted
+        } else {
+            alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
+        }
       });
 				// Get lokasi dropdown value
 				switch (lokasi) {
@@ -182,6 +200,12 @@ function rss() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
+      }, function(error) {
+        if (!error) {
+            // Handler if data is inserted
+        } else {
+            alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
+        }
       });
 				// Get lokasi dropdown value
 				switch (lokasi) {
