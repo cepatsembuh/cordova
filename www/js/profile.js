@@ -57,3 +57,13 @@ function getNoAntri(tipe, username, name) {
     alert("Input anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
   }
 }
+
+function doctorProfile(nama, gambar, lulusan, tahun) {
+  swal({
+    title: "Dr. " + nama,
+    imageUrl: gambar,
+    text: "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun,
+    html: true
+  })
+  console.log('Gambar: ' + gambar)
+}
