@@ -29,7 +29,7 @@ function getNoAntri(tipe, username, name) {
   var nama = prompt("Masukan nama"),
   nik = prompt("Masukan NIK:");
   if (nama != "" || nik.length != 16) {
-    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/pasien/');
+    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + '/pasien/');
     // Initialize data
     faskesRef.on("value", function(snapshot) {
       // Update variables
