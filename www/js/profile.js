@@ -29,19 +29,17 @@ function getNoAntri(tipe, username, name) {
   var nama = prompt("Masukan nama"),
   nik = prompt("Masukan NIK:");
   if (nama != "" || nik.length != 16) {
-    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + '/pasien/');
+    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
     // Initialize data
     faskesRef.on("value", function(snapshot) {
-      // Update variables
-      var data = snapshot.val().antrian,
+      /* var data = snapshot.val().antrian,
       one = 1,
       sum = data + one;
 
-      // Update nomor antrian
       faskesRef.update({
         nama: name,
         antrian: sum
-      });
+      }); */
 
       // Print data
       alert('No antrian: ' + snapshot.val().antrian);
