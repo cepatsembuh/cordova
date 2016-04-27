@@ -24,13 +24,13 @@ function selectFaskes(username) {
 function puskesmas() {
 	// Firebase
   var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
-	puskesmas = ref.child("puskesmas"),
-	pasien = puskesmas.child("pasien");
+	    puskesmas = ref.child("puskesmas"),
+	    pasien = puskesmas.child("pasien");
 
 	// Input value
 	var nama = $('#nama').val(),
-	nik = $('#nik').val(),
-	lokasi = $('#lokasi').val();
+	    nik = $('#nik').val(),
+	    lokasi = $('#lokasi').val ();
 
 	if (nama == '') {
 		// Validate name input
@@ -62,14 +62,14 @@ function puskesmas() {
 function rsud() {
 	// Firebase
   var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
-	rsud = ref.child("rsud"),
-	pasien = rsud.child("pasien");
+	    rsud = ref.child("rsud"),
+	    pasien = rsud.child("pasien");
 
 	// Input value
   var nama = $('#nama').val(),
-	rujuk = $('#rujuk').val(),
-	nik = $('#nik').val(),
-	lokasi = $('#lokasi').val();
+	    rujuk = $('#rujuk').val(),
+	    nik = $('#nik').val(),
+	    lokasi = $('#lokasi').val();
 
 	if (nama == '') {
 		// Validate name input
@@ -106,14 +106,14 @@ function rsud() {
 function rsuk() {
 	// Firebase
   var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
-	rsuk = ref.child("rsuk"),
-	pasien = rsuk.child("pasien");
+	    rsuk = ref.child("rsuk"),
+	    pasien = rsuk.child("pasien");
 
 	// Input value
   var nama = $('#nama').val(),
-	rujuk = $('#rujuk').val(),
-	nik = $('#nik').val(),
-	lokasi = $('#lokasi').val();
+	    rujuk = $('#rujuk').val(),
+	    nik = $('#nik').val(),
+	    lokasi = $('#lokasi').val();
 
 	if (nama == '') {
 		// Validate name input
@@ -149,14 +149,14 @@ function rsuk() {
 function rss() {
 	// Firebase
   var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
-	rss = ref.child("rss"),
-	pasien = rss.child("pasien");
+	    rss = ref.child("rss"),
+	    pasien = rss.child("pasien");
 
 	// Input value
   var nama = $('#nama').val(),
-	rujuk = $('#rujuk').val(),
-	nik = $('#nik').val(),
-	lokasi = $('#lokasi').val();
+	    rujuk = $('#rujuk').val(),
+	    nik = $('#nik').val(),
+	    lokasi = $('#lokasi').val();
 
 	if (nama == '') {
 		// Validate name input
