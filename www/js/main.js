@@ -48,18 +48,12 @@ function puskesmas() {
         nama: nama,
         nik: nik,
        lokasi: lokasi
-     }, function(error) {
-       if (!error) {
-          // Handler if data is inserted
-       } else {
-         switch (lokasi) {
-           default:
-           window.location.href = 'option' + '/available.html';
-           break
-         };
-          alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
-       }
      });
+     switch (lokasi) {
+       default:
+         window.location.href = 'option' + '/available.html';
+         break;
+     };
 
 	}
 };
@@ -98,18 +92,12 @@ function rsud() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
-      }, function(error) {
-        if (!error) {
-            // Handler if data is inserted
-        } else {
-          switch (lokasi) {
-            default:
-              window.location.href = 'option' + '/available.html';
-              break
-          };
-            alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
-        }
       });
+      switch (lokasi) {
+        default:
+          window.location.href = 'option' + '/available.html';
+          break;
+      };
 
 	}
 };
@@ -148,18 +136,12 @@ function rsuk() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
-      }, function(error) {
-        if (!error) {
-            // Handler if data is inserted
-            switch (lokasi) {
-              default:
-                window.location.href = 'option' + '/available.html';
-                break;
-            };
-        } else {
-            alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
-        }
       });
+      switch (lokasi) {
+        default:
+          window.location.href = 'option' + '/available.html';
+          break;
+      };
 	}
 };
 
@@ -197,17 +179,11 @@ function rss() {
         no_rujuk: rujuk,
         nik: nik,
         lokasi: lokasi
-      }, function(error) {
-        if (!error) {
-            // Handler if data is inserted
-            switch (lokasi) {
-              default:
-                window.location.href = 'option' + '/available.html';
-                break;
-            };
-        } else {
-            alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
-        }
       });
+      switch (lokasi) {
+        default:
+          window.location.href = 'option' + '/available.html';
+          break;
+      };
 	}
 }
