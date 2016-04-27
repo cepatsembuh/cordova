@@ -96,17 +96,23 @@
                     <span class="day">Rabu</span><span class="time">14:00 - 18:00</span>
                 <br>
                 </div>
-          <center>
-            <hr>
-            <a class="btn btn-hg btn-primary btn-embossed" href="tel:+62211500135">
-              <i class="fa fa-phone"></i>
-              Call Faskes
-            </a><br><br>
-            <button class="btn btn-info btn-hg btn-embossed" onclick="getNoAntri('rsud', 'cipto', 'RSUD Dr. Cipto Mangunkusumo')">
-              Dapatkan No Antri
-            </button>
-            <br><br>
-          </center>
+                <center>
+                  <hr>
+                  <div class="btn-group-vertical" role="group">
+                    <button class="btn btn-info" onclick="getNoAntri('rsud', 'cipto', 'RSUD Dr. Cipto Mangunkusumo')">
+                      Dapatkan No Antri
+                    </button>
+                    <button class="btn btn-primary" onclick="tempatTidur('rsud', 'cipto')">
+                      Tempat Tidur Kosong
+                    </button>
+                  </div>
+                  <br><br>
+                  <a class="btn btn-hg btn-success btn-embossed" href="tel:+62216400261">
+                    <i class="fa fa-phone"></i>
+                    Call Faskes
+                  </a>
+                  <br><br>
+                </center>
     </div>
     <!-- JS -->
     <script src="../../js/main.js"></script>
