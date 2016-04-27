@@ -72,7 +72,7 @@ function doctorProfile(nama, gambar, lulusan, tahun) {
 
   // Pop-up
   swal({
-    title: "Dr. " + nama,
+    title: "dr. " + nama,
     imageUrl: "../../img/" + gambar,
     text: giant,
     html: true
