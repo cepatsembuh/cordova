@@ -26,34 +26,59 @@ function getNoAntri(tipe, username, name) {
 
   // Confirmation
   alert("Mohon konfirmasi ulang");
-  var nama = prompt("Masukan nama"),
-  nik = prompt("Masukan NIK:")
-  if (nama != "" || nik.length != 16) {
-    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/pasien/');
-    // Initialize data
-    faskesRef.on("value", function(snapshot) {
-      // Print data
-      alert('No antrian: ' + snapshot.val().antrian);
+  var nama = prompt("Masukan nama");
 
-      // Push data to firebase
-      pasien.push().set({
-        nama: nama,
-        nomor_antrian: snapshot.val().antrian
-      })
+  if (nama != "") {
+    nik = prompt("Masukan NIK:");
+    if (nik.length != 16) {
+      // Firebase
+      var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
 
-      // Updated variables
-      var data = snapshot.val().antrian,
-      one = 1,
-      sum = data + one;
+      // Get data
+      faskesRef.on("value", function(snapshot) {
+        // Print data
+        alert('No antrian: ' + snapshot.val().antrian);
 
-      // Update nomor antrian
-      faskesRef.update({
-        nama: name,
-        antrian: sum
+        // Push data to firebase
+        pasien.push().set({
+          nama: nama,
+          nomor_antrian: snapshot.val().antrian
+        })
       });
-    });
+    };
   } else {
     // Error message
     alert("Input anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
   }
+}
+
+function tempatTidur(tipe, username) {
+  // Firebase
+  brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username);
+
+  // Log
+  wait = 'Getting data..';
+  console.log(wait);
+  alert(wait);
+
+  // Get data
+  brea.on("value", function(snapshot) {
+    data = snapshot.val().tempat_tidur;
+    alert('Jumlah Tempat Tidur: ' + data);
+  })
+}
+
+function doctorProfile(nama, gambar, lulusan, tahun) {
+  // Text
+  giant = "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun;
+  name = "dr. " + nama;
+  image = "../../img/" + gambar;
+
+  // Pop-up
+  swal({
+    title: name,
+    imageUrl: image,
+    text: giant,
+    html: true
+  })
 }

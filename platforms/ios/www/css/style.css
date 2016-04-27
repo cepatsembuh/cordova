@@ -2,12 +2,20 @@
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
 */
+
+/* Index style */
 h3.daftar {
 	color: #90A4AE;
+	font-weight: 100;
+}
+
+#puskesmas a {
+	color: #1ABC9C;
 }
 
 #puskesmas h5 {
   font-size: 30px;
+	font-weight: 300;
   border:4px solid #1ABC9C;
   width: 200px;
   height: 200px;
@@ -16,8 +24,13 @@ h3.daftar {
   border-radius: 50%;
 }
 
+#rsuk a {
+	color: #2C3E50;
+}
+
 #rsuk h5 {
-  font-size: 40px;
+  font-size: 45px;
+	font-weight: 300;
   border:4px solid #2C3E50;
   width: 200px;
   height: 200px;
@@ -26,8 +39,13 @@ h3.daftar {
   border-radius: 50%;
 }
 
+#rsud a {
+	color: #D35400;
+}
+
 #rsud h5 {
-  font-size: 40px;
+  font-size: 45px;
+	font-weight: 300;
   border:4px solid #D35400;
   width: 200px;
   height: 200px;
@@ -36,8 +54,13 @@ h3.daftar {
   border-radius: 50%;
 }
 
+#rss a {
+	color: #2196F3;
+}
+
 #rss h5 {
-  font-size: 40px;
+  font-size: 45px;
+	font-weight: 300;
   border:4px solid #2196F3;
   width: 200px;
   height: 200px;
@@ -56,14 +79,12 @@ h3.daftar {
 	width: 240px;
 }
 
+/* Faskes layout style */
 .faskes {
 	margin-bottom: 15px;
 }
 
-.no-antri {
-  color: #424242;
-}
-
+/* Fasilitas style */
 .icon {
 	text-align: right;
   float: right;
@@ -74,6 +95,11 @@ i.fa-check {
 	color: #009688;
 }
 
+i.fa-times {
+	color: #F44336;
+}
+
+/* Poli style */
 .poli {
  font-size: 1.2em;
 }

@@ -36,8 +36,8 @@ function puskesmas() {
 		// Validate name input
 		alert('Nama is not filled');
 	} else if (nik.length != 16) {
-	    alert('NIK anda tidak valid');
-	  } else {
+	   alert('NIK anda tidak valid');
+	} else {
       // Log input value for testing
       console.log('Nama: ' + nama);
       console.log('NIK: ' + nik);
@@ -49,13 +49,12 @@ function puskesmas() {
         nik: nik,
        lokasi: lokasi
      });
+     switch (lokasi) {
+       default:
+         window.location.href = 'option' + '/available.html';
+         break;
+     };
 
-			// Get lokasi dropdown value
-			switch (lokasi) {
-				default:
-					window.location.href = 'option/' + 'available.html';
-					break;
-		  };
 	}
 };
 
@@ -75,9 +74,11 @@ function rsud() {
 	if (nama == '') {
 		// Validate name input
 		alert('Nama anda tidak valid');
-	} else if (rujuk != 20) {
-	  alert('Nomor r.lengthujuk anda tidak valid');
+	} else if (rujuk.length != 20) {
+    // Validate rujuk number
+	  alert('Nomor rujuk anda tidak valid');
 	} else if (nik.length != 16) {
+    // Validate nik number
 	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
@@ -92,13 +93,12 @@ function rsud() {
         nik: nik,
         lokasi: lokasi
       });
+      switch (lokasi) {
+        default:
+          window.location.href = 'option' + '/available.html';
+          break;
+      };
 
-			// Get lokasi dropdown value
-			switch (lokasi) {
-				default:
-					window.location.href = 'option/' + 'available.html';
-					break;
-		 };
 	}
 };
 
@@ -119,8 +119,10 @@ function rsuk() {
 		// Validate name input
 		alert('Nama anda tidak valid');
 	} else if (rujuk.length != 20) {
+    // Validate rujuk number
 	  alert('Nomor rujuk anda tidak valid');
 	} else if (nik.length != 16) {
+    // Validate nik number
 	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
@@ -135,12 +137,11 @@ function rsuk() {
         nik: nik,
         lokasi: lokasi
       });
-				// Get lokasi dropdown value
-				switch (lokasi) {
-					default:
-						window.location.href = 'option/' + 'available.html';
-						break;
-			 };
+      switch (lokasi) {
+        default:
+          window.location.href = 'option' + '/available.html';
+          break;
+      };
 	}
 };
 
@@ -161,8 +162,10 @@ function rss() {
 		// Validate name input
 		alert('Nama anda tidak valid');
 	} else if (rujuk.length != 20) {
+    // Validate rujuk number
 	  alert('Nomor rujuk anda tidak valid');
 	} else if (nik.length != 16) {
+    // Validate nik number
 	  alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
@@ -177,11 +180,10 @@ function rss() {
         nik: nik,
         lokasi: lokasi
       });
-				// Get lokasi dropdown value
-				switch (lokasi) {
-					default:
-						window.location.href = 'option/' + 'available.html';
-						break;
-			 };
+      switch (lokasi) {
+        default:
+          window.location.href = 'option' + '/available.html';
+          break;
+      };
 	}
 }
