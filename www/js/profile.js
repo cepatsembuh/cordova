@@ -26,23 +26,25 @@ function getNoAntri(tipe, username, name) {
 
   // Confirmation
   alert("Mohon konfirmasi ulang");
-  var nama = prompt("Masukan nama"),
-  nik = prompt("Masukan NIK:");
+  var nama = prompt("Masukan nama");
 
-  if (nama != "" || nik.length != 16) {
-    // Firebase
-    var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
+  if (nama != "") {
+    nik = prompt("Masukan NIK:");
+    if (nik.length != 16) {
+      // Firebase
+      var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
 
-    // Get data
-    faskesRef.on("value", function(snapshot) {
-      // Print data
-      alert('No antrian: ' + snapshot.val().antrian);
+      // Get data
+      faskesRef.on("value", function(snapshot) {
+        // Print data
+        alert('No antrian: ' + snapshot.val().antrian);
 
-      // Push data to firebase
-      pasien.push().set({
-        nama: nama,
-        nomor_antrian: snapshot.val().antrian
-      })
+        // Push data to firebase
+        pasien.push().set({
+          nama: nama,
+          nomor_antrian: snapshot.val().antrian
+        })
+      }
     });
   } else {
     // Error message
