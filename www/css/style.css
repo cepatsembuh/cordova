@@ -6,10 +6,12 @@
 /* Index style */
 h3.daftar {
 	color: #90A4AE;
+	font-weight: lighter;
 }
 
 #puskesmas h5 {
   font-size: 30px;
+	font-weight: lighter;
   border:4px solid #1ABC9C;
   width: 200px;
   height: 200px;
@@ -20,6 +22,7 @@ h3.daftar {
 
 #rsuk h5 {
   font-size: 40px;
+	font-weight: lighter;
   border:4px solid #2C3E50;
   width: 200px;
   height: 200px;
@@ -30,6 +33,7 @@ h3.daftar {
 
 #rsud h5 {
   font-size: 40px;
+	font-weight: lighter;
   border:4px solid #D35400;
   width: 200px;
   height: 200px;
@@ -40,6 +44,7 @@ h3.daftar {
 
 #rss h5 {
   font-size: 40px;
+	font-weight: lighter;
   border:4px solid #2196F3;
   width: 200px;
   height: 200px;
