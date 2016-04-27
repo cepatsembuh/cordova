@@ -56,6 +56,14 @@ function getNoAntri(tipe, username, name) {
   }
 }
 
+function tempatTidur(tipe, username) {
+  brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username);
+  brea.on("value", function(snapshot) {
+    data = snapshot.val().tempat_tidur;
+    alert('Jumlah Tempat Tidur: ' + data);
+  })
+}
+
 function doctorProfile(nama, gambar, lulusan, tahun) {
   giant = "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun;
   swal({
