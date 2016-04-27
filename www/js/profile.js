@@ -58,6 +58,7 @@ function getNoAntri(tipe, username, name) {
 
 function tempatTidur(tipe, username) {
   brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username);
+  console.log('Getting data..');
   brea.on("value", function(snapshot) {
     data = snapshot.val().tempat_tidur;
     alert('Jumlah Tempat Tidur: ' + data);
