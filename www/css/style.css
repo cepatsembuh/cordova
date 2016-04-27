@@ -2,6 +2,8 @@
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
 */
+
+/* Index style */
 h3.daftar {
 	color: #90A4AE;
 }
@@ -56,6 +58,7 @@ h3.daftar {
 	width: 240px;
 }
 
+/* Faskes layout style */
 .faskes {
 	margin-bottom: 15px;
 }
@@ -64,6 +67,7 @@ h3.daftar {
   color: #424242;
 }
 
+/* Fasilitas style */
 .icon {
 	text-align: right;
   float: right;
@@ -78,6 +82,7 @@ i.fa-times {
 	color: #F44336;
 }
 
+/* Poli style */
 .poli {
  font-size: 1.2em;
 }
