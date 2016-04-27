@@ -9,6 +9,10 @@ h3.daftar {
 	font-weight: lighter;
 }
 
+#puskesmas a {
+	color: #1ABC9C;
+}
+
 #puskesmas h5 {
   font-size: 30px;
 	font-weight: lighter;
@@ -18,6 +22,10 @@ h3.daftar {
   padding: 75px 25px;
   margin-bottom: 10px;
   border-radius: 50%;
+}
+
+#rsuk a {
+	color: #2C3E50;
 }
 
 #rsuk h5 {
@@ -31,6 +39,10 @@ h3.daftar {
   border-radius: 50%;
 }
 
+#rsud a {
+	color: #D35400;
+}
+
 #rsud h5 {
   font-size: 40px;
 	font-weight: lighter;
@@ -40,6 +52,10 @@ h3.daftar {
   padding: 75px 25px;
   margin-bottom: 10px;
   border-radius: 50%;
+}
+
+#rss a {
+	color: #2196F3;
 }
 
 #rss h5 {
