@@ -28,19 +28,13 @@ function getNoAntri(tipe, username, name) {
   alert("Mohon konfirmasi ulang");
   var nama = prompt("Masukan nama"),
   nik = prompt("Masukan NIK:");
+
   if (nama != "" || nik.length != 16) {
+    // Firebase
     var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
-    // Initialize data
+
+    // Get data
     faskesRef.on("value", function(snapshot) {
-      /* var data = snapshot.val().antrian,
-      one = 1,
-      sum = data + one;
-
-      faskesRef.update({
-        nama: name,
-        antrian: sum
-      }); */
-
       // Print data
       alert('No antrian: ' + snapshot.val().antrian);
 
@@ -57,10 +51,15 @@ function getNoAntri(tipe, username, name) {
 }
 
 function tempatTidur(tipe, username) {
+  // Firebase
   brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username);
+
+  // Log
   wait = 'Getting data..';
   console.log(wait);
   alert(wait);
+
+  // Get data
   brea.on("value", function(snapshot) {
     data = snapshot.val().tempat_tidur;
     alert('Jumlah Tempat Tidur: ' + data);
@@ -68,12 +67,14 @@ function tempatTidur(tipe, username) {
 }
 
 function doctorProfile(nama, gambar, lulusan, tahun) {
+  // Text
   giant = "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun;
+
+  // Pop-up
   swal({
     title: "Dr. " + nama,
     imageUrl: "../../img/" + gambar,
     text: giant,
     html: true
   })
-  console.log('Gambar: ' + gambar)
 }
