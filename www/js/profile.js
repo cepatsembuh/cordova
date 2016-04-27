@@ -71,11 +71,13 @@ function tempatTidur(tipe, username) {
 function doctorProfile(nama, gambar, lulusan, tahun) {
   // Text
   giant = "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun;
+  name = "dr. " + nama;
+  image = "../../img/" + gambar;
 
   // Pop-up
   swal({
-    title: "dr. " + nama,
-    imageUrl: "../../img/" + gambar,
+    title: name,
+    imageUrl: image,
     text: giant,
     html: true
   })
