@@ -44,8 +44,8 @@ function getNoAntri(tipe, username, name) {
           nama: nama,
           nomor_antrian: snapshot.val().antrian
         })
-      }
-    });
+      });
+    };
   } else {
     // Error message
     alert("Input anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
