@@ -52,16 +52,15 @@ function puskesmas() {
        if (!error) {
           // Handler if data is inserted
        } else {
+         switch (lokasi) {
+           default:
+           window.location.href = 'option' + '/available.html';
+           break
+         };
           alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
        }
      });
 
-			// Get lokasi dropdown value
-			switch (lokasi) {
-				default:
-					window.location.href = 'option/' + 'available.html';
-					break;
-		  };
 	}
 };
 
@@ -103,16 +102,15 @@ function rsud() {
         if (!error) {
             // Handler if data is inserted
         } else {
+          switch (lokasi) {
+            default:
+              window.location.href = 'option' + '/available.html';
+              break
+          };
             alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
         }
       });
 
-			// Get lokasi dropdown value
-			switch (lokasi) {
-				default:
-					window.location.href = 'option/' + 'available.html';
-					break;
-		 };
 	}
 };
 
@@ -153,16 +151,15 @@ function rsuk() {
       }, function(error) {
         if (!error) {
             // Handler if data is inserted
+            switch (lokasi) {
+              default:
+                window.location.href = 'option' + '/available.html';
+                break;
+            };
         } else {
             alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
         }
       });
-				// Get lokasi dropdown value
-				switch (lokasi) {
-					default:
-						window.location.href = 'option/' + 'available.html';
-						break;
-			 };
 	}
 };
 
@@ -203,15 +200,14 @@ function rss() {
       }, function(error) {
         if (!error) {
             // Handler if data is inserted
+            switch (lokasi) {
+              default:
+                window.location.href = 'option' + '/available.html';
+                break;
+            };
         } else {
             alert("Koneksi anda kurang kuat, Mohon coba lagi nanti");
         }
       });
-				// Get lokasi dropdown value
-				switch (lokasi) {
-					default:
-						window.location.href = 'option/' + 'available.html';
-						break;
-			 };
 	}
 }
