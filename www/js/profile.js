@@ -39,11 +39,11 @@ function getNoAntri(tipe, username, name) {
         alert('No antrian: ' + snapshot.val().antrian);
 
         // Push data to firebase
-        pasien.push().set({
+        /* pasien.push().set({
           nama: nama,
           nik: nik,
           nomor_antrian: snapshot.val().antrian
-        })
+        }) */
       });
   } else {
     // Error message
