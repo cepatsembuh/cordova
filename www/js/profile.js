@@ -67,7 +67,7 @@ function tempatTidur(tipe, username) {
     tiga = snapshot.val().tiga;
 
     // Show user the data's
-    alert("Satu: " + satu + "\n" + "Dua: " + dua + "\n" + "Tiga: " + tiga);
+    alert("Kelas I: " + satu + "\n" + "Kelas II: " + dua + "\n" + "Kelas III: " + tiga);
 
     /* swal({
         title: "Jumlah Tempat Tidur",
