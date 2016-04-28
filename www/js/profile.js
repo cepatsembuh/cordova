@@ -46,7 +46,7 @@ function getNoAntri(tipe, username, name) {
       });
   } else {
     // Error message
-    swal("Input anda tidak valid. ", "Anda tidak bisa mendapatkan nomor antrian", "error");
+    alert("Input anda tidak valid. " + "\n" +"Anda tidak bisa mendapatkan nomor antrian");
   }
 }
 
