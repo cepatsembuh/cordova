@@ -52,7 +52,7 @@ function getNoAntri(tipe, username, name) {
 
 function tempatTidur(tipe, username) {
   // Firebase
-  brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username);
+  brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username + '/tempat_tidur');
 
   // Log
   wait = 'Getting data..';
