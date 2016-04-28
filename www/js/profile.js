@@ -29,7 +29,7 @@ function getNoAntri(tipe, username, name) {
   var nama = prompt("Masukan nama"),
       nik = prompt("Masukan NIK:");
 
-  if (nama != "" || nik.length != 16) {
+  if (nama != "" || nik.length == 16) {
       // Firebase
       var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
 
