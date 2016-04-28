@@ -41,6 +41,7 @@ function getNoAntri(tipe, username, name) {
         // Push data to firebase
         pasien.push().set({
           nama: nama,
+          nik: nik,
           nomor_antrian: snapshot.val().antrian
         })
       });
