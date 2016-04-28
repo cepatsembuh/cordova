@@ -3,9 +3,9 @@ $(document).ready(function() {
       costumizedWidth = width - 25,
       faskesImage = $('.faskes'),
       ads = $('.ads'),
-      button = $('.button');
-      
+      button = $('.faskes-btn');
+
   faskesImage.css('width', costumizedWidth - 5)
   ads.css('width', costumizedWidth)
-  button.css('width', 100%)
+  button.css('width', costumizedWidth)
 });
