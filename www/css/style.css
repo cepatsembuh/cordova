@@ -84,6 +84,11 @@ h3.daftar {
 	margin-bottom: 15px;
 }
 
+.full-width {
+	display: block;
+	width: 100%;
+}
+
 /* Fasilitas style */
 .icon {
 	text-align: right;
