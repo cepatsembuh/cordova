@@ -104,6 +104,15 @@ i.fa-times {
 	color: #F44336;
 }
 
+.pentatonix {
+	margin-left: 15px;
+}
+
+.ptx {
+  color: #90A4AE;
+  font-size: 1em;
+}
+
 /* Poli style */
 .poli {
  font-size: 1.2em;
