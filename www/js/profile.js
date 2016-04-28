@@ -35,8 +35,11 @@ function getNoAntri(tipe, username, name) {
 
       // Get data
       faskesRef.on("value", function(snapshot) {
+        // Declare data variables
+        data = snapshot.val().antrian;
+
         // Print data
-        alert('No antrian: ' + snapshot.val().antrian);
+        alert('No antrian: ' + data);
 
         // Push data to firebase
         /* pasien.push().set({
