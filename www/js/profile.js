@@ -78,7 +78,7 @@ function tempatTidur(tipe, username) {
 
 function doctorProfile(nama, gambar, lulusan, tahun) {
   // Text
-  giant = "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun;
+  giant = "Lulusan: " + lulusan + "\n" + "Tahun: " + tahun;
   name = "dr. " + nama;
   image = "../../img/" + gambar;
 
