@@ -64,7 +64,7 @@ function tempatTidur(tipe, username) {
   // Get data
   brea.on("value", function(snapshot) {
     data = snapshot.val().tempat_tidur;
-    text = "<h2>" + data + "</h2>";
+    text = "<h2 style=\"font-weight: 300\">" + data + "</h2>";
     swal({
       title: "Jumlah Tempat Tidur",
       text: text,
