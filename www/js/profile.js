@@ -61,17 +61,18 @@ function tempatTidur(tipe, username) {
 
   // Get data
   brea.on("value", function(snapshot) {
-    var satu = snapshot.val().satu,
-        dua = snapshot.val().dua,
-        tiga = snapshot.val().tiga,
-        text = "<h2 style=\"font-weight: 300\">" + satu + "<br>" + dua + "<br>" + tiga + "</h2>";
+    satu = snapshot.val().satu;
+    dua = snapshot.val().dua;
+    tiga = snapshot.val().tiga;
 
-    swal({
-      title: "Jumlah Tempat Tidur",
-      text: text,
-      type: "success",
-      html: true
-    })
+    alert("Satu: " + satu + "\n" + "Dua: " + dua + "\n" + "Tiga: " + tiga);
+
+    /* swal({
+        title: "Jumlah Tempat Tidur",
+        text: text,
+        type: "success",
+        html: true
+      }) */
   })
 }
 
