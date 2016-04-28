@@ -83,10 +83,11 @@ function doctorProfile(nama, gambar, lulusan, tahun) {
   image = "../../img/" + gambar;
 
   // Pop-up
-  swal({
+  alert(name + "\n" + giant);
+  /* swal({
     title: name,
     imageUrl: image,
     text: giant,
     html: true
-  })
+  }) */
 }
