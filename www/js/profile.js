@@ -59,7 +59,7 @@ function tempatTidur(tipe, username) {
   // Log
   wait = 'Getting data..';
   console.log(wait);
-  alert(wait);
+  swal(wait);
 
   // Get data
   brea.on("value", function(snapshot) {
