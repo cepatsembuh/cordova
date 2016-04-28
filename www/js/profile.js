@@ -61,10 +61,12 @@ function tempatTidur(tipe, username) {
 
   // Get data
   brea.on("value", function(snapshot) {
+    // Data's
     satu = snapshot.val().satu;
     dua = snapshot.val().dua;
     tiga = snapshot.val().tiga;
 
+    // Show user the data's
     alert("Satu: " + satu + "\n" + "Dua: " + dua + "\n" + "Tiga: " + tiga);
 
     /* swal({
