@@ -113,6 +113,10 @@ i.fa-times {
   font-size: 1em;
 }
 
+.badge {
+	float: right;
+}
+
 /* Poli style */
 .poli {
  font-size: 1.2em;
