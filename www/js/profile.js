@@ -42,11 +42,11 @@ function getNoAntri(tipe, username, name) {
         alert('No antrian: ' + data);
 
         // Push data to firebase
-        /* pasien.push().set({
+        pasien.push().set({
           nama: nama,
           nik: nik,
-          nomor_antrian: snapshot.val().antrian
-        }) */
+          nomor_antrian: data
+        })
       });
   } else {
     // Error message
