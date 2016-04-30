@@ -29,25 +29,31 @@ function getNoAntri(tipe, username, name) {
   var nama = prompt("Masukan nama"),
       nik = prompt("Masukan NIK:");
 
-  if (nama != "" || nik.length == 16) {
+  if (nama != "") {
       // Firebase
       var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
 
-      // Get data
-      faskesRef.on("value", function(snapshot) {
-        // Declare data variables
-        data = snapshot.val().antrian;
+      if (nik.length == 16) {
+        'use strict';
+        // Get data
+        faskesRef.on("value", function(snapshot) {
+            // Declare data variables
+            data = snapshot.val().antrian;
 
-        // Print data
-        alert('No antrian: ' + data);
+            // Print data
+            alert('No antrian: ' + data);
+          })
+        } else {
+          // Error message
+          alert("Input anda tidak valid. " + "\n" +"Anda tidak bisa mendapatkan nomor antrian");
+        }
 
         // Push data to firebase
         /* pasien.push().set({
           nama: nama,
           nik: nik,
           nomor_antrian: data
-        }) */
-      });
+        }) */      
   } else {
     // Error message
     alert("Input anda tidak valid. " + "\n" +"Anda tidak bisa mendapatkan nomor antrian");
