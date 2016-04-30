@@ -96,12 +96,6 @@ h3.daftar {
   font-size: 1.3em;
 }
 
-.badge {
-	background-color: #9B59B6;
-	width: 50px;
-	font-size: 1em;
-}
-
 i.fa-check {
 	color: #009688;
 }
@@ -121,6 +115,9 @@ i.fa-times {
 
 .badge {
 	float: right;
+	background-color: #9B59B6;
+	width: 50px;
+	font-size: 1em;
 }
 
 /* Poli style */
