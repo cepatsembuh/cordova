@@ -6,7 +6,7 @@
 /* Index style */
 h3.daftar {
 	color: #90A4AE;
-	font-weight: 100;
+	font-weight: 400;
 }
 
 #puskesmas a {
@@ -84,6 +84,11 @@ h3.daftar {
 	margin-bottom: 15px;
 }
 
+.full-width {
+	display: block;
+	width: 100%;
+}
+
 /* Fasilitas style */
 .icon {
 	text-align: right;
@@ -97,6 +102,19 @@ i.fa-check {
 
 i.fa-times {
 	color: #F44336;
+}
+
+.pentatonix {
+	margin-left: 15px;
+}
+
+.ptx {
+  color: #90A4AE;
+  font-size: 1em;
+}
+
+.badge {
+	float: right;
 }
 
 /* Poli style */

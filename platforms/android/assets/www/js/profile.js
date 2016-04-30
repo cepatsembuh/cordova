@@ -26,35 +26,37 @@ function getNoAntri(tipe, username, name) {
 
   // Confirmation
   alert("Mohon konfirmasi ulang");
-  var nama = prompt("Masukan nama");
+  var nama = prompt("Masukan nama"),
+      nik = prompt("Masukan NIK:");
 
-  if (nama != "") {
-    nik = prompt("Masukan NIK:");
-    if (nik.length != 16) {
+  if (nama != "" || nik.length == 16) {
       // Firebase
       var pasien = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + "/faskes/" + username + '/pasien/');
 
       // Get data
       faskesRef.on("value", function(snapshot) {
+        // Declare data variables
+        data = snapshot.val().antrian;
+
         // Print data
-        alert('No antrian: ' + snapshot.val().antrian);
+        alert('No antrian: ' + data);
 
         // Push data to firebase
         pasien.push().set({
           nama: nama,
-          nomor_antrian: snapshot.val().antrian
+          nik: nik,
+          nomor_antrian: data
         })
       });
-    };
   } else {
     // Error message
-    alert("Input anda tidak valid. \n Anda tidak bisa mendapatkan nomor antrian");
+    alert("Input anda tidak valid. " + "\n" +"Anda tidak bisa mendapatkan nomor antrian");
   }
 }
 
 function tempatTidur(tipe, username) {
   // Firebase
-  brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username);
+  brea = new Firebase("https://cepatsembuh.firebaseio.com/" + tipe + '/faskes/' + username + '/tempat_tidur');
 
   // Log
   wait = 'Getting data..';
@@ -63,22 +65,22 @@ function tempatTidur(tipe, username) {
 
   // Get data
   brea.on("value", function(snapshot) {
-    data = snapshot.val().tempat_tidur;
-    alert('Jumlah Tempat Tidur: ' + data);
+    // Data's
+    satu = snapshot.val().satu;
+    dua = snapshot.val().dua;
+    tiga = snapshot.val().tiga;
+
+    // Show user the data's
+    alert("Kelas I: " + satu + "\n" + "Kelas II: " + dua + "\n" + "Kelas III: " + tiga);    
   })
 }
 
 function doctorProfile(nama, gambar, lulusan, tahun) {
   // Text
-  giant = "Lulusan: " + lulusan + "<br>" + "Tahun: " + tahun;
+  giant = "Lulusan: " + lulusan + "\n" + "Tahun: " + tahun;
   name = "dr. " + nama;
   image = "../../img/" + gambar;
 
   // Pop-up
-  swal({
-    title: name,
-    imageUrl: image,
-    text: giant,
-    html: true
-  })
+  alert(name + "\n" + giant);
 }
