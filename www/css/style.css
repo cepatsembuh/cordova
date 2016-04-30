@@ -106,11 +106,13 @@ i.fa-times {
 
 .pentatonix {
 	margin-left: 15px;
+	font-weight: bold;
 }
 
 .ptx {
   color: #90A4AE;
   font-size: 1em;
+	font-weight: bold;
 }
 
 .badge {
