@@ -43,6 +43,12 @@ function getNoAntri(tipe, username, name) {
             // Print data
             alert('No antrian: ' + data);
           })
+
+          // Push data to firebase
+          pasien.push().set({
+            nama: nama,
+            nik: nik
+          })
         } else {
           // Error message
           alert("Input anda tidak valid. " + "\n" +"Anda tidak bisa mendapatkan nomor antrian");
