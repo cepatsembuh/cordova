@@ -17,6 +17,6 @@
     <preference name="SplashScreenDelay" value="3000" />
     <icon src="www/img/icon.png" />
     <platform name="android">
-        <splash src="img/splash.png" />
+        <splash src="www/img/splash.png" />
     </platform>
 </widget>
