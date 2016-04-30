@@ -42,11 +42,11 @@ function getNoAntri(tipe, username, name) {
         alert('No antrian: ' + data);
 
         // Push data to firebase
-        pasien.push().set({
+        /* pasien.push().set({
           nama: nama,
           nik: nik,
           nomor_antrian: data
-        })
+        }) */
       });
   } else {
     // Error message
@@ -71,7 +71,7 @@ function tempatTidur(tipe, username) {
     tiga = snapshot.val().tiga;
 
     // Show user the data's
-    alert("Kelas I: " + satu + "\n" + "Kelas II: " + dua + "\n" + "Kelas III: " + tiga);    
+    alert("Kelas I: " + satu + "\n" + "Kelas II: " + dua + "\n" + "Kelas III: " + tiga);
   })
 }
 
