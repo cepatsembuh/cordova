@@ -96,6 +96,11 @@ h3.daftar {
   font-size: 1.3em;
 }
 
+.badge {
+	background-color: #9B59B6;
+	width: 50px;
+}
+
 i.fa-check {
 	color: #009688;
 }
