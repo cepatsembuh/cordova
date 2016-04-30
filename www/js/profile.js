@@ -71,14 +71,7 @@ function tempatTidur(tipe, username) {
     tiga = snapshot.val().tiga;
 
     // Show user the data's
-    alert("Kelas I: " + satu + "\n" + "Kelas II: " + dua + "\n" + "Kelas III: " + tiga);
-
-    /* swal({
-        title: "Jumlah Tempat Tidur",
-        text: text,
-        type: "success",
-        html: true
-      }) */
+    alert("Kelas I: " + satu + "\n" + "Kelas II: " + dua + "\n" + "Kelas III: " + tiga);    
   })
 }
 
@@ -90,10 +83,4 @@ function doctorProfile(nama, gambar, lulusan, tahun) {
 
   // Pop-up
   alert(name + "\n" + giant);
-  /* swal({
-    title: name,
-    imageUrl: image,
-    text: giant,
-    html: true
-  }) */
 }
