@@ -115,6 +115,11 @@ i.fa-times {
 	font-weight: bold;
 }
 
+.btn-primary {
+	background-color: #16A085;
+	color: #fff;
+}
+
 .badge {
 	float: right;
 	background-color: #9B59B6;
