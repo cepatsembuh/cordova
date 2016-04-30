@@ -49,11 +49,11 @@ function getNoAntri(tipe, username, name) {
         }
 
         // Push data to firebase
-        /* pasien.push().set({
-          nama: nama,
-          nik: nik,
-          nomor_antrian: data
-        }) */      
+        // pasien.push().set({
+        //   nama: nama,
+        //   nik: nik,
+        //   nomor_antrian: data
+        // })
   } else {
     // Error message
     alert("Input anda tidak valid. " + "\n" +"Anda tidak bisa mendapatkan nomor antrian");
