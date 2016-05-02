@@ -89,6 +89,10 @@ h3.daftar {
 	width: 100%;
 }
 
+.faskes-desc {
+	font-weight: 300;
+}
+
 /* Fasilitas style */
 .icon {
 	text-align: right;
