@@ -45,10 +45,10 @@ function getNoAntri(tipe, username, name) {
           })
 
           // Push data to firebase
-          pasien.push().set({
-            nama: nama,
-            nik: nik
-          })
+          // pasien.push().set({
+          //   nama: nama,
+          //   nik: nik
+          // })
         } else {
           // Error message
           alert("Input anda tidak valid. " + "\n" +"Anda tidak bisa mendapatkan nomor antrian");
