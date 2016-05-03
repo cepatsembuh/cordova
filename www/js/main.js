@@ -50,6 +50,9 @@ function puskesmas() {
        lokasi: lokasi
      });
      switch (lokasi) {
+       case "kelapa-gading":
+         window.location.href = 'option' + '/kelapa-gading.html';
+         break;
        default:
          window.location.href = 'option' + '/available.html';
          break;
