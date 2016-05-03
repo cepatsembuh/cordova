@@ -44,7 +44,7 @@ function puskesmas() {
       console.log('Lokasi: ' + lokasi);
 
      switch (lokasi) {
-      case "kelapa-gading":
+      case "kelapa_gading":
          window.location.href = 'option' + '/kelapa-gading.html';
          break;
       case "cilincing":
@@ -176,10 +176,6 @@ function puskesmas() {
  			case "kep_seribu_utara":
  					window.location.href = 'option/' + 'kep_seribu_utara.html';
  					break;
-
-       default:
-         window.location.href = 'option' + '/available.html';
-         break;
      };
 
 	}
