@@ -43,12 +43,6 @@ function puskesmas() {
       console.log('NIK: ' + nik);
       console.log('Lokasi: ' + lokasi);
 
-      // Push input value to firebase
-      pasien.push().set({
-        nama: nama,
-        nik: nik,
-       lokasi: lokasi
-     });
      switch (lokasi) {
       case "kelapa-gading":
          window.location.href = 'option' + '/kelapa-gading.html';
@@ -219,13 +213,6 @@ function rsud() {
       console.log('NIK: ' + nik);
       console.log('Lokasi: ' + lokasi);
 
-      // Push input value to firebase
-      pasien.push().set({
-        nama: nama,
-        no_rujuk: rujuk,
-        nik: nik,
-        lokasi: lokasi
-      });
       switch (lokasi) {
         default:
           window.location.href = 'option' + '/available.html';
@@ -263,13 +250,6 @@ function rsuk() {
       console.log('NIK: ' + nik);
       console.log('Lokasi: ' + lokasi);
 
-      // Push input value to firebase
-      pasien.push().set({
-        nama: nama,
-        no_rujuk: rujuk,
-        nik: nik,
-        lokasi: lokasi
-      });
       switch (lokasi) {
         default:
           window.location.href = 'option' + '/available.html';
@@ -306,13 +286,6 @@ function rss() {
       console.log('NIK: ' + nik);
       console.log('Lokasi: ' + lokasi);
 
-      // Push input value to firebase
-      pasien.push().set({
-        nama: nama,
-        no_rujuk: rujuk,
-        nik: nik,
-        lokasi: lokasi
-      });
       switch (lokasi) {
         default:
           window.location.href = 'option' + '/available.html';
