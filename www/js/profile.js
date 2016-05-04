@@ -10,12 +10,12 @@ document.addEventListener('deviceready', function () {
 
 // Not available faskes
 $('#not-available').on('click', function() {
-	alert('Faskes is not available')
+	alert('Faskes is not available.')
 })
 
 // Get no antrian function
 function getNoAntri(tipe, username, name) {
-  alert('Fitur nomor antrian belum selesai, tim kami sedang menyelesaikannya')
+  alert('Fitur nomor antrian belum selesai, tim kami sedang menyelesaikannya.')
 }
 
 function tempatTidur(tipe, username) {
