@@ -39,11 +39,11 @@ function tempatTidur(tipe, username) {
   })
 }
 
-function doctorProfile(nama, gambar, lulusan, tahun) {
+function doctorProfile(nama, lulusan, tahun) {
   // Text
   giant = 'Lulusan: ' + lulusan + '\n' + 'Tahun: ' + tahun;
   name = 'dr. ' + nama;
-  image = '../../img/' + gambar;
+  // image = '../../img/' + gambar;
 
   // Pop-up
   alert(name + '\n' + giant);
