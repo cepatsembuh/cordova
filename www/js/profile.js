@@ -15,48 +15,7 @@ $('#not-available').on('click', function() {
 
 // Get no antrian function
 function getNoAntri(tipe, username, name) {
-  // Define firebase URL
-  var faskesRef = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
-
-  // Log firebase URL
-  console.log('Url :' + 'https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
-
-  // Warn user that this fiture need internet
-	alert('Fitur ini membutuhkan internet untuk mengambil data');
-
-  // Confirmation
-  alert('Mohon konfirmasi ulang');
-  var nama = prompt('Masukan nama'),
-      nik = prompt('Masukan NIK:');
-
-  if (nama != '') {
-      // Firebase
-      var pasien = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/pasien/');
-
-      if (nik.length == 16) {
-        'use strict';
-        // Get data
-        faskesRef.on('value', function(snapshot) {
-            // Declare data variables
-            data = snapshot.val().antrian;
-
-            // Print data
-            alert('No antrian: ' + data);
-          })
-
-          // Push data to firebase
-          // pasien.push().set({
-          //   nama: nama,
-          //   nik: nik
-          // })
-        } else {
-          // Error message
-          alert('Input anda tidak valid. ' + '\n' +'Anda tidak bisa mendapatkan nomor antrian');
-        }
-  } else {
-    // Error message
-    alert('Input anda tidak valid. ' + '\n' +'Anda tidak bisa mendapatkan nomor antrian');
-  }
+  alert('Fitur nomor antrian belum selesai, tim kami sedang menyelesaikannya')
 }
 
 function tempatTidur(tipe, username) {
@@ -89,3 +48,49 @@ function doctorProfile(nama, gambar, lulusan, tahun) {
   // Pop-up
   alert(name + '\n' + giant);
 }
+
+// getNoAntri code
+/*
+// Define firebase URL
+var faskesRef = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
+
+// Log firebase URL
+console.log('Url :' + 'https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
+
+// Warn user that this fiture need internet
+alert('Fitur ini membutuhkan internet untuk mengambil data');
+
+// Confirmation
+alert('Mohon konfirmasi ulang');
+var nama = prompt('Masukan nama'),
+    nik = prompt('Masukan NIK:');
+
+if (nama != '') {
+    // Firebase
+    var pasien = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/pasien/');
+
+    if (nik.length == 16) {
+      'use strict';
+      // Get data
+      faskesRef.on('value', function(snapshot) {
+          // Declare data variables
+          data = snapshot.val().antrian;
+
+          // Print data
+          alert('No antrian: ' + data);
+        })
+
+        // Push data to firebase
+        // pasien.push().set({
+        //   nama: nama,
+        //   nik: nik
+        // })
+      } else {
+        // Error message
+        alert('Input anda tidak valid. ' + '\n' +'Anda tidak bisa mendapatkan nomor antrian');
+      }
+} else {
+  // Error message
+  alert('Input anda tidak valid. ' + '\n' +'Anda tidak bisa mendapatkan nomor antrian');
+}
+*/
