@@ -60,7 +60,7 @@ function puskesmas() {
  					window.location.href = 'option/' + 'penjaringan.html';
  					break;
  			case "tanjung_priok":
- 					window.location.href = 'option/' + 'tanjung_priok.html';
+ 					window.location.href = 'option/' + 'priok.html';
  					break;
  			case "cengkareng":
  					window.location.href = 'option/' + 'cengkareng.html';
