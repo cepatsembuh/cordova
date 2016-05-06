@@ -15,7 +15,10 @@ $('#not-available').on('click', function() {
 
 // Get no antrian function
 function getNoAntri(tipe, username, name) {
-  alert('Fitur nomor antrian belum selesai, tim kami sedang menyelesaikannya.')
+  breanna = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
+  breanna.on("value", function(snapshot) {
+    alert('Nomor Antrian: ' + snapshot.val().antrian)
+  })
 }
 
 function tempatTidur(tipe, username) {
