@@ -15,7 +15,10 @@ $('#not-available').on('click', function() {
 
 // Get no antrian function
 function getNoAntri(tipe, username, name) {
+  // Firebase
   breanna = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
+
+  // Get data
   breanna.on("value", function(snapshot) {
     alert('Nomor Antrian: ' + snapshot.val().antrian)
   })
