@@ -21,10 +21,15 @@ function getNoAntri(tipe, username, name) {
   // Make sure the connection is OK
   alert('Pastikan koneksi anda stabil')
 
+  get = 'Getting data..';
+  console.log(get);
+
   // Get data
   breanna.on("value", function(snapshot) {
     alert('Nomor Antrian: ' + snapshot.val().antrian)
   })
+
+  console.log('Data is ready');
 }
 
 function tempatTidur(tipe, username) {
