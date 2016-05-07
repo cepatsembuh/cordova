@@ -14,7 +14,7 @@ $('#not-available').on('click', function() {
 function getNoAntri(tipe, username, name) {
   breanna = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
 
-  alert('Pastikan koneksi anda stabil') // Make sure the connection is OK
+  alert('Pastikan koneksi anda stabil'); // Make sure the connection is OK
 
   get = 'Getting data..';
   console.log(get);
