@@ -177,8 +177,7 @@ function puskesmas() {
  					window.location.href = 'option/' + 'kep_seribu_utara.html';
  					break;
      };
-
-	}
+   }
 };
 
 // RSUD form action
@@ -214,8 +213,7 @@ function rsud() {
           window.location.href = 'option' + '/available.html';
           break;
       };
-
-	}
+    }
 };
 
 // RSUK form action
