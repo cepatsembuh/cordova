@@ -20,13 +20,13 @@ function getNoAntri(tipe, username, name) {
   get = 'Getting data..';
   console.log(get);
 
-  antri.on("value", function(snapshot) {
+  breanna.on("value", function(snapshot) {
     alert('Nomor Antrian: ' + snapshot.val().antrian)
   })
 
   antri.transaction(function(currentRank) {
      // If /users/fred/rank has never been set, currentRank will be null.
-     return currentRank+1;
+     return currentRank + 1;
   });
 
   console.log('Data is ready');
