@@ -20,13 +20,16 @@ function getNoAntri(tipe, username, name) {
   get = 'Getting data..';
   console.log(get);
 
-  antri.on("value", function(snapshot) {
-    alert('Nomor Antrian: ' + snapshot.val())
-  })
-
   antri.transaction(function(currentRank) {
-     return currentRank + 1;
+      return currentRank + 1;
+  }, function(error, committed, snapshot) {
+      if (error) {
+          alert('Koneksi anda tidak stabil' + error);
+      } else {
+          alert('Nomor Antrian: ' + snapshot.val());
+      }
   });
+
 
   console.log('Data is ready');
 }
