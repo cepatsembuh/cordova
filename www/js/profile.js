@@ -24,8 +24,7 @@ function getNoAntri(tipe, username, name) {
     alert('Nomor Antrian: ' + snapshot.val().antrian)
   })
 
-  antri.transaction(function(currentRank) {
-     // If /users/fred/rank has never been set, currentRank will be null.
+  antri.transaction(function(currentRank) {     
      return currentRank + 1;
   });
 
