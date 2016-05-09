@@ -30,7 +30,7 @@ function puskesmas() {
 	// Input value
 	var nama = $('#nama').val(),
 	    nik = $('#nik').val(),
-	    lokasi = $('#lokasi').val ();
+	    lokasi = $('#lokasi').val();
 
 	if (nama == '') {
 		// Validate name input
