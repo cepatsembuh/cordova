@@ -12,25 +12,22 @@ $('#not-available').on('click', function() {
 })
 
 function getNoAntri(tipe, username, name) {
-  breanna = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username);
+  breanna = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
+  antri = new Firebase("https://cepatsembuh.firebaseio.com/puskesmas/faskes/kelapa_gading/antrian");
 
   alert('Pastikan koneksi anda stabil'); // Make sure the connection is OK
 
   get = 'Getting data..';
   console.log(get);
 
-  breanna.on("value", function(snapshot) {
-    var data = snapshot.val().antrian,
-        one = 1,
-        sum = data + one;
-
-    breanna.update({
-      antrian: sum,
-      nama: name
-    });
-
-    alert('Nomor Antrian: ' + snapshot.val().antrian)
+  antri.on("value", function(snapshot) {
+    alert('Nomor Antrian: ' + snapshot.val())
   })
+
+  antri.transaction(function(currentRank) {
+     // If /users/fred/rank has never been set, currentRank will be null.
+     return currentRank+1;
+  });
 
   console.log('Data is ready');
 }
