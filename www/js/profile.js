@@ -20,11 +20,11 @@ function getNoAntri(tipe, username, name) {
   get = 'Getting data..';
   console.log(get);
 
-  breanna.on("value", function(snapshot) {
-    alert('Nomor Antrian: ' + snapshot.val().antrian)
+  antri.on("value", function(snapshot) {
+    alert('Nomor Antrian: ' + snapshot.val())
   })
 
-  antri.transaction(function(currentRank) {     
+  antri.transaction(function(currentRank) {
      return currentRank + 1;
   });
 
