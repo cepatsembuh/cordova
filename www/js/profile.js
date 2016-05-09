@@ -20,6 +20,15 @@ function getNoAntri(tipe, username, name) {
   console.log(get);
 
   breanna.on("value", function(snapshot) {
+    var data = snapshot.val().antrian,
+        one = 1,
+        sum = data + one;
+
+    breanna.update({
+      antrian: sum,
+      nama: name
+    });
+
     alert('Nomor Antrian: ' + snapshot.val().antrian)
   })
 
