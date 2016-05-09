@@ -21,7 +21,7 @@ function getNoAntri(tipe, username, name) {
   console.log(get);
 
   antri.on("value", function(snapshot) {
-    alert('Nomor Antrian: ' + snapshot.val())
+    alert('Nomor Antrian: ' + snapshot.val().antrian)
   })
 
   antri.transaction(function(currentRank) {
