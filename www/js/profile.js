@@ -27,11 +27,14 @@ function getNoAntri(tipe, username, name) {
     alert('Input tidak valid');
   } else {
     antri.transaction(function(currentRank) {
-        return currentRank + 1;
+        currentData = currentRank + 1;
+
         breanna.push().set({
           nama: nama,
-          nik: nik,          
+          nik: nik,
         })
+        
+        return currentData;
     }, function(error, committed, snapshot) {
         if (error) {
             alert('Koneksi anda tidak stabil' + error);
