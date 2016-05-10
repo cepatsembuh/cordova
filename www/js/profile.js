@@ -39,7 +39,7 @@ function getNoAntri(tipe, username, name) {
             pasien.push().set({
               nama: nama,
               nik: nik,
-              no_antri: currentData
+              no_antri: snapshot.val()
             })
         }
     });
