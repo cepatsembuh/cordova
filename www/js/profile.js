@@ -32,8 +32,9 @@ function getNoAntri(tipe, username, name) {
         breanna.push().set({
           nama: nama,
           nik: nik,
+          no_antri: currentData
         })
-        
+
         return currentData;
     }, function(error, committed, snapshot) {
         if (error) {
