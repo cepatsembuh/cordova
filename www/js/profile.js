@@ -20,16 +20,26 @@ function getNoAntri(tipe, username, name) {
   get = 'Getting data..';
   console.log(get);
 
-  antri.transaction(function(currentRank) {
-      return currentRank + 1;
-  }, function(error, committed, snapshot) {
-      if (error) {
-          alert('Koneksi anda tidak stabil' + error);
-      } else {
-          alert('Nomor Antrian: ' + snapshot.val());
-      }
-  });
+  var nama = prompt("Nama: "),
+      nik = prompt("NIK: ")
 
+  if (nama === '' || nik.length != 16) {
+    alert('Input tidak valid');
+  } else {
+    antri.transaction(function(currentRank) {
+        return currentRank + 1;
+        breanna.push().set({
+          nama: nama,
+          nik: nik,          
+        })
+    }, function(error, committed, snapshot) {
+        if (error) {
+            alert('Koneksi anda tidak stabil' + error);
+        } else {
+            alert('Nomor Antrian: ' + snapshot.val());
+        }
+    });
+  }
 
   console.log('Data is ready');
 }
