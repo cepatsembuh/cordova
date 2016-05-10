@@ -14,6 +14,7 @@ $('#not-available').on('click', function() {
 function getNoAntri(tipe, username, name) {
   breanna = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
   antri = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
+  pasien = breanna.child("pasien");
 
   alert('Pastikan koneksi anda stabil'); // Make sure the connection is OK
 
@@ -29,7 +30,7 @@ function getNoAntri(tipe, username, name) {
     antri.transaction(function(currentRank) {
         currentData = currentRank + 1;
 
-        breanna.push().set({
+        pasien.push().set({
           nama: nama,
           nik: nik,
           no_antri: currentData
