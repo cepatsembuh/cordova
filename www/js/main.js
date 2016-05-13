@@ -36,6 +36,7 @@ function puskesmas() {
 		// Validate name input
 		alert('Nama is not filled');
 	} else if (nik.length != 16) {
+      // Validate nik input
 	   alert('NIK anda tidak valid');
 	} else {
       // Log input value for testing
