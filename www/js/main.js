@@ -44,6 +44,7 @@ function puskesmas() {
       console.log('Lokasi: ' + lokasi);
 
      switch (lokasi) {
+      //  Jakarta Utara
       case "kelapa_gading":
          window.location.href = 'option' + '/kelapa-gading.html';
          break;
@@ -62,6 +63,7 @@ function puskesmas() {
  			case "tanjung_priok":
  					window.location.href = 'option/' + 'priok.html';
  					break;
+      // Jakarta Barat
       case "cengkareng":
           window.location.href = 'option/' + 'cengkareng.html'
      };
