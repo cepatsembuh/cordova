@@ -12,8 +12,8 @@ $('#not-available').on('click', function() {
 })
 
 function getNoAntri(tipe, username, name) {
-  breanna = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
-  antri = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
+  breanna = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
+  antri = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
   pasien = breanna.child("pasien");
 
   alert('Pastikan koneksi anda stabil'); // Make sure the connection is OK
@@ -49,7 +49,7 @@ function getNoAntri(tipe, username, name) {
 }
 
 function tempatTidur(tipe, username) {
-  brea = new Firebase('https://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/tempat_tidur');
+  brea = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/tempat_tidur');
 
   wait = 'Getting data..';
   console.log(wait);

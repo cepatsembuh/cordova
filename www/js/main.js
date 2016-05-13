@@ -23,7 +23,7 @@ function selectFaskes(username) {
 // Puskesmas form action
 function puskesmas() {
 	// Firebase
-  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+  var ref = new Firebase("http://cepatsembuh.firebaseio.com/"),
 	    puskesmas = ref.child("puskesmas"),
 	    pasien = puskesmas.child("pasien");
 
@@ -69,7 +69,7 @@ function puskesmas() {
 // RSUD form action
 function rsud() {
 	// Firebase
-  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+  var ref = new Firebase("http://cepatsembuh.firebaseio.com/"),
 	    rsud = ref.child("rsud"),
 	    pasien = rsud.child("pasien");
 
@@ -105,7 +105,7 @@ function rsud() {
 // RSUK form action
 function rsuk() {
 	// Firebase
-  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+  var ref = new Firebase("http://cepatsembuh.firebaseio.com/"),
 	    rsuk = ref.child("rsuk"),
 	    pasien = rsuk.child("pasien");
 
@@ -141,7 +141,7 @@ function rsuk() {
 // RSS form action
 function rss() {
 	// Firebase
-  var ref = new Firebase("https://cepatsembuh.firebaseio.com/"),
+  var ref = new Firebase("http://cepatsembuh.firebaseio.com/"),
 	    rss = ref.child("rss"),
 	    pasien = rss.child("pasien");
 
