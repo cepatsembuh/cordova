@@ -46,7 +46,7 @@ function puskesmas() {
      switch (lokasi) {
       //  Jakarta Utara
       case "kelapa_gading":
-         window.location.href = 'option' + '/kelapa-gading.html';
+         window.location.href = 'option/' + 'kelapa-gading.html';
          break;
       case "cilincing":
  			 		window.location.href = 'option/' + 'cilincing.html';
