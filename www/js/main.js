@@ -62,6 +62,8 @@ function puskesmas() {
  			case "tanjung_priok":
  					window.location.href = 'option/' + 'priok.html';
  					break;
+      case "cengkareng":
+          window.location.href = 'option/' + 'cengkareng.html'
      };
    }
 };
