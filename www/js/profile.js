@@ -22,7 +22,7 @@ function getNoAntri(tipe, username, name) {
   console.log(get);
 
   var nama = prompt("Nama: "),
-      nik = prompt("NIK: ")
+      nik = prompt("NIK: ");
 
   if (nama === '' || nik.length != 16) {
     alert('Input tidak valid');
