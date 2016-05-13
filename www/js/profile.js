@@ -16,37 +16,38 @@ function getNoAntri(tipe, username, name) {
   antri = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
   pasien = breanna.child("pasien");
 
-  alert('Pastikan koneksi anda stabil'); // Make sure the connection is OK
-
-  get = 'Getting data..';
-  console.log(get);
-
-  var nama = prompt("Nama: "),
-      nik = prompt("NIK: ");
-
-  if (nama === '' || nik.length != 16) {
-    alert('Input tidak valid');
+  if (navigator.online) {
+    alert('Anda tidak online');
   } else {
-    antri.transaction(function(currentRank) {
-        currentData = currentRank + 1;
+    get = 'Getting data..';
+    console.log(get);
 
-        return currentData;
-    }, function(error, committed, snapshot) {
-        nomor = Number(snapshot.val());
-        if (error) {
-            alert('Koneksi anda tidak stabil' + error);
-        } else {
-            alert('Nomor Antrian: ' + snapshot.val());
-            nomor.push().set({
-              nama: nama,
-              nik: nik,
-              no_antri: snapshot.val()
-            })
-        }
-    });
+    var nama = prompt("Nama: "),
+        nik = prompt("NIK: ");
+
+    if (nama === '' || nik.length != 16) {
+      alert('Input tidak valid');
+    } else {
+      antri.transaction(function(currentRank) {
+          currentData = currentRank + 1;
+
+          return currentData;
+      }, function(error, committed, snapshot) {
+          nomor = Number(snapshot.val());
+          if (error) {
+              alert('Koneksi anda tidak stabil' + error);
+          } else {
+              alert('Nomor Antrian: ' + snapshot.val());
+              nomor.push().set({
+                nama: nama,
+                nik: nik,
+                no_antri: snapshot.val()
+              })
+          }
+      });
+    }
+    console.log('Data is ready');
   }
-
-  console.log('Data is ready');
 }
 
 function tempatTidur(tipe, username) {
