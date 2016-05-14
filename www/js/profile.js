@@ -33,12 +33,11 @@ function getNoAntri(tipe, username, name) {
 
           return currentData;
       }, function(error, committed, snapshot) {
-          nomor = Number(snapshot.val());
           if (error) {
               alert('Koneksi anda tidak stabil' + error);
           } else {
               alert('Nomor Antrian: ' + snapshot.val());
-              nomor.push().set({
+              pasien.push().set({
                 nama: nama,
                 nik: nik,
                 no_antri: snapshot.val()
