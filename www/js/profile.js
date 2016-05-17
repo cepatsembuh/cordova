@@ -21,8 +21,7 @@ function getNoAntri(tipe, username, name) {
   month = date.getMonth() + 1,
   day = date.getDate(),
   right_now = year + '-' + month + '-' + day,
-  today = ref.child(right_now),
-  nomor = new Firebase("https://dr-iqbal.firebaseio.com/no_antrian");
+  today = breanna.child(right_now),
 
   if (navigator.online) {
     alert('Anda tidak online');
@@ -45,7 +44,7 @@ function getNoAntri(tipe, username, name) {
               alert('Koneksi anda tidak stabil' + error);
           } else {
               alert('Nomor Antrian: ' + snapshot.val());
-              pasien.push().set({
+              today.push().set({
                 nama: nama,
                 nik: nik,
                 no_antri: snapshot.val()
