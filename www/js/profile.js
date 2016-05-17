@@ -14,7 +14,15 @@ $('#not-available').on('click', function() {
 function getNoAntri(tipe, username, name) {
   breanna = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
   antri = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
-  pasien = breanna.child("pasien");
+  pasien = breanna.child("pasien"),
+  // Date
+  date = new Date(),
+  year = date.getFullYear(),
+  month = date.getMonth() + 1,
+  day = date.getDate(),
+  right_now = year + '-' + month + '-' + day,
+  today = ref.child(right_now),
+  nomor = new Firebase("https://dr-iqbal.firebaseio.com/no_antrian");
 
   if (navigator.online) {
     alert('Anda tidak online');
