@@ -15,8 +15,12 @@
     <preference name="Orientation" value="portrait" />
     <preference name="SplashScreen" value="screen"/>
     <preference name="SplashScreenDelay" value="3000" />
-    <platform name="android">
-        <icon src="www/img/icon.png" />
+    <platform name="android">        
+        <icon src="www/img/icon/mdpi.png" density="mdpi"/>
+        <icon src="www/img/icon/hdpi.png" density="hdpi"/>
+        <icon src="www/img/icon/xhdpi.png" density="xhdpi"/>
+        <icon src="www/img/icon/xxhdpi.png" density="xxhdpi"/>
+        <icon src="www/img/icon/xxxhdpi.png" density="xxxhdpi"/>
         <splash src="www/img/splash.png" density="port-mdpi"/>
         <splash src="www/img/splash.png" density="port-hdpi"/>
         <splash src="www/img/splash.png" density="port-xhdpi"/>
