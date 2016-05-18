@@ -23,37 +23,33 @@ function getNoAntri(tipe, username, name) {
   right_now = year + '-' + month + '-' + day,
   today = breanna.child(right_now),
 
-  if (navigator.online) {
-    alert('Anda tidak online');
+  get = 'Getting data..';
+  console.log(get);
+
+  var nama = prompt("Nama: "),
+      nik = prompt("NIK: ");
+
+  if (nama === '' || nik.length != 16 || typeof Number(nik) !== 'number' || Number(nik) == 'NaN') {
+    alert('Input tidak valid');
   } else {
-    get = 'Getting data..';
-    console.log(get);
+    antri.transaction(function(currentRank) {
+        currentData = currentRank + 1;
 
-    var nama = prompt("Nama: "),
-        nik = prompt("NIK: ");
-
-    if (nama === '' || nik.length != 16 || typeof Number(nik) !== 'number' || Number(nik) == 'NaN') {
-      alert('Input tidak valid');
-    } else {
-      antri.transaction(function(currentRank) {
-          currentData = currentRank + 1;
-
-          return currentData;
-      }, function(error, committed, snapshot) {
-          if (error) {
-              alert('Koneksi anda tidak stabil' + error);
-          } else {
-              alert('Nomor Antrian: ' + snapshot.val());
-              today.push().set({
-                nama: nama,
-                nik: nik,
-                no_antri: snapshot.val()
-              })
-          }
-      });
-    }
-    console.log('Data is ready');
+        return currentData;
+    }, function(error, committed, snapshot) {
+        if (error) {
+            alert('Koneksi anda tidak stabil' + error);
+        } else {
+            alert('Nomor Antrian: ' + snapshot.val());
+            today.push().set({
+              nama: nama,
+              nik: nik,
+              no_antri: snapshot.val()
+            })
+        }
+    });
   }
+  console.log('Data is ready');
 }
 
 function tempatTidur(tipe, username) {
