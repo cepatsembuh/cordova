@@ -32,7 +32,7 @@ function getNoAntri(tipe, username, name) {
     var nama = prompt("Nama: "),
         nik = prompt("NIK: ");
 
-    if (nama === '' || nik.length != 16 || typeof Number(nik) !== 'number') {
+    if (nama === '' || nik.length != 16 || typeof Number(nik) !== 'number' || Number(nik) == 'NaN') {
       alert('Input tidak valid');
     } else {
       antri.transaction(function(currentRank) {
