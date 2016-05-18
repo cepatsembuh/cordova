@@ -30,7 +30,6 @@
     <access origin="*" />
     <allow-intent href="tel:*" />
     <allow-intent href="https://cepatsembuh.firebaseio.com" />
-    <icon src="www/img/icon.png" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />

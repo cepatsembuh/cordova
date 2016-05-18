@@ -9,7 +9,14 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <splash src="www/img/splash.png" />
+    <icon density="mdpi" src="res/mipmap-mdpi/ic_launcher.png" />
+    <icon density="hdpi" src="res/mipmap-hdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="res/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="res/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="res/mipmap-xxxhdpi/ic_launcher.png" />
+    <splash density="port-mdpi" src="res/splash.png" />
+    <splash density="port-hdpi" src="res/splash.png" />
+    <splash density="port-xhdpi" src="res/splash.png" />
     <name>CepatSembuh</name>
     <description>
       An app to help people to find the nearest faskes in their location
@@ -24,5 +31,4 @@
     <preference name="Orientation" value="portrait" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-    <icon src="www/img/icon.png" />
 </widget>
