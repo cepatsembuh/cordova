@@ -40,7 +40,7 @@ function getNoAntri(tipe, username, name) {
         if (error) {
             alert('Koneksi anda tidak stabil' + error);
         } else {
-            alert('Nomor Antrian: ' + snapshot.val());
+            alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Screenshot ini dan tunjukan ke faskes anda');
             today.push().set({
               nama: nama,
               nik: nik,
