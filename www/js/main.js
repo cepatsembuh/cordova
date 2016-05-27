@@ -67,6 +67,12 @@ function puskesmas() {
       // Jakarta Barat
       case "cengkareng":
           window.location.href = 'option/' + 'cengkareng.html'
+          break;
+
+      // Global
+      case null:
+          alert("Anda belum memilih faskes")
+          break;
      };
    }
 };
