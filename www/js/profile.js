@@ -46,7 +46,7 @@ function getNoAntri(tipe, username, name) {
             alert('Koneksi anda tidak stabil' + error);
         } else {
             // Send the Data
-            alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Screenshot ini dan tunjukan ke faskes anda');
+            alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
             // Push the prompt data
             today.push().set({
