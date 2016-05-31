@@ -15,7 +15,7 @@ $('#not-available').on('click', function() {
 function getNoAntri(tipe, username, name) {
   breanna = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
   antri = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
-  pasien = breanna.child("pasien"),
+  pasien = breanna.child('pasien'),
 
   // Date
   date = new Date(),
@@ -30,8 +30,8 @@ function getNoAntri(tipe, username, name) {
   console.log(get);
 
   // Prompt
-  var nama = prompt("Nama: "),
-      nik = prompt("NIK: ");
+  var nama = prompt('Nama: '),
+      nik = prompt('NIK: ');
 
   if (nama === '' || nik.length != 16 || typeof Number(nik) !== 'number' || Number(nik) == 'NaN') {
     alert('Input tidak valid');
