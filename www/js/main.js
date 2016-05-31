@@ -35,7 +35,7 @@ function puskesmas() {
 	if (nama == '') {
 		// Validate name input
 		alert('Nama is not filled');
-	} else if (nik.length != 16) {
+	} else if (nik.length != 1) {
       // Validate nik input
 	   alert('NIK anda tidak valid');
 	} else {
@@ -46,26 +46,26 @@ function puskesmas() {
 
      switch (lokasi) {
       //  Jakarta Utara
-      case "kelapa_gading":
+      case 1:
          window.location.href = 'option/' + 'kelapa-gading.html';
          break;
-      case "cilincing":
+      case 2:
  			 		window.location.href = 'option/' + 'cilincing.html';
  			 		break;
- 			case "koja":
+ 			case 3:
  					window.location.href = 'option/' + 'koja.html';
  					break;
- 			case "pademangan":
+ 			case 4:
  					window.location.href = 'option/' + 'pademangan.html';
  					break;
- 			case "penjaringan":
+ 			case 5:
  					window.location.href = 'option/' + 'penjaringan.html';
  					break;
- 			case "tanjung_priok":
+ 			case 6:
  					window.location.href = 'option/' + 'priok.html';
  					break;
       // Jakarta Barat
-      case "cengkareng":
+      case 7:
           window.location.href = 'option/' + 'cengkareng.html'
           break;
 
