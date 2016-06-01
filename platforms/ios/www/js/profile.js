@@ -7,6 +7,7 @@ document.addEventListener('deviceready', function () {
     Firebase.goOnline();
 });
 
+// Example faskes action
 $('#not-available').on('click', function() {
 	alert('Faskes is not available.')
 })
@@ -14,7 +15,8 @@ $('#not-available').on('click', function() {
 function getNoAntri(tipe, username, name) {
   breanna = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
   antri = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
-  pasien = breanna.child("pasien"),
+  pasien = breanna.child('pasien'),
+
   // Date
   date = new Date(),
   year = date.getFullYear(),
@@ -23,11 +25,13 @@ function getNoAntri(tipe, username, name) {
   right_now = year + '-' + month + '-' + day,
   today = breanna.child(right_now),
 
+  // Get data
   get = 'Getting data..';
   console.log(get);
 
-  var nama = prompt("Nama: "),
-      nik = prompt("NIK: ");
+  // Prompt
+  var nama = prompt('Nama: '),
+      nik = prompt('NIK: ');
 
   if (nama === '' || nik.length != 16 || typeof Number(nik) !== 'number' || Number(nik) == 'NaN') {
     alert('Input tidak valid');
@@ -38,9 +42,13 @@ function getNoAntri(tipe, username, name) {
         return currentData;
     }, function(error, committed, snapshot) {
         if (error) {
+            // Error message
             alert('Koneksi anda tidak stabil' + error);
         } else {
-            alert('Nomor Antrian: ' + snapshot.val());
+            // Send the Data
+            alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+
+            // Push the prompt data
             today.push().set({
               nama: nama,
               nik: nik,
@@ -53,12 +61,15 @@ function getNoAntri(tipe, username, name) {
 }
 
 function tempatTidur(tipe, username) {
+  // Firebase URL
   brea = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/tempat_tidur');
 
+  // Waiting message
   wait = 'Getting data..';
   console.log(wait);
   alert(wait);
 
+  // Get the data
   brea.on('value', function(snapshot) {
     satu = snapshot.val().satu;
     dua = snapshot.val().dua;
@@ -69,8 +80,8 @@ function tempatTidur(tipe, username) {
 }
 
 function doctorProfile(nama, lulusan, tahun) {
-  giant = 'Lulusan: ' + lulusan + '\n' + 'Tahun: ' + tahun;
-  name = 'dr. ' + nama;
+  giant = 'Lulusan: ' + lulusan + '\n' + 'Tahun: ' + tahun; // Doctor content
+  name = 'dr. ' + nama; // Doctor name
 
   alert(name + '\n' + giant); // Pop-up
 }
