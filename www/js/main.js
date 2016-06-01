@@ -30,7 +30,7 @@ function puskesmas() {
 	// Input value
 	var nama = $('#nama').val(),
 	    nik = $('#nik').val(),
-	    lokasi = $('#lokasi').val();
+      empire = nik.slice(-16, -15);
 
 	if (nama == '') {
 		// Validate name input
@@ -42,30 +42,29 @@ function puskesmas() {
       // Log input value for testing
       console.log('Nama: ' + nama);
       console.log('NIK: ' + nik);
-      console.log('Lokasi: ' + lokasi);
 
-     switch (lokasi) {
+     switch (empire) {
       //  Jakarta Utara
-      case 1:
+      case "1":
          window.location.href = 'option/' + 'kelapa-gading.html';
          break;
-      case 2:
+      case "2":
  			 		window.location.href = 'option/' + 'cilincing.html';
  			 		break;
- 			case 3:
+ 			case "3":
  					window.location.href = 'option/' + 'koja.html';
  					break;
- 			case 4:
+ 			case "4":
  					window.location.href = 'option/' + 'pademangan.html';
  					break;
- 			case 5:
+ 			case "5":
  					window.location.href = 'option/' + 'penjaringan.html';
  					break;
- 			case 6:
+ 			case "6":
  					window.location.href = 'option/' + 'priok.html';
  					break;
       // Jakarta Barat
-      case 7:
+      case "7":
           window.location.href = 'option/' + 'cengkareng.html'
           break;
 
