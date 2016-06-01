@@ -75,7 +75,7 @@ function tempatTidur(tipe, username) {
     dua = snapshot.val().dua;
     tiga = snapshot.val().tiga;
 
-    alert('Kelas I: ' + satu + '\n' + 'Kelas II: ' + dua + '\n' + 'Kelas III: ' + tiga); // Show user the data's
+    alert('Kelas I: ' + Number(satu) + '\n' + 'Kelas II: ' + Number(dua) + '\n' + 'Kelas III: ' + Number(tiga)); // Show user the data's
   })
 }
 
