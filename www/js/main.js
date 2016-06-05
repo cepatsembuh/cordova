@@ -30,7 +30,8 @@ function puskesmas() {
 	// Input value
 	var nama = $('#nama').val(),
 	    nik = $('#nik').val(),
-      empire = nik.slice(-16, -15);
+      lokasi = $('#lokasi').val();
+      // empire = nik.slice(-16, -15);
 
 	if (nama == '') {
 		// Validate name input
@@ -43,29 +44,30 @@ function puskesmas() {
       console.log('Nama: ' + nama);
       console.log('NIK: ' + nik);
 
-     switch (Number(empire)) {
+    //  switch (Number(empire)) {
+    switch(lokasi){
       //  Jakarta Utara
-      case 1:
-         window.location.href = 'option/' + 'kelapa-gading.html';
+      case "kelapa_gading":
+         window.location.href = 'option' + '/kelapa-gading.html';
          break;
-      case 2:
+      case "cilincing":
  			 		window.location.href = 'option/' + 'cilincing.html';
  			 		break;
- 			case 3:
+ 			case "koja":
  					window.location.href = 'option/' + 'koja.html';
  					break;
- 			case 4:
+ 			case "pademangan":
  					window.location.href = 'option/' + 'pademangan.html';
  					break;
- 			case 5:
+ 			case "penjaringan":
  					window.location.href = 'option/' + 'penjaringan.html';
  					break;
- 			case 6:
+ 			case "tanjung_priok":
  					window.location.href = 'option/' + 'priok.html';
  					break;
       // Jakarta Barat
-      case 7:
-          window.location.href = 'option/' + 'cengkareng.html'
+      case "cengkareng":
+          window.location.href = 'option/' + 'cengkareng.html';
           break;
 
       // Global
