@@ -69,6 +69,28 @@ function puskesmas() {
       case "cengkareng":
           window.location.href = 'option/' + 'cengkareng.html';
           break;
+      case "grogol_petamburan":
+          window.location.href = 'option/' + 'grogol_petamburan.html';
+          break;
+      case "kalideres":
+          window.location.href = 'option/' + 'kalideres.html';
+          break;
+      case "kebon_jeruk":
+          window.location.href = 'option/' + 'kebon_jeruk.html';
+          break;
+      case "kembangan":
+          window.location.href = 'option/' + 'kembangan.html';
+          break;
+      case "palmerah":
+          window.location.href = 'option/' + 'palmerah.html';
+          break;
+      case "taman_sari":
+          window.location.href = 'option/' + 'taman_sari.html';
+          break;
+      case "tambora":
+          window.location.href = 'option/' + 'tambora.html';
+          break;
+
 
       // Global
       case null:
@@ -78,32 +100,7 @@ function puskesmas() {
    }
 };
 
-
-/* case 'cengkareng':
-    window.location.href = 'option/' + 'cengkareng.html';
-    break;
-case 'grogol_petamburan':
-    window.location.href = 'option/' + 'grogol_petamburan.html';
-    break;
-case 'kalideres':
-    window.location.href = 'option/' + 'kalideres.html';
-    break;
-case 'kebon_jeruk':
-    window.location.href = 'option/' + 'kebon_jeruk.html';
-    break;
-case 'kembangan':
-    window.location.href = 'option/' + 'kembangan.html';
-    break;
-case 'palmerah':
-    window.location.href = 'option/' + 'palmerah.html';
-    break;
-case 'taman_sari':
-    window.location.href = 'option/' + 'taman_sari.html';
-    break;
-case 'tambora':
-    window.location.href = 'option/' + 'tambora.html';
-    break;
-case 'cilandak':
+/* case 'cilandak':
     window.location.href = 'option/' + 'cilandak.html';
     break;
 case 'jagakarsa':
