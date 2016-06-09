@@ -29,6 +29,8 @@ function getNoAntri(tipe, username, name) {
   get = 'Getting data..';
   console.log(get);
 
+  alert('Mohon konfirmasi ulang');
+
   // Prompt
   var nama = prompt('Nama: '),
       nik = prompt('NIK: ');
