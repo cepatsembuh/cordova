@@ -76,7 +76,7 @@ function puskesmas() {
           window.location.href = 'option/' + 'kalideres.html';
           break;
       case "kebon_jeruk":
-          window.location.href = 'option/' + 'kebon_jeruk.html';
+          window.location.href = 'option/' + 'kebonjeruk.html';
           break;
       case "kembangan":
           window.location.href = 'option/' + 'kembangan.html';
