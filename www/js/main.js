@@ -70,7 +70,7 @@ function puskesmas() {
           window.location.href = 'option/' + 'cengkareng.html';
           break;
       case "grogol_petamburan":
-          window.location.href = 'option/' + 'grogol_petamburan.html';
+          window.location.href = 'option/' + 'grogol.html';
           break;
       case "kalideres":
           window.location.href = 'option/' + 'kalideres.html';
