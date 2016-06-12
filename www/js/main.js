@@ -69,14 +69,14 @@ function puskesmas() {
       case "cengkareng":
           window.location.href = 'option/' + 'cengkareng.html';
           break;
-      case "grogol_petamburan":
-          window.location.href = 'option/' + 'grogol_petamburan.html';
+      case "grogol":
+          window.location.href = 'option/' + 'grogol.html';
           break;
       case "kalideres":
           window.location.href = 'option/' + 'kalideres.html';
           break;
       case "kebon_jeruk":
-          window.location.href = 'option/' + 'kebon_jeruk.html';
+          window.location.href = 'option/' + 'kebonjeruk.html';
           break;
       case "kembangan":
           window.location.href = 'option/' + 'kembangan.html';
@@ -90,7 +90,37 @@ function puskesmas() {
       case "tambora":
           window.location.href = 'option/' + 'tambora.html';
           break;
-
+      // Jakarta Selatan
+      case 'cilandak':
+          window.location.href = 'option/' + 'cilandak.html';
+          break;
+      case 'jagakarsa':
+          window.location.href = 'option/' + 'jagakarsa.html';
+          break;
+      case 'kebayoran_baru':
+          window.location.href = 'option/' + 'kebayoran_baru.html';
+          break;
+      case 'kebayoran_lama':
+          window.location.href = 'option/' + 'kebayoran_lama.html';
+          break;
+      case 'mampang_prapatan':
+          window.location.href = 'option/' + 'mampang_prapatan.html';
+          break;
+      case 'pancoran':
+          window.location.href = 'option/' + 'pancoran.html';
+          break;
+      case 'pasar_minggu':
+          window.location.href = 'option/' + 'pasar_minggu.html';
+          break;
+      case 'pesanggrahan':
+          window.location.href = 'option/' + 'pesanggrahan.html';
+          break;
+      case 'setia_budi':
+          window.location.href = 'option/' + 'setia_budi.html';
+          break;
+      case 'tebet':
+          window.location.href = 'option/' + 'tebet.html';
+          break;
 
       // Global
       case null:
@@ -100,37 +130,7 @@ function puskesmas() {
    }
 };
 
-/* case 'cilandak':
-    window.location.href = 'option/' + 'cilandak.html';
-    break;
-case 'jagakarsa':
-    window.location.href = 'option/' + 'jagakarsa.html';
-    break;
-case 'kebayoran_baru':
-    window.location.href = 'option/' + 'kebayoran_baru.html';
-    break;
-case 'kebayoran_lama':
-    window.location.href = 'option/' + 'kebayoran_lama.html';
-    break;
-case 'mampang_prapatan':
-    window.location.href = 'option/' + 'mampang_prapatan.html';
-    break;
-case 'pancoran':
-    window.location.href = 'option/' + 'pancoran.html';
-    break;
-case 'pasar_minggu':
-    window.location.href = 'option/' + 'pasar_minggu.html';
-    break;
-case 'pesanggrahan':
-    window.location.href = 'option/' + 'pesanggrahan.html';
-    break;
-case 'setia_budi':
-    window.location.href = 'option/' + 'setia_budi.html';
-    break;
-case 'tebet':
-    window.location.href = 'option/' + 'tebet.html';
-    break;
-case 'cakung':
+/* case 'cakung':
     window.location.href = 'option/' + 'cakung.html';
     break;
 case 'cipayung':
