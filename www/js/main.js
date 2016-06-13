@@ -116,7 +116,7 @@ function puskesmas() {
           window.location.href = 'option/' + 'pesanggrahan.html';
           break;
       case 'setia_budi':
-          window.location.href = 'option/' + 'setia-budi.html';
+          window.location.href = 'option/' + 'setiabudi.html';
           break;
       case 'tebet':
           window.location.href = 'option/' + 'tebet.html';
