@@ -85,7 +85,7 @@ function puskesmas() {
           window.location.href = 'option/' + 'palmerah.html';
           break;
       case "taman_sari":
-          window.location.href = 'option/' + 'taman_sari.html';
+          window.location.href = 'option/' + 'taman-sari.html';
           break;
       case "tambora":
           window.location.href = 'option/' + 'tambora.html';
@@ -98,10 +98,10 @@ function puskesmas() {
           window.location.href = 'option/' + 'jagakarsa.html';
           break;
       case 'kebayoran_baru':
-          window.location.href = 'option/' + 'kebayoran_baru.html';
+          window.location.href = 'option/' + 'kebayoran-baru.html';
           break;
       case 'kebayoran_lama':
-          window.location.href = 'option/' + 'kebayoran_lama.html';
+          window.location.href = 'option/' + 'kebayoran-lama.html';
           break;
       case 'mampang_prapatan':
           window.location.href = 'option/' + 'mampang_prapatan.html';
@@ -110,13 +110,13 @@ function puskesmas() {
           window.location.href = 'option/' + 'pancoran.html';
           break;
       case 'pasar_minggu':
-          window.location.href = 'option/' + 'pasar_minggu.html';
+          window.location.href = 'option/' + 'pasar-minggu.html';
           break;
       case 'pesanggrahan':
           window.location.href = 'option/' + 'pesanggrahan.html';
           break;
       case 'setia_budi':
-          window.location.href = 'option/' + 'setia_budi.html';
+          window.location.href = 'option/' + 'setia-budi.html';
           break;
       case 'tebet':
           window.location.href = 'option/' + 'tebet.html';
