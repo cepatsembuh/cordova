@@ -2,7 +2,8 @@
   "name": "CepatSembuh - Cordova",
   "homepage": "https://github.com/mercysmart/cepatsembuh",
   "authors": [
-    "Andre Christoga <andrechristoga@gmail.com>"
+    "Andre Christoga <andrechristoga@gmail.com>",
+    "Christie Kirana <christiexkirana@gmail.com>"
   ],
   "description": "Cepat Sembuh in Cordova mode",
   "main": "index.html",
