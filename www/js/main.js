@@ -145,7 +145,42 @@ function puskesmas() {
       case 'matraman':
           window.location.href = 'option/' + 'matraman.html';
           break;
-
+      case 'pasar_rebo':
+          window.location.href = 'option/' + 'pasar_rebo.html';
+          break;
+      case 'pulo_gadung':
+          window.location.href = 'option/' + 'pulo_gadung.html';
+          break;
+      case 'cempaka_putih':
+          window.location.href = 'option/' + 'cempaka_putih.html';
+          break;
+      case 'gambir':
+          window.location.href = 'option/' + 'gambir.html';
+          break;
+      case 'johar_baru':
+          window.location.href = 'option/' + 'johar_baru.html';
+          break;
+      case 'kemayoran':
+          window.location.href = 'option/' + 'kemayoran.html';
+          break;
+      case 'menteng':
+          window.location.href = 'option/' + 'menteng.html';
+          break;
+      case 'sawah_besar':
+          window.location.href = 'option/' + 'sawah_besar.html';
+          break;
+      case 'senen':
+          window.location.href = 'option/' + 'senen.html';
+          break;
+      case 'tanah_abang':
+          window.location.href = 'option/' + 'tanah_abang.html';
+          break;
+      case 'kep_seribu_selatan':
+          window.location.href = 'option/' + 'kep_seribu_selatan.html';
+          break;
+      case 'kep_seribu_utara':
+          window.location.href = 'option/' + 'kep_seribu_utara.html';
+          break;
       // Global
       case null:
           alert('Anda belum memilih faskes')
@@ -153,40 +188,3 @@ function puskesmas() {
      };
    }
 };
-
-/* case 'pasar_rebo':
-    window.location.href = 'option/' + 'pasar_rebo.html';
-    break;
-case 'pulo_gadung':
-    window.location.href = 'option/' + 'pulo_gadung.html';
-    break;
-case 'cempaka_putih':
-    window.location.href = 'option/' + 'cempaka_putih.html';
-    break;
-case 'gambir':
-    window.location.href = 'option/' + 'gambir.html';
-    break;
-case 'johar_baru':
-    window.location.href = 'option/' + 'johar_baru.html';
-    break;
-case 'kemayoran':
-    window.location.href = 'option/' + 'kemayoran.html';
-    break;
-case 'menteng':
-    window.location.href = 'option/' + 'menteng.html';
-    break;
-case 'sawah_besar':
-    window.location.href = 'option/' + 'sawah_besar.html';
-    break;
-case 'senen':
-    window.location.href = 'option/' + 'senen.html';
-    break;
-case 'tanah_abang':
-    window.location.href = 'option/' + 'tanah_abang.html';
-    break;
-case 'kep_seribu_selatan':
-    window.location.href = 'option/' + 'kep_seribu_selatan.html';
-    break;
-case 'kep_seribu_utara':
-    window.location.href = 'option/' + 'kep_seribu_utara.html';
-    break; */
