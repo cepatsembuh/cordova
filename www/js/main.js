@@ -121,6 +121,7 @@ function puskesmas() {
       case 'tebet':
           window.location.href = 'option/' + 'tebet.html';
           break;
+      // Jakarta Timur
       case 'cakung':
           window.location.href = 'option/' + 'cakung.html';
           break;
@@ -151,6 +152,7 @@ function puskesmas() {
       case 'pulo_gadung':
           window.location.href = 'option/' + 'pulo_gadung.html';
           break;
+      // Jakarta Pusat
       case 'cempaka_putih':
           window.location.href = 'option/' + 'cempaka_putih.html';
           break;
@@ -175,12 +177,14 @@ function puskesmas() {
       case 'tanah_abang':
           window.location.href = 'option/' + 'tanah_abang.html';
           break;
+      // Pulau Seribu
       case 'kep_seribu_selatan':
           window.location.href = 'option/' + 'kep_seribu_selatan.html';
           break;
       case 'kep_seribu_utara':
           window.location.href = 'option/' + 'kep_seribu_utara.html';
           break;
+
       // Global
       case null:
           alert('Anda belum memilih faskes')
