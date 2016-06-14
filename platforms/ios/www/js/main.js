@@ -30,7 +30,8 @@ function puskesmas() {
 	// Input value
 	var nama = $('#nama').val(),
 	    nik = $('#nik').val(),
-      empire = nik.slice(-16, -15);
+      lokasi = $('#lokasi').val();
+      // empire = nik.slice(-16, -15);
 
 	if (nama == '') {
 		// Validate name input
@@ -43,29 +44,82 @@ function puskesmas() {
       console.log('Nama: ' + nama);
       console.log('NIK: ' + nik);
 
-     switch (Number(empire)) {
+    //  switch (Number(empire)) {
+    switch(lokasi){
       //  Jakarta Utara
-      case 1:
-         window.location.href = 'option/' + 'kelapa-gading.html';
+      case "kelapa_gading":
+         window.location.href = 'option' + '/kelapa-gading.html';
          break;
-      case 2:
+      case "cilincing":
  			 		window.location.href = 'option/' + 'cilincing.html';
  			 		break;
- 			case 3:
+ 			case "koja":
  					window.location.href = 'option/' + 'koja.html';
  					break;
- 			case 4:
+ 			case "pademangan":
  					window.location.href = 'option/' + 'pademangan.html';
  					break;
- 			case 5:
+ 			case "penjaringan":
  					window.location.href = 'option/' + 'penjaringan.html';
  					break;
- 			case 6:
+ 			case "tanjung_priok":
  					window.location.href = 'option/' + 'priok.html';
  					break;
       // Jakarta Barat
-      case 7:
-          window.location.href = 'option/' + 'cengkareng.html'
+      case "cengkareng":
+          window.location.href = 'option/' + 'cengkareng.html';
+          break;
+      case "grogol":
+          window.location.href = 'option/' + 'grogol.html';
+          break;
+      case "kalideres":
+          window.location.href = 'option/' + 'kalideres.html';
+          break;
+      case "kebon_jeruk":
+          window.location.href = 'option/' + 'kebonjeruk.html';
+          break;
+      case "kembangan":
+          window.location.href = 'option/' + 'kembangan.html';
+          break;
+      case "palmerah":
+          window.location.href = 'option/' + 'palmerah.html';
+          break;
+      case "taman_sari":
+          window.location.href = 'option/' + 'taman_sari.html';
+          break;
+      case "tambora":
+          window.location.href = 'option/' + 'tambora.html';
+          break;
+      // Jakarta Selatan
+      case 'cilandak':
+          window.location.href = 'option/' + 'cilandak.html';
+          break;
+      case 'jagakarsa':
+          window.location.href = 'option/' + 'jagakarsa.html';
+          break;
+      case 'kebayoran_baru':
+          window.location.href = 'option/' + 'kebayoran_baru.html';
+          break;
+      case 'kebayoran_lama':
+          window.location.href = 'option/' + 'kebayoran_lama.html';
+          break;
+      case 'mampang_prapatan':
+          window.location.href = 'option/' + 'mampang_prapatan.html';
+          break;
+      case 'pancoran':
+          window.location.href = 'option/' + 'pancoran.html';
+          break;
+      case 'pasar_minggu':
+          window.location.href = 'option/' + 'pasar_minggu.html';
+          break;
+      case 'pesanggrahan':
+          window.location.href = 'option/' + 'pesanggrahan.html';
+          break;
+      case 'setia_budi':
+          window.location.href = 'option/' + 'setia_budi.html';
+          break;
+      case 'tebet':
+          window.location.href = 'option/' + 'tebet.html';
           break;
 
       // Global
@@ -76,169 +130,7 @@ function puskesmas() {
    }
 };
 
-// RSUD form action
-function rsud() {
-	// Firebase
-  var ref = new Firebase('http://cepatsembuh.firebaseio.com/'),
-	    rsud = ref.child('rsud'),
-	    pasien = rsud.child('pasien');
-
-	// Input value
-  var nama = $('#nama').val(),
-	    rujuk = $('#rujuk').val(),
-	    nik = $('#nik').val(),
-	    lokasi = $('#lokasi').val();
-
-	if (nama == '') {
-		// Validate name input
-		alert('Nama anda tidak valid');
-	} else if (rujuk.length != 20) {
-    // Validate rujuk number
-	  alert('Nomor rujuk anda tidak valid');
-	} else if (nik.length != 16) {
-    // Validate nik number
-	  alert('NIK anda tidak valid');
-	} else {
-      // Log input value for testing
-      console.log('No Rujuk: ' + rujuk);
-      console.log('NIK: ' + nik);
-      console.log('Lokasi: ' + lokasi);
-
-      switch (lokasi) {
-        default:
-          window.location.href = 'option' + '/available.html';
-          break;
-      };
-    }
-};
-
-// RSUK form action
-function rsuk() {
-	// Firebase
-  var ref = new Firebase('http://cepatsembuh.firebaseio.com/'),
-	    rsuk = ref.child('rsuk'),
-	    pasien = rsuk.child('pasien');
-
-	// Input value
-  var nama = $('#nama').val(),
-	    rujuk = $('#rujuk').val(),
-	    nik = $('#nik').val(),
-	    lokasi = $('#lokasi').val();
-
-	if (nama == '') {
-		// Validate name input
-		alert('Nama anda tidak valid');
-	} else if (rujuk.length != 20) {
-    // Validate rujuk number
-	  alert('Nomor rujuk anda tidak valid');
-	} else if (nik.length != 16) {
-    // Validate nik number
-	  alert('NIK anda tidak valid');
-	} else {
-      // Log input value for testing
-      console.log('No Rujuk: ' + rujuk);
-      console.log('NIK: ' + nik);
-      console.log('Lokasi: ' + lokasi);
-
-      switch (lokasi) {
-        default:
-          window.location.href = 'option' + '/available.html';
-          break;
-      };
-	}
-};
-
-// RSS form action
-function rss() {
-	// Firebase
-  var ref = new Firebase('http://cepatsembuh.firebaseio.com/'),
-	    rss = ref.child('rss'),
-	    pasien = rss.child('pasien');
-
-	// Input value
-  var nama = $('#nama').val(),
-	    rujuk = $('#rujuk').val(),
-	    nik = $('#nik').val(),
-	    lokasi = $('#lokasi').val();
-
-	if (nama == '') {
-		// Validate name input
-		alert('Nama anda tidak valid');
-	} else if (rujuk.length != 20) {
-    // Validate rujuk number
-	  alert('Nomor rujuk anda tidak valid');
-	} else if (nik.length != 16) {
-    // Validate nik number
-	  alert('NIK anda tidak valid');
-	} else {
-      // Log input value for testing
-      console.log('No Rujuk: ' + rujuk);
-      console.log('NIK: ' + nik);
-      console.log('Lokasi: ' + lokasi);
-
-      switch (lokasi) {
-        default:
-          window.location.href = 'option' + '/available.html';
-          break;
-      };
-	}
-}
-
-/* case 'cengkareng':
-    window.location.href = 'option/' + 'cengkareng.html';
-    break;
-case 'grogol_petamburan':
-    window.location.href = 'option/' + 'grogol_petamburan.html';
-    break;
-case 'kalideres':
-    window.location.href = 'option/' + 'kalideres.html';
-    break;
-case 'kebon_jeruk':
-    window.location.href = 'option/' + 'kebon_jeruk.html';
-    break;
-case 'kembangan':
-    window.location.href = 'option/' + 'kembangan.html';
-    break;
-case 'palmerah':
-    window.location.href = 'option/' + 'palmerah.html';
-    break;
-case 'taman_sari':
-    window.location.href = 'option/' + 'taman_sari.html';
-    break;
-case 'tambora':
-    window.location.href = 'option/' + 'tambora.html';
-    break;
-case 'cilandak':
-    window.location.href = 'option/' + 'cilandak.html';
-    break;
-case 'jagakarsa':
-    window.location.href = 'option/' + 'jagakarsa.html';
-    break;
-case 'kebayoran_baru':
-    window.location.href = 'option/' + 'kebayoran_baru.html';
-    break;
-case 'kebayoran_lama':
-    window.location.href = 'option/' + 'kebayoran_lama.html';
-    break;
-case 'mampang_prapatan':
-    window.location.href = 'option/' + 'mampang_prapatan.html';
-    break;
-case 'pancoran':
-    window.location.href = 'option/' + 'pancoran.html';
-    break;
-case 'pasar_minggu':
-    window.location.href = 'option/' + 'pasar_minggu.html';
-    break;
-case 'pesanggrahan':
-    window.location.href = 'option/' + 'pesanggrahan.html';
-    break;
-case 'setia_budi':
-    window.location.href = 'option/' + 'setia_budi.html';
-    break;
-case 'tebet':
-    window.location.href = 'option/' + 'tebet.html';
-    break;
-case 'cakung':
+/* case 'cakung':
     window.location.href = 'option/' + 'cakung.html';
     break;
 case 'cipayung':
