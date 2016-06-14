@@ -121,6 +121,30 @@ function puskesmas() {
       case 'tebet':
           window.location.href = 'option/' + 'tebet.html';
           break;
+      case 'cakung':
+          window.location.href = 'option/' + 'cakung.html';
+          break;
+      case 'cipayung':
+          window.location.href = 'option/' + 'cipayung.html';
+          break;
+      case 'ciracas':
+          window.location.href = 'option/' + 'ciracas.html';
+          break;
+      case 'duren_sawit':
+          window.location.href = 'option/' + 'duren_sawit.html';
+          break;
+      case 'jatinegara':
+          window.location.href = 'option/' + 'jatinegara.html';
+          break;
+      case 'kramat_jati':
+          window.location.href = 'option/' + 'kramat_jati.html';
+          break;
+      case 'makassar':
+          window.location.href = 'option/' + 'makassar.html';
+          break;
+      case 'matraman':
+          window.location.href = 'option/' + 'matraman.html';
+          break;
 
       // Global
       case null:
@@ -130,31 +154,7 @@ function puskesmas() {
    }
 };
 
-/* case 'cakung':
-    window.location.href = 'option/' + 'cakung.html';
-    break;
-case 'cipayung':
-    window.location.href = 'option/' + 'cipayung.html';
-    break;
-case 'ciracas':
-    window.location.href = 'option/' + 'ciracas.html';
-    break;
-case 'duren_sawit':
-    window.location.href = 'option/' + 'duren_sawit.html';
-    break;
-case 'jatinegara':
-    window.location.href = 'option/' + 'jatinegara.html';
-    break;
-case 'kramat_jati':
-    window.location.href = 'option/' + 'kramat_jati.html';
-    break;
-case 'makassar':
-    window.location.href = 'option/' + 'makassar.html';
-    break;
-case 'matraman':
-    window.location.href = 'option/' + 'matraman.html';
-    break;
-case 'pasar_rebo':
+/* case 'pasar_rebo':
     window.location.href = 'option/' + 'pasar_rebo.html';
     break;
 case 'pulo_gadung':
