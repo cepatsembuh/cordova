@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- CSS -->
+    <link href="../../css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/flat-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand">CepatSembuh</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 faskes">
+          <img src="../../img/puskesmas/duren-sawit/main.png" alt="duren-sawit" class="faskes">
+          <h4>Kecamatan Duren Sawit</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. H. Dogol (samping SMUN 71), Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Duren Sawit</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Kelurahan Raya RT 005/02, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-kel')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+        <h4>Kelurahan Klender I</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Pertanian Timur RT 003/02, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-klender-1')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Klender II</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Bulak Timur I No. 8 RT 004/16, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-klender-2')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Klender III</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Taman Buaran Indah II, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-klender-3')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Malaka Jaya</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Teratai Putih Raya No. 1, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-malaka-jaya')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Malaka Sari</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Raya Malaka III RT 001/06, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-malaka-sari')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Pondok Bambu I</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Kesehatan 5 RT 002/05, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-bambu-1')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Pondok Bambu II</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Cipinang Muara II, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-bambu-2')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Pondok Kelapa</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. H. Dogol, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-kelapa')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Pondok Kopi I</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Bina Marga RT 003/06, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-kopi-1')">Daftar</button>
+        </div>
+        <div class="col-md-4 faskes">
+          <h4>Kelurahan Pondok Kopi II</h4>
+          <p class="faskes-desc"><span class="fui-location"></span>Jl. Robusta Raya Blok Q VIII, Kec. Duren Sawit</p>
+          <button class="btn btn-inverse full-width faskes-btn" onclick="selectFaskes('duren-sawit-kopi-2')">Daftar</button>
+        </div>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/vendor/jquery.min.js"></script>
+    <script src="../../js/flat-ui.min.js"></script>
+    <script src="../../js/responsive.js" charset="utf-8"></script>
+    <script src="../../js/profile.js" charset="utf-8"></script>
+  </body>
+</html>
