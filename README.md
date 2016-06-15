@@ -1,5 +1,5 @@
 # CepatSembuh
-Repo for CepatSembuh cordova version.
+Repo for CepatSembuh Cordova.
 
 ## License
 MIT Licensed.
