@@ -104,7 +104,7 @@ function puskesmas() {
           window.location.href = 'option/' + 'kebayoran-lama.html';
           break;
       case 'mampang_prapatan':
-          window.location.href = 'option/' + 'mampang_prapatan.html';
+          window.location.href = 'option/' + 'mampang.html';
           break;
       case 'pancoran':
           window.location.href = 'option/' + 'pancoran.html';
@@ -132,13 +132,13 @@ function puskesmas() {
           window.location.href = 'option/' + 'ciracas.html';
           break;
       case 'duren_sawit':
-          window.location.href = 'option/' + 'duren_sawit.html';
+        window.location.href = 'option/' + 'duren-sawit.html';
           break;
       case 'jatinegara':
           window.location.href = 'option/' + 'jatinegara.html';
           break;
       case 'kramat_jati':
-          window.location.href = 'option/' + 'kramat_jati.html';
+          window.location.href = 'option/' + 'kramat-jati.html';
           break;
       case 'makassar':
           window.location.href = 'option/' + 'makassar.html';
@@ -147,20 +147,20 @@ function puskesmas() {
           window.location.href = 'option/' + 'matraman.html';
           break;
       case 'pasar_rebo':
-          window.location.href = 'option/' + 'pasar_rebo.html';
+          window.location.href = 'option/' + 'pasar-rebo.html';
           break;
       case 'pulo_gadung':
-          window.location.href = 'option/' + 'pulo_gadung.html';
+          window.location.href = 'option/' + 'pulo-gadung.html';
           break;
       // Jakarta Pusat
       case 'cempaka_putih':
-          window.location.href = 'option/' + 'cempaka_putih.html';
+          window.location.href = 'option/' + 'cempaka-putih.html';
           break;
       case 'gambir':
           window.location.href = 'option/' + 'gambir.html';
           break;
       case 'johar_baru':
-          window.location.href = 'option/' + 'johar_baru.html';
+          window.location.href = 'option/' + 'johar-baru.html';
           break;
       case 'kemayoran':
           window.location.href = 'option/' + 'kemayoran.html';
@@ -169,20 +169,20 @@ function puskesmas() {
           window.location.href = 'option/' + 'menteng.html';
           break;
       case 'sawah_besar':
-          window.location.href = 'option/' + 'sawah_besar.html';
+          window.location.href = 'option/' + 'sawah-besar.html';
           break;
       case 'senen':
           window.location.href = 'option/' + 'senen.html';
           break;
       case 'tanah_abang':
-          window.location.href = 'option/' + 'tanah_abang.html';
+          window.location.href = 'option/' + 'tanah-abang.html';
           break;
       // Pulau Seribu
       case 'kep_seribu_selatan':
-          window.location.href = 'option/' + 'kep_seribu_selatan.html';
+          window.location.href = 'option/' + 'kep-seribu-selatan.html';
           break;
       case 'kep_seribu_utara':
-          window.location.href = 'option/' + 'kep_seribu_utara.html';
+          window.location.href = 'option/' + 'kep-seribu-utara.html';
           break;
 
       // Global
