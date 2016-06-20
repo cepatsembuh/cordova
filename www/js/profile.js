@@ -44,7 +44,7 @@ function doctorProfile(nama, lulusan, tahun) {
 }
 
 function pilihPoli(username) {
-  breanna = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
+ breanna = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username),
  antri = new Firebase('http://cepatsembuh.firebaseio.com/' + tipe + '/faskes/' + username + '/antrian');
  pasien = breanna.child('pasien'),
 
