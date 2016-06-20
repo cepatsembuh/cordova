@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- CSS -->
+    <link href="../../css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/flat-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="../../fonts/font-awesome/css/font-awesome.min.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand">CepatSembuh</a>
+      </div>
+      </div>
+    </nav>
+    <div class="container">
+          <center><img src="../../img/puskesmas/koja/main.jpg" alt="Koja" class="faskes"></center>
+          <h5>Puskesmas Kelurahan Lagoa</h5>
+          <div class="faskes-desc">
+            <p><span class="fui-location"></span>Jl. Menteng No.30, Kec. Koja<br></p>
+          </div>
+          <center><img src="../../img/iklan.png" class="ads"></center>
+          <hr>
+          <div class="beatles" align="center">
+            <h5 class="daftar">Isi Data Diri untuk <br>Mendapatkan Nomor Antrian</h5>
+            <input type="text" class="form-control" placeholder="Nama" id="nama"><br>
+            <input type="text" class="form-control" placeholder="NIK" id="nik"><br>
+            <select class="form-control" id="poli">
+              <option selected disabled>Poli Tujuan</option>
+              <option disabled>-----------</option>
+              <option value="bpu">Balai Pengobatan Umum (BPU)</option>
+              <option value="bpg">Balai Pengobatan Gigi (BPG)</option>
+              <option value="kia">Poli Kesehatan Ibu & Anak (KIA)</option>
+            </select><br>
+            <button class="btn btn-info" onclick="pilihPoli('koja_lagoa')">Submit</button><br><br>
+            <br>
+            <br>
+          </div>
+          <!-- <center>
+          <hr>
+            <button class="btn btn-primary btn-lg" onclick="getNoAntri('puskesmas', 'kelapa_gading', 'Puskesmas Kecamatan Kelapa Gading')">
+              Dapatkan No Antri
+            </button>
+          <br><br>
+          <a class="btn btn-hg btn-info btn-embossed" href="tel:+62214513321">
+            <i class="fa fa-phone"></i>
+            Call Faskes
+          </a>
+          <br><br>
+          </center> -->
+    </div>
+    <!-- JS -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/vendor/jquery.min.js"></script>
+    <script src="../../js/flat-ui.min.js"></script>
+    <script src="../../js/profile.js"></script>
+    <script src="../../bower_components/firebase/firebase.js"></script>
+    <script src="../../js/responsive.js" charset="utf-8"></script>
+  </body>
+</html>
