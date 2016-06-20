@@ -65,17 +65,6 @@ function pilihPoli(username) {
 
   switch (poli) {
     case 'bpu':
-      console.log('BPU');
-      // bpu.transaction(function(currentRank){
-      //   bpu.push().set({
-      //     nama: nama,
-      //     nik: nik,
-      //     no_antrian: currentRank+1,
-      //     poli: poli
-      //   });
-      //
-      //   return currentRank+1;
-      // })
       bpu.transaction(function(currentRank) {
         currentData = currentRank + 1;
 
