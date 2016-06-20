@@ -33,13 +33,6 @@ function puskesmas() {
       lokasi = $('#lokasi').val();
       // empire = nik.slice(-16, -15);
 
-	if (nama == '') {
-		// Validate name input
-		alert('Nama is not filled');
-	} else if (nik.length != 16) {
-      // Validate nik input
-	   alert('NIK anda tidak valid');
-	} else {
       // Log input value for testing
       console.log('Nama: ' + nama);
       console.log('NIK: ' + nik);
@@ -189,6 +182,5 @@ function puskesmas() {
       case null:
           alert('Anda belum memilih faskes')
           break;
-     };
-   }
+     };   
 };
