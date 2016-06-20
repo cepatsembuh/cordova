@@ -87,5 +87,51 @@ function pilihPoli(username) {
             }
         });
       break;
+    case 'bpg':
+      bpg.transaction(function(currentRank) {
+        currentData = currentRank + 1;
+
+        return currentData;
+        }, function(error, committed, snapshot) {
+            if (error) {
+                // Error message
+                alert('Koneksi anda tidak stabil' + error);
+            } else {
+                // Send the Data
+                alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+
+                // Push the prompt data
+                bpg_pasien.push().set({
+                  nama: nama,
+                  nik: nik,
+                  no_antri: snapshot.val(),
+                  poli: 'BPG'
+                })
+            }
+        });
+      break;
+    case 'kia':
+      bpu.transaction(function(currentRank) {
+        currentData = currentRank + 1;
+
+        return currentData;
+        }, function(error, committed, snapshot) {
+            if (error) {
+                // Error message
+                alert('Koneksi anda tidak stabil' + error);
+            } else {
+                // Send the Data
+                alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+
+                // Push the prompt data
+                bpu_pasien.push().set({
+                  nama: nama,
+                  nik: nik,
+                  no_antri: snapshot.val(),
+                  poli: 'KIA'
+                })
+            }
+        });
+      break;
   }
 }
