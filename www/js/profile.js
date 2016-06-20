@@ -111,7 +111,7 @@ function pilihPoli(username) {
         });
       break;
     case 'kia':
-      bpu.transaction(function(currentRank) {
+      kia.transaction(function(currentRank) {
         currentData = currentRank + 1;
 
         return currentData;
@@ -124,7 +124,7 @@ function pilihPoli(username) {
                 alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
                 // Push the prompt data
-                bpu_pasien.push().set({
+                kia_pasien.push().set({
                   nama: nama,
                   nik: nik,
                   no_antri: snapshot.val(),
