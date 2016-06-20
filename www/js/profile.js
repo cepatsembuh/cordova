@@ -44,4 +44,28 @@ function doctorProfile(nama, lulusan, tahun) {
 }
 
 function pilihPoli(username) {
+  var nama = $('#nama').val(),
+      nik = $('#nik').val(),
+      poli = $('#poli').val();
+
+  dipcifica = new Firebase('https://cepatsembuh.firebaseio.com/puskesmas/faskes/' + username),
+  bpu = dipcifica.child('bpu'),
+  bpg = dipcifica.child('bpg'),
+  kia = dipcifica.child('kia');
+
+  switch (poli) {
+    case 'bpu':
+      console.log('BPU');
+      bpu.transaction(function(currentRank){
+        bpu.push().set({
+          nama: nama,
+          nik: nik,
+          no_antrian: currentRank+1,
+          poli: poli
+        });
+
+        return currentRank+1;
+      })
+      break;
+  }
 }
