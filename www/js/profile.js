@@ -49,23 +49,54 @@ function pilihPoli(username) {
       poli = $('#poli').val();
 
   dipcifica = new Firebase('https://cepatsembuh.firebaseio.com/puskesmas/faskes/' + username),
+
+  date = new Date(),
+  year = date.getFullYear(),
+  month = date.getMonth() + 1,
+  day = date.getDate(),
+  right_now = year + '-' + month + '-' + day,
+  today = dipcifica.child(right_now),
+
   bpu = dipcifica.child('bpu'),
-  bpg = dipcifica.child('bpg'),
-  kia = dipcifica.child('kia');
+
+  bpu_pasien = today.child('bpu-pasien'),
+  bpg_pasien = today.child('bpg-pasien'),
+  kia_pasien = today.child('kia-pasien');
 
   switch (poli) {
     case 'bpu':
       console.log('BPU');
-      bpu.transaction(function(currentRank){
-        bpu.push().set({
-          nama: nama,
-          nik: nik,
-          no_antrian: currentRank+1,
-          poli: poli
-        });
+      // bpu.transaction(function(currentRank){
+      //   bpu.push().set({
+      //     nama: nama,
+      //     nik: nik,
+      //     no_antrian: currentRank+1,
+      //     poli: poli
+      //   });
+      //
+      //   return currentRank+1;
+      // })
+      bpu.transaction(function(currentRank) {
+        currentData = currentRank + 1;
 
-        return currentRank+1;
-      })
+        return currentData;
+        }, function(error, committed, snapshot) {
+            if (error) {
+                // Error message
+                alert('Koneksi anda tidak stabil' + error);
+            } else {
+                // Send the Data
+                alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+
+                // Push the prompt data
+                bpu_pasien.push().set({
+                  nama: nama,
+                  nik: nik,
+                  no_antri: snapshot.val(),
+                  poli: 'BPU'
+                })
+            }
+        });
       break;
   }
 }
