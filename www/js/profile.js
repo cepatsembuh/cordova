@@ -66,6 +66,7 @@ function pilihPoli(username) {
   kia_pasien = today.child('kia-pasien');
 
   switch (poli) {
+    // BPU
     case 'bpu':
       bpu.transaction(function(currentRank) {
         currentData = currentRank + 1;
@@ -89,6 +90,7 @@ function pilihPoli(username) {
             }
         });
       break;
+    // BPG
     case 'bpg':
       bpg.transaction(function(currentRank) {
         currentData = currentRank + 1;
@@ -112,6 +114,7 @@ function pilihPoli(username) {
             }
         });
       break;
+    // KIA
     case 'kia':
       kia.transaction(function(currentRank) {
         currentData = currentRank + 1;
