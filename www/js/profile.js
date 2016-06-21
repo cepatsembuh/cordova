@@ -138,5 +138,10 @@ function pilihPoli(username) {
             }
         });
       break;
+
+      // Null handler
+      case null:
+        alert('Anda belum memilih poli');
+        break;
   }
 }
