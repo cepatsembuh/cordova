@@ -9,6 +9,12 @@ h3.daftar {
 	font-weight: 400;
 }
 
+.starco {
+ color: #90A4A3;
+ font-weight: 400;
+ text-transform: capitalize;
+}
+
 #puskesmas a {
 	color: #1ABC9C;
 }
