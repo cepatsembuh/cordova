@@ -58,6 +58,8 @@ function pilihPoli(username) {
   today = dipcifica.child(right_now),
 
   bpu = dipcifica.child('bpu'),
+  bpg = dipcifica.child('bpg'),
+  kia = dipcifica.child('kia'),
 
   bpu_pasien = today.child('bpu-pasien'),
   bpg_pasien = today.child('bpg-pasien'),
