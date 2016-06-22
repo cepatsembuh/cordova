@@ -81,7 +81,7 @@ function pilihPoli(username) {
                   alert('Koneksi anda tidak stabil' + error);
               } else {
                   // Send the Data
-                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
                   // Push the prompt data
                   bpu_pasien.push().set({
@@ -105,7 +105,7 @@ function pilihPoli(username) {
                   alert('Koneksi anda tidak stabil' + error);
               } else {
                   // Send the Data
-                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
                   // Push the prompt data
                   bpg_pasien.push().set({
@@ -129,7 +129,7 @@ function pilihPoli(username) {
                   alert('Koneksi anda tidak stabil' + error);
               } else {
                   // Send the Data
-                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
                   // Push the prompt data
                   kia_pasien.push().set({
