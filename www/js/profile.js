@@ -75,7 +75,7 @@ function pilihPoli(username) {
     alert('Input tidak valid')
   } else {
     hour.transaction(function(currentRank){
-      currentData = currentRank + dipper;
+      currentData = Number(currentRank) + Number(dipper);
       return currentData;
     })
     switch (poli) {
