@@ -59,8 +59,7 @@ function pilihPoli(username) {
   right_now = year + '-' + month + '-' + day,
   today = dipcifica.child(right_now),
 
-  jam = dipcifica.child('jam'),
-  menit = dipcifica.child('menit'),
+  waktu = dipcifica.child('waktu'),
 
   bpu = dipcifica.child('bpu'),
   bpg = dipcifica.child('bpg'),
@@ -84,7 +83,7 @@ function pilihPoli(username) {
               if (error) {
                   // Error message
                   alert('Terjadi kesahalah saat mengambil data');
-              } else {
+              } else {                  
                   // Send the Data
                   alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
