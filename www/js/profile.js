@@ -60,7 +60,8 @@ function pilihPoli(username) {
   right_now = year + '-' + month + '-' + day,
   today = dipcifica.child(right_now),
 
-  waktu = dipcifica.child('waktu'),
+  hour = dipcifica.child('hour'),
+  minute = dipcifica.child('minute'),
 
   bpu = dipcifica.child('bpu'),
   bpg = dipcifica.child('bpg'),
