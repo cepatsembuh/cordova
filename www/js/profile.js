@@ -61,7 +61,7 @@ function pilihPoli(username) {
   today = dipcifica.child(right_now),
 
   hour = dipcifica.child('hour'),
-  minute = dipcifica.child('minute'),
+  minute = dipcifica.child('menit'),
 
   bpu = dipcifica.child('bpu'),
   bpg = dipcifica.child('bpg'),
