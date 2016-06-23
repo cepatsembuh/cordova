@@ -83,7 +83,7 @@ function pilihPoli(username) {
               if (error) {
                   // Error message
                   alert('Terjadi kesahalah saat mengambil data');
-              } else {                  
+              } else {
                   // Send the Data
                   alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
