@@ -74,7 +74,7 @@ function pilihPoli(username) {
   if (nama === '' || nik.length != 16) {
     alert('Input tidak valid')
   } else {
-    hour.transaction(function(currentRank){
+    minute.transaction(function(currentRank){
       currentData = Number(currentRank) + Number(dipper);
       return currentData;
     })
