@@ -94,6 +94,7 @@ function pilihPoli(username) {
               }
           });
         break;
+
       // BPG
       case 'bpg':
         bpg.transaction(function(currentRank) {
@@ -118,6 +119,7 @@ function pilihPoli(username) {
               }
           });
         break;
+        
       // KIA
       case 'kia':
         kia.transaction(function(currentRank) {
