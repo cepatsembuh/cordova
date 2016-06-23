@@ -56,6 +56,7 @@ function pilihPoli(username) {
   month = date.getMonth() + 1,
   day = date.getDate(),
   hour = date.getHours(),
+  minute = date.getMinutes(),
   right_now = year + '-' + month + '-' + day,
   today = dipcifica.child(right_now),
 
@@ -92,7 +93,9 @@ function pilihPoli(username) {
                     nama: nama,
                     nik: nik,
                     no_antri: snapshot.val(),
-                    poli: 'BPU'
+                    poli: 'BPU',
+                    jam: hour,
+                    menit: minute
                   })
               }
           });
@@ -117,7 +120,9 @@ function pilihPoli(username) {
                     nama: nama,
                     nik: nik,
                     no_antri: snapshot.val(),
-                    poli: 'BPG'
+                    poli: 'BPG',
+                    jam: hour,
+                    menit: minute
                   })
               }
           });
@@ -142,7 +147,9 @@ function pilihPoli(username) {
                     nama: nama,
                     nik: nik,
                     no_antri: snapshot.val(),
-                    poli: 'KIA'
+                    poli: 'KIA',
+                    jam: hour,
+                    menit: minute
                   })
               }
           });
