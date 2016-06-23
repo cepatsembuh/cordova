@@ -74,6 +74,10 @@ function pilihPoli(username) {
   if (nama === '' || nik.length != 16) {
     alert('Input tidak valid')
   } else {
+    hour.transaction(function(currentRank){
+      currentData = currentRank + dipper;
+      return currentData;
+    })
     switch (poli) {
       // BPU
       case 'bpu':
