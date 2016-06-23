@@ -79,7 +79,7 @@ function pilihPoli(username) {
           }, function(error, committed, snapshot) {
               if (error) {
                   // Error message
-                  alert('Koneksi anda tidak stabil' + error);
+                  alert('Terjadi kesahalah saat mengambil data');
               } else {
                   // Send the Data
                   alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
@@ -104,7 +104,7 @@ function pilihPoli(username) {
           }, function(error, committed, snapshot) {
               if (error) {
                   // Error message
-                  alert('Koneksi anda tidak stabil' + error);
+                  alert('Terjadi kesahalah saat mengambil data');
               } else {
                   // Send the Data
                   alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
@@ -119,7 +119,7 @@ function pilihPoli(username) {
               }
           });
         break;
-        
+
       // KIA
       case 'kia':
         kia.transaction(function(currentRank) {
@@ -129,7 +129,7 @@ function pilihPoli(username) {
           }, function(error, committed, snapshot) {
               if (error) {
                   // Error message
-                  alert('Koneksi anda tidak stabil' + error);
+                  alert('Terjadi kesahalah saat mengambil data');
               } else {
                   // Send the Data
                   alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
