@@ -57,6 +57,8 @@ function pilihPoli(username) {
   day = date.getDate(),
   right_now = year + '-' + month + '-' + day,
   today = dipcifica.child(right_now),
+  jam = dipcifica.child('jam'),
+  menit = dipcifica.child('menit'),
 
   bpu = dipcifica.child('bpu'),
   bpg = dipcifica.child('bpg'),
