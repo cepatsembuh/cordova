@@ -71,99 +71,103 @@ function pilihPoli(username) {
   bpg_pasien = today.child('bpg-pasien'),
   kia_pasien = today.child('kia-pasien');
 
-  if (nama === '' || nik.length != 16) {
-    alert('Input tidak valid')
+  if (username !== 'kelapa_gading') {
+
   } else {
-    minute.transaction(function(currentRank){
-      currentData = Number(currentRank) + Number(dipper);
-      return currentData;
-    })
-    switch (poli) {
-      // BPU
-      case 'bpu':
-        bpu.transaction(function(currentRank) {
-          currentData = currentRank + 1;
+    if (nama === '' || nik.length != 16) {
+      alert('Input tidak valid')
+    } else {
+      minute.transaction(function(currentRank){
+        currentData = Number(currentRank) + Number(dipper);
+        return currentData;
+      })
+      switch (poli) {
+        // BPU
+        case 'bpu':
+          bpu.transaction(function(currentRank) {
+            currentData = currentRank + 1;
 
-          return currentData;
-          }, function(error, committed, snapshot) {
-              if (error) {
-                  // Error message
-                  alert('Terjadi kesahalah saat mengambil data');
-              } else {
-                  // Send the Data
-                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+            return currentData;
+            }, function(error, committed, snapshot) {
+                if (error) {
+                    // Error message
+                    alert('Terjadi kesahalah saat mengambil data');
+                } else {
+                    // Send the Data
+                    alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
 
-                  // Push the prompt data
-                  bpu_pasien.push().set({
-                    nama: nama,
-                    nik: nik,
-                    no_antri: snapshot.val(),
-                    poli: 'BPU',
-                    jam: hour,
-                    menit: minute
-                  })
-              }
-          });
-        break;
-
-      // BPG
-      case 'bpg':
-        bpg.transaction(function(currentRank) {
-          currentData = currentRank + 1;
-
-          return currentData;
-          }, function(error, committed, snapshot) {
-              if (error) {
-                  // Error message
-                  alert('Terjadi kesahalah saat mengambil data');
-              } else {
-                  // Send the Data
-                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
-
-                  // Push the prompt data
-                  bpg_pasien.push().set({
-                    nama: nama,
-                    nik: nik,
-                    no_antri: snapshot.val(),
-                    poli: 'BPG',
-                    jam: hour,
-                    menit: minute
-                  })
-              }
-          });
-        break;
-
-      // KIA
-      case 'kia':
-        kia.transaction(function(currentRank) {
-          currentData = currentRank + 1;
-
-          return currentData;
-          }, function(error, committed, snapshot) {
-              if (error) {
-                  // Error message
-                  alert('Terjadi kesahalah saat mengambil data');
-              } else {
-                  // Send the Data
-                  alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
-
-                  // Push the prompt data
-                  kia_pasien.push().set({
-                    nama: nama,
-                    nik: nik,
-                    no_antri: snapshot.val(),
-                    poli: 'KIA',
-                    jam: hour,
-                    menit: minute
-                  })
-              }
-          });
-        break;
-
-        // Null handler
-        case null:
-          alert('Anda belum memilih poli');
+                    // Push the prompt data
+                    bpu_pasien.push().set({
+                      nama: nama,
+                      nik: nik,
+                      no_antri: snapshot.val(),
+                      poli: 'BPU',
+                      jam: hour,
+                      menit: minute
+                    })
+                }
+            });
           break;
+
+        // BPG
+        case 'bpg':
+          bpg.transaction(function(currentRank) {
+            currentData = currentRank + 1;
+
+            return currentData;
+            }, function(error, committed, snapshot) {
+                if (error) {
+                    // Error message
+                    alert('Terjadi kesahalah saat mengambil data');
+                } else {
+                    // Send the Data
+                    alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+
+                    // Push the prompt data
+                    bpg_pasien.push().set({
+                      nama: nama,
+                      nik: nik,
+                      no_antri: snapshot.val(),
+                      poli: 'BPG',
+                      jam: hour,
+                      menit: minute
+                    })
+                }
+            });
+          break;
+
+        // KIA
+        case 'kia':
+          kia.transaction(function(currentRank) {
+            currentData = currentRank + 1;
+
+            return currentData;
+            }, function(error, committed, snapshot) {
+                if (error) {
+                    // Error message
+                    alert('Terjadi kesahalah saat mengambil data');
+                } else {
+                    // Send the Data
+                    alert('Nomor Antrian: ' + snapshot.val() + '\n' + 'Datanglah pada: ' + String(right_now) + '\n' + '\n' + '*Harap screenshot ini dan tunjukan ke faskes anda');
+
+                    // Push the prompt data
+                    kia_pasien.push().set({
+                      nama: nama,
+                      nik: nik,
+                      no_antri: snapshot.val(),
+                      poli: 'KIA',
+                      jam: hour,
+                      menit: minute
+                    })
+                }
+            });
+          break;
+
+          // Null handler
+          case null:
+            alert('Anda belum memilih poli');
+            break;
+      }
     }
   }
 }
