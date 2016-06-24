@@ -72,7 +72,7 @@ function pilihPoli(username) {
   kia_pasien = today.child('kia-pasien');
 
   if (username !== 'kelapa_gading') {
-
+    alert('Fitur ini tidak tersedia di puskesmas anda')
   } else {
     if (nama === '' || nik.length != 16) {
       alert('Input tidak valid')
