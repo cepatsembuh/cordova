@@ -86,7 +86,7 @@ function pilihPoli(username) {
         case 'bpu':
           // Friendly message
           alert('Mendaftarkan anda..');
-          
+
           bpu.transaction(function(currentRank) {
             currentData = currentRank + 1;
 
@@ -116,7 +116,7 @@ function pilihPoli(username) {
         case 'bpg':
           // Friendly message
           alert('Mendaftarkan anda..');
-          
+
           bpg.transaction(function(currentRank) {
             currentData = currentRank + 1;
 
@@ -146,7 +146,7 @@ function pilihPoli(username) {
         case 'kia':
           // Friendly message
           alert('Mendaftarkan anda..');
-          
+
           kia.transaction(function(currentRank) {
             currentData = currentRank + 1;
 
