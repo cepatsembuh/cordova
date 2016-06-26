@@ -84,6 +84,9 @@ function pilihPoli(username) {
       switch (poli) {
         // BPU
         case 'bpu':
+          // Friendly message
+          alert('Mendaftarkan anda..')
+
           bpu.transaction(function(currentRank) {
             currentData = currentRank + 1;
 
@@ -111,6 +114,9 @@ function pilihPoli(username) {
 
         // BPG
         case 'bpg':
+          // Friendly message
+          alert('Mendaftarkan anda..')
+
           bpg.transaction(function(currentRank) {
             currentData = currentRank + 1;
 
@@ -138,6 +144,9 @@ function pilihPoli(username) {
 
         // KIA
         case 'kia':
+          // Friendly message
+          alert('Mendaftarkan anda..')
+
           kia.transaction(function(currentRank) {
             currentData = currentRank + 1;
 
