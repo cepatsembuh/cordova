@@ -70,7 +70,7 @@ function pilihPoli(username) {
     alert('Input tidak valid')
   } else {
     minute.transaction(function(currentRank){
-      currentData = Number(currentRank) + Number(dipper);
+      currentData = Number(currentRank) + 10;
       return currentData;
     })
     switch (poli) {
