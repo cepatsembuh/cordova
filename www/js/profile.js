@@ -46,7 +46,6 @@ function doctorProfile(nama, lulusan, tahun) {
 function pilihPoli(username) {
   var nama = $('#nama').val(),
       nik = $('#nik').val(),
-      dipper = $('#durasi').val(),
       poli = $('#poli').val();
 
   dipcifica = new Firebase('https://cepatsembuh.firebaseio.com/puskesmas/faskes/' + username),
