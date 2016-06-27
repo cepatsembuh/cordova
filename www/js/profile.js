@@ -78,8 +78,8 @@ function pilihPoli(username) {
     alert('Input tidak valid')
   } else {
     // Update minute
-    minute.transaction(function(currentRank){
-      currentData = Number(currentRank) + 10;
+    waktu.transaction(function(currentRank){
+      currentData = hour + ":" + minute;
       return currentData;
     })
 
