@@ -56,6 +56,7 @@ function pilihPoli(username) {
   month = date.getMonth() + 1,
   day = date.getDate(),
   right_now = year + '-' + month + '-' + day,
+  minute = dipcifica.child('menit'),
   today = dipcifica.child(right_now),
 
   bpu = dipcifica.child('bpu'),
@@ -69,6 +70,10 @@ function pilihPoli(username) {
   if (nama === '' || nik.length != 16) {
     alert('Input tidak valid')
   } else {
+    minute.transaction(function(currentRank){
+      currentData = Number(currentRank) + Number(dipper);
+      return currentData;
+    })
     switch (poli) {
       // BPU
       case 'bpu':
