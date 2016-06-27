@@ -44,12 +44,15 @@ function doctorProfile(nama, lulusan, tahun) {
 }
 
 function pilihPoli(username) {
+  // Input's
   var nama = $('#nama').val(),
       nik = $('#nik').val(),
       poli = $('#poli').val();
 
+  // Firebase ref
   dipcifica = new Firebase('https://cepatsembuh.firebaseio.com/puskesmas/faskes/' + username),
 
+  // Date's
   date = new Date(),
   year = date.getFullYear(),
   month = date.getMonth() + 1,
@@ -58,21 +61,26 @@ function pilihPoli(username) {
   minute = dipcifica.child('menit'),
   today = dipcifica.child(right_now),
 
+  // Poli child's
   bpu = dipcifica.child('bpu'),
   bpg = dipcifica.child('bpg'),
   kia = dipcifica.child('kia'),
 
+  // Poli pasien's
   bpu_pasien = today.child('bpu-pasien'),
   bpg_pasien = today.child('bpg-pasien'),
   kia_pasien = today.child('kia-pasien');
 
+  // Validate input
   if (nama === '' || nik.length != 16) {
     alert('Input tidak valid')
   } else {
+    // Update minute
     minute.transaction(function(currentRank){
       currentData = Number(currentRank) + 10;
       return currentData;
     })
+
     switch (poli) {
       // BPU
       case 'bpu':
