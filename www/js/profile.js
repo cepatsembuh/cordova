@@ -164,5 +164,12 @@ function pilihPoli(username) {
           alert('Anda belum memilih poli');
           break;
     }
+
+    waktu.on('value', function(snapshot){
+      data = snapshot.val();
+      dipper = data.slice(-4, -5);
+
+      console.log(sliced);
+    })
   }
 }
