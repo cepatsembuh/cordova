@@ -57,6 +57,8 @@ function pilihPoli(username) {
   year = date.getFullYear(),
   month = date.getMonth() + 1,
   day = date.getDate(),
+  hour = date.getHours(),
+  minute = date.getMinutes(),
   right_now = year + '-' + month + '-' + day,
   waktu = dipcifica.child('waktu'),
   today = dipcifica.child(right_now),
