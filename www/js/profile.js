@@ -58,7 +58,8 @@ function pilihPoli(username) {
   hour = date.getHours(),
   minute = date.getMinutes(),
   right_now = year + '-' + month + '-' + day,
-  today = dipcifica.child(right_now),
+  pasien = dipcifica.child('pasien')
+  today = pasien.child(right_now),
 
   hour = dipcifica.child('jam'),
   minute = dipcifica.child('menit'),
