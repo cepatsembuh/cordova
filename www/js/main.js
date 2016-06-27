@@ -28,14 +28,8 @@ function puskesmas() {
 	    pasien = puskesmas.child('pasien');
 
 	// Input value
-	var nama = $('#nama').val(),
-	    nik = $('#nik').val(),
-      lokasi = $('#lokasi').val();
-      // empire = nik.slice(-16, -15);
-
-      // Log input value for testing
-      console.log('Nama: ' + nama);
-      console.log('NIK: ' + nik);
+  var lokasi = $('#lokasi').val();
+  // empire = nik.slice(-16, -15);
 
     //  switch (Number(empire)) {
     switch(lokasi){
@@ -182,5 +176,5 @@ function puskesmas() {
       case null:
           alert('Anda belum memilih faskes')
           break;
-     };   
+     };
 };
