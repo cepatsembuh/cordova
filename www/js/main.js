@@ -174,7 +174,7 @@ function puskesmas() {
 
       // Global
       case null:
-          alert('Anda belum memilih faskes')
+          alert('Anda belum memilih lokasi faskes')
           break;
      };
 };
