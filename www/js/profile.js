@@ -167,7 +167,8 @@ function pilihPoli(username) {
 
     waktu.on('value', function(snapshot){
       data = snapshot.val(),
-      dipper = data.slice(-4, -5);
+      star = data.slice(-4, -5),
+      marco = data.slice(-1);
 
       console.log(sliced);
     })
