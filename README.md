@@ -6,6 +6,7 @@ Read it from right to left, you probably give up. _sucker_
 
 ## ToDo
 - [ ] Slice error
+- [ ] Finish this app
 
 ## License
 MIT Licensed.
