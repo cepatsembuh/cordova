@@ -79,7 +79,23 @@ function pilihPoli(username) {
   } else {
     // Update minute
     waktu.transaction(function(currentRank){
-      currentData = hour + ":" + minute;
+      // Time data
+      data = currentRank;
+
+      // Sliced data
+      marco = data.slice(-5, -3);
+      star = data.slice(-2);
+
+      // Mixed data
+      ludo = Number(star) + 10;
+      currentData = marco + ":" + String(ludo);
+
+      // Data logs
+      console.log('Jam: ' + marco);
+      console.log('Menit: ' + star);
+      console.log('Full data: ' + currentData);
+
+      // Return new data
       return currentData;
     })
 
@@ -164,22 +180,5 @@ function pilihPoli(username) {
           alert('Anda belum memilih poli');
           break;
     }
-
-    waktu.on('value', function(snapshot){
-      // Time data
-      data = snapshot.val(),
-
-      // Sliced data
-      marco = data.slice(-5, -3),
-      star = data.slice(-2),
-
-      // Mixed data
-      starco = marco + ":" + star,
-
-      // Data logs
-      console.log('Jam: ' + marco),
-      console.log('Menit: ' + star),
-      console.log('Full data: ' + starco);
-    })
   }
 }
