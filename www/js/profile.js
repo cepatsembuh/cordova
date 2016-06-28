@@ -166,12 +166,17 @@ function pilihPoli(username) {
     }
 
     waktu.on('value', function(snapshot){
+      // Time data
       data = snapshot.val(),
+
+      // Sliced data
       marco = data.slice(-5, -3),
       star = data.slice(-2),
 
+      // Mixed data
       starco = marco + ":" + star,
-      
+
+      // Data logs
       console.log('Jam: ' + marco),
       console.log('Menit: ' + star),
       console.log('Full data: ' + starco);
