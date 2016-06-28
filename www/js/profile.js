@@ -170,8 +170,11 @@ function pilihPoli(username) {
       marco = data.slice(-5, -3),
       star = data.slice(-2),
 
-      starco = marco + ":" + star,
-      console.log(starco);
+      // starco = marco + ":" + star,
+      // console.log(starco);
+      console.log('Jam: ' + marco),
+      console.log('Menit: ' + star),
+      console.log('Full data: ' + starco);
     })
   }
 }
