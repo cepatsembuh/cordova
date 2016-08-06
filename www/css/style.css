@@ -15,3 +15,8 @@
 .full-width {
 	width: 100%
 }
+
+.image {
+	width: 90%;
+	height: 150px;	
+}
