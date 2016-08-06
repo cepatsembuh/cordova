@@ -3,13 +3,11 @@
 	font-weight: bold;
 }
 .zrk {
-	background-color: #009688;
+	color: #009688;
+	float: right;
 }
 
 .mm {
-	background-color: #F44336;
-}
-
-i.ksi {
-	color: #fff;
+	color: #F44336;
+	float: right;
 }
