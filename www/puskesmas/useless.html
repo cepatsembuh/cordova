@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- CSS -->
+    <link href="../css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/flat-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand">CepatSembuh</a>
+      </div>
+      </div>
+    </nav>
+    <div class="form" align="center">
+      <!-- <input type="text" class="form-control" placeholder="Nama" id="nama" /><br>
+      <input type="number" class="form-control" placeholder="NIK" id="nik" /><br> -->
+      <h4 class="starco">pilih lokasi sesuai <br><strong>no BPJS</strong> anda</h4>
+      <select class="form-control" id="lokasi">
+        <option selected disabled>Faskes Tingkat 1</option>
+        <option disabled>-----------</option>
+        <optgroup label="Jakarta Utara">
+          <option value="kelapa_gading">Kelapa Gading</option>
+          <option value="cilincing">Cilincing</option>
+          <option value="koja">Koja</option>
+          <option value="pademangan">Pademangan</option>
+          <option value="penjaringan">Penjaringan</option>
+          <option value="tanjung_priok">Tanjung Priok</option>
+        </optgroup>
+        <optgroup label="Jakarta Barat">
+          <option value="cengkareng">Cengkareng</option>
+          <option value="grogol">Grogol Petamburan</option>
+          <option value="kalideres">Kalideres</option>
+          <option value="kebon_jeruk">Kebon Jeruk</option>
+          <option value="kembangan">Kembangan</option>
+          <option value="palmerah">Palmerah</option>
+          <option value="taman_sari">Taman Sari</option>
+          <option value="tambora">Tambora</option>
+        </optgroup>
+        <optgroup label="Jakarta Selatan">
+          <option value="cilandak">Cilandak</option>
+          <option value="jagakarsa">Jagakarsa</option>
+          <option value="kebayoran_baru">Kebayoran Baru</option>
+          <option value="kebayoran_lama">Kebayoran Lama</option>
+          <option value="mampang_prapatan">Mampang Prapatan</option>
+          <option value="pancoran">Pancoran</option>
+          <option value="pasar_minggu">Pasar Minggu</option>
+          <option value="pesanggrahan">Pesanggrahan</option>
+          <option value="setia_budi">Setia Budi</option>
+          <option value="tebet">Tebet</option>
+        </optgroup>
+        <optgroup label="Jakarta Timur">
+          <option value="cakung">Cakung</option>
+          <option value="cipayung">Cipayung</option>
+          <option value="ciracas">Ciracas</option>
+          <option value="duren_sawit">Duren Sawit</option>
+          <option value="jatinegara">Jatinegara</option>
+          <option value="kramat_jati">Kramat Jati</option>
+          <option value="makassar">Makassar</option>
+          <option value="matraman">Matraman</option>
+          <option value="pasar_rebo">Pasar Rebo</option>
+          <option value="pulo_gadung">Pulo Gadung</option>
+        </optgroup>
+        <optgroup label="Jakarta Pusat">
+          <option value="cempaka_putih">Cempaka Putih</option>
+          <option value="gambir">Gambir</option>
+          <option value="johar_baru">Johar Baru</option>
+          <option value="kemayoran">Kemayoran</option>
+          <option value="menteng">Menteng</option>
+          <option value="sawah_besar">Sawah Besar</option>
+          <option value="senen">Senen</option>
+          <option value="tanah_abang">Tanah Abang</option>
+        </optgroup>
+        <optgroup label="Kep. Seribu">
+          <option value="kep_seribu_selatan">Kep. Seribu Selatan</option>
+          <option value="kep_seribu_utara">Kep. Seribu Utara</option>
+        </optgroup>
+      </select><br>
+      <button class="btn btn-info btn-embossed" onclick="puskesmas()" id="puskesmas">Submit</button>
+    </div>
+
+    <!-- JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/flat-ui.min.js"></script>
+    <script src="../bower_components/firebase/firebase.js" charset="utf-8"></script>
+  </body>
+</html>
