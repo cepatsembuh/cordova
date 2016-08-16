@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, iniital-scale=1">
 	<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,6 +10,21 @@
 	<div align="center">
 		<img src="img/icon.png"><br>
 		<a class="button button-outline" href="option.html">Pilih Faskes</a>
+		<div class="form">
+				<fieldset>
+					<label for="name">Nama</label>
+			    <input type="text" placeholder="Andre Christoga" id="name">
+
+			    <label for="nik">NIK</label>
+			    <input type="number" placeholder="1234567890123456" id="nik">
+
+			    <label for="no">No Rujukan/BPJS</label>
+			    <input type="number" placeholder="12345678901234567890" id="no">
+				   				    
+				  <br><br>
+			    <button class="button-primary full-width" onclick="antrian()">Daftar</button>
+				</fieldset>			
+		</div>
 	</div>
 	<script src="js/main.js"></script>
 </body>
