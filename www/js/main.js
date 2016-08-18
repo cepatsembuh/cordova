@@ -31,7 +31,7 @@ function antrian(){
        nama: nama,
        nik: nik,
        no: no,
-       no_antrian: current,
+       no_antrian: next,
        poli: 'bpu'
       })
   })
@@ -49,7 +49,7 @@ function antrian(){
         nama: nama,
         nik: nik,
         no: no,
-        no_antrian: current,
+        no_antrian: next,
         poli: 'bpg'
        })
    })
@@ -67,7 +67,7 @@ function antrian(){
         nama: nama,
         nik: nik,
         no: no,
-        no_antrian: current,
+        no_antrian: next,
         poli: 'kia'
        })
    })
