@@ -24,4 +24,6 @@ function antrian(){
 
  return next;
  })
+
+ window.location.href = 'option.html';
 }
