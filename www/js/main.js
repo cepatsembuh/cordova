@@ -16,7 +16,13 @@ function antrian(){
      kia = faskes.child('kia');
  
  if (poli == 'null' || nama == '' || nik.length != 16 || no.length != 20) {
-  alert('Input anda tidak valid, mohon cek lagi')
+  alert('Anda belum memilih poli');
+ } else if (nama == '') {
+  alert('Anda belum memasukan nama anda');
+ } else if (nik.length != 16) {
+  alert('Anda belum memasukan nik');
+ } else if (no_rujuk.length != 20) {
+  alert('Anda belum memasukan nomor BPJS');
  } else if (poli == 'bpu') {
   bpu.transaction(function(currentRank){
   current = currentRank;
