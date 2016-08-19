@@ -19,7 +19,7 @@ function antrian(){
      bpg = faskes.child('bpg'),
      kia = faskes.child('kia');
  
- if (poli == 'null' || nama == '' || nik.length != 16 || no.length != 20) {
+ if (poli == 'null') {
   alert('Anda belum memilih poli');
  } else if (nama == '') {
   alert('Anda belum memasukan nama anda');
