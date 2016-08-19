@@ -13,8 +13,6 @@
     <allow-intent href="tel:*" />
     <allow-intent href="https://cepatsembuh.firebaseio.com" />
     <preference name="Orientation" value="portrait" />
-    <preference name="SplashScreen" value="screen"/>
-    <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <icon src="res/mipmap-mdpi/ic_launcher.png" density="mdpi"/>
         <icon src="res/mipmap-hdpi/ic_launcher.png" density="hdpi"/>

@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <!-- CSS -->
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/flat-ui.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <a class="navbar-brand">CepatSembuh</a>
-      </div>
-    </nav>
-    <div class="services" align="center">
-      <img src="img/logo.png" width="150" height="150">
-      <h3 class="daftar">Daftar</h3>
-      <div class="col-md-4" id="puskesmas">
-        <h5><a href="javascript:selectServices('puskesmas')">Puskesmas</a></h5>
-      </div>
-      <!-- <div class="col-md-4" id="rsuk">
-        <h5><a href="javascript:selectServices('rsuk')">RSUK</a></h5>
-      </div>
-      <div class="col-md-4" id="rsud">
-        <h5><a href="javascript:selectServices('rsud')">RSUD</a></h5>
-      </div>
-      <div class="col-md-4" id="rss">
-        <h5><a href="javascript:selectServices('rss')">RSS</a></h5>
-      </div>       -->
-    </div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div>
+		<center><img src="img/icon.png"><br></center>
+		<div class="form">
+				<fieldset>
+				<label for="name">Nama</label>
+			    <input type="text" placeholder="Andre Christoga" id="name">
 
-    <!-- JS -->
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/flat-ui.min.js"></script>
-    <script src="js/main.js" charset="utf-8"></script>
-  </body>
+			    <label for="nik">NIK</label>
+			    <input type="number" placeholder="1234567890123456" id="nik">
+
+			    <label for="no">No BPJS</label>
+			    <input type="number" placeholder="12345678901234567890" id="no">
+				   				    
+			    <br><br>
+			    <center><a class="button-primary full-width" href="option.html">Daftar</a></center>
+				</fieldset>			
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>	
+	<script src="js/main.js"></script>
+</body>
 </html>
