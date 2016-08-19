@@ -50,7 +50,7 @@ function antrian(){
      current = currentRank;
      next = currentRank + 1;
 
-   return next;
+     return next;
   }, function(error, snapshot, committed){
        alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas');
       
@@ -68,7 +68,7 @@ function antrian(){
      current = currentRank;
      next = currentRank + 1;
 
-   return next;
+     return next;
   }, function(error, snapshot, committed){
        alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas');
       
