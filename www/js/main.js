@@ -29,8 +29,8 @@ function antrian(){
   alert('Anda belum memasukan nomor BPJS');
  } else if (poli == 'bpu') {
   bpu.transaction(function(currentRank){
-  current = currentRank;
-  next = currentRank + 1;
+    current = currentRank;
+    next = currentRank + 1;
 
   return next;
  }, function(error, snapshot, committed){
@@ -47,8 +47,8 @@ function antrian(){
   })
  } else if (poli == 'bpg'){
    bpg.transaction(function(currentRank){
-   current = currentRank;
-   next = currentRank + 1;
+     current = currentRank;
+     next = currentRank + 1;
 
    return next;
   }, function(error, snapshot, committed){
@@ -65,8 +65,8 @@ function antrian(){
    })
  } else if (poli == 'kia'){
    kia.transaction(function(currentRank){
-   current = currentRank;
-   next = currentRank + 1;
+     current = currentRank;
+     next = currentRank + 1;
 
    return next;
   }, function(error, snapshot, committed){
