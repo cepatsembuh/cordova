@@ -1,3 +1,4 @@
+// Firebase child's
 var ref = new Firebase('https://cepatsembuh.firebaseio.com');
 var puskesmas = ref.child('puskesmas'),
   	faskes = puskesmas.child('kelapa_gading');
@@ -6,11 +7,14 @@ function antrian(){
  var ref = new Firebase('https://cepatsembuh.firebaseio.com'),
     puskesmas = ref.child('puskesmas'),
     faskes = puskesmas.child('kelapa_gading'),
-    nama = $('#name').val(),
-    nik = $('#nik').val(),
-    no = $('#no').val(),
-    poli = $('#poli').val();
 
+  // Input's
+  var nama = $('#name').val(),
+      nik = $('#nik').val(),
+      no = $('#no').val(),
+      poli = $('#poli').val();
+
+ // Poli child's
  var bpu = faskes.child('bpu'),
      bpg = faskes.child('bpg'),
      kia = faskes.child('kia');
@@ -30,7 +34,7 @@ function antrian(){
 
   return next;
  }, function(error, snapshot, committed){
-      alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas');
+      alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas'); 
      
       var pasien = faskes.child('pasien');
       pasien.push().set({
