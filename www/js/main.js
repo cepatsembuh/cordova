@@ -1,9 +1,7 @@
-// Firebase child's
-var ref = new Firebase('https://cepatsembuh.firebaseio.com'),
-    puskesmas = ref.child('puskesmas'),
-  	faskes = puskesmas.child('kelapa_gading');
+
 
 function antrian(){
+'use strict';
  var ref = new Firebase('https://cepatsembuh.firebaseio.com'),
      puskesmas = ref.child('puskesmas'),
      faskes = puskesmas.child('kelapa_gading');
