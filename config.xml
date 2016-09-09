@@ -20,8 +20,5 @@
         <icon src="res/mipmap-xhdpi/ic_launcher.png" density="xhdpi"/>
         <icon src="res/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi"/>
         <icon src="res/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi"/>
-        <splash src="res/splash.png" density="port-mdpi"/>
-        <splash src="res/splash.png" density="port-hdpi"/>
-        <splash src="res/splash.png" density="port-xhdpi"/>
     </platform>
 </widget>
