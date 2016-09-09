@@ -1,5 +1,3 @@
-
-
 function antrian(){
 'use strict';
  var ref = new Firebase('https://cepatsembuh.firebaseio.com'),
