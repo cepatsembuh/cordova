@@ -1,12 +1,17 @@
+/*
+	The class and id names will be so weird.
+  Just google it if you're curious :v
+*/
+/* ------------------------ */
 .pentatonix {
 	margin-left: 15px;
 	font-weight: bold;
 }
-.zrk {
+.mike {
 	color: #009688;
 	float: right;
 }
-.mm {
+.eleven {
 	color: #F44336;
 	float: right;
 }
@@ -20,5 +25,4 @@
 #ayat {
 	font-size: 1.5em;
 	font-style: italic;
-/*	font-weight: !important;*/
 }
