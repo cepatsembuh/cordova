@@ -1,8 +1,15 @@
-function antrian(){
+function antrian() {
 'use strict';
- var ref = new Firebase('https://cepatsembuh.firebaseio.com'),
-     puskesmas = ref.child('puskesmas'),
-     faskes = puskesmas.child('kelapa_gading');
+ var config = {
+    apiKey: "fFRaVtFRskcRYpFdbbLC6NaGz8JSEpGPggQrudgF",
+    authDomain: "cepatsembuh.firebaseapp.com",
+    databaseURL: "https://cepatsembuh.firebaseio.com",
+  };
+  firebase.initializeApp(config);
+	
+	var ref = firebase.database().ref(),
+			puskesmas = ref.child('puskesmas'),
+			faskes = puskesmas.child('faskes');
 
   // Input's
   var nama = $('#name').val(),
@@ -28,7 +35,7 @@ function antrian(){
     current = currentRank;
     next = currentRank + 1;
 
-  return next;
+		return next;
  }, function(error, snapshot, committed){
       alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas'); 
      
@@ -46,7 +53,7 @@ function antrian(){
      current = currentRank;
      next = currentRank + 1;
 
-     return next;
+			 return next;
   }, function(error, snapshot, committed){
        alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas');
       
@@ -64,7 +71,7 @@ function antrian(){
      current = currentRank;
      next = currentRank + 1;
 
-     return next;
+			 return next;
   }, function(error, snapshot, committed){
        alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas');
       
