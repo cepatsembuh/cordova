@@ -1,5 +1,4 @@
-function antrian() {
-'use strict';
+ 'use strict';
  var config = {
     apiKey: "fFRaVtFRskcRYpFdbbLC6NaGz8JSEpGPggQrudgF",
     authDomain: "cepatsembuh.firebaseapp.com",
@@ -9,80 +8,53 @@ function antrian() {
 	
 	var ref = firebase.database().ref(),
 			puskesmas = ref.child('puskesmas'),
-			faskes = puskesmas.child('faskes');
+			faskes = puskesmas.child('kelapa_gading'),
+      pasien = faskes.child('pasien');
 
-  // Input's
-  var nama = $('#name').val(),
-      nik = $('#nik').val(),
-      no = $('#no').val(),
-      poli = $('#poli').val();
+var date = new Date(),
+  year = date.getFullYear(),
+  month = date.getMonth() + 1,
+  day = date.getDate(),
+  right_now = year + '-' + month + '-' + day;
 
  // Poli child's
- var bpu = faskes.child('bpu'),
-     bpg = faskes.child('bpg'),
-     kia = faskes.child('kia');
- 
- if (poli == 'null') {
+ var bpu = firebase.database().ref('puskesmas/kelapa_gading/bpu'),
+     bpg = firebase.database().ref('puskesmas/kelapa_gading/bpg'),
+     kia = firebase.database().ref('puskesmas/kelapa_gading/kia');
+
+function antrian() {
+ 'use strict';
+  var nama = $('#name').val();
+  var nik = $('#nik').val();
+  var no = $('#no').val();
+  var poli = $('#poli').val();
+
+ if (poli == null) {
   alert('Anda belum memilih poli');
  } else if (nama == '') {
   alert('Anda belum memasukan nama anda');
  } else if (nik.length != 16) {
   alert('Anda belum memasukan nik');
- } else if (no.length != 20) {
+ } if (no.length != 20) {
   alert('Anda belum memasukan nomor BPJS');
  } else if (poli == 'bpu') {
-  bpu.transaction(function(currentRank){
-    current = currentRank;
-    next = currentRank + 1;
+    bpu.transaction(function(currentRank) {      
+      return currentRank + 1;
+    }, function(error, commited, snapshot) {
+        if (error) {
+          alert('Error')
+        } else {
+          var today = firebase.database().ref('puskesmas/kelapa_gading/pasien/' + right_now + '/bpu');
 
-		return next;
- }, function(error, snapshot, committed){
-      alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas'); 
-     
-      var pasien = faskes.child('pasien');
-      pasien.push().set({
-       nama: nama,
-       nik: nik,
-       no: no,
-       no_antrian: next,
-       poli: 'bpu'
-      })
-  })
- } else if (poli == 'bpg'){
-   bpg.transaction(function(currentRank){
-     current = currentRank;
-     next = currentRank + 1;
-
-			 return next;
-  }, function(error, snapshot, committed){
-       alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas');
-      
-       var pasien = faskes.child('pasien');
-       pasien.push().set({
-        nama: nama,
-        nik: nik,
-        no: no,
-        no_antrian: next,
-        poli: 'bpg'
-       })
-   })
- } else if (poli == 'kia'){
-   kia.transaction(function(currentRank){
-     current = currentRank;
-     next = currentRank + 1;
-
-			 return next;
-  }, function(error, snapshot, committed){
-       alert('Nomor Antrian Anda:' + next + '\n' + '\n' + '*Tunjukan nomor antrian ini kepada puskesmas');
-      
-       var pasien = faskes.child('pasien');
-       pasien.push().set({
-        nama: nama,
-        nik: nik,
-        no: no,
-        no_antrian: next,
-        poli: 'kia'
-       })
-   })
+          console.log('HELL YEAH!')
+          today.push().set({
+            nama: nama,
+            nik: nik,
+            no: no,
+            antrian: snapshot.val(),
+            poli: 'bpu'
+          })          
+        }
+    })
  }
 }
