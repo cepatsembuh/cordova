@@ -47,6 +47,8 @@ function antrian() {
           var today = firebase.database().ref('puskesmas/kelapa_gading/pasien/' + right_now + '/bpu');
 
           console.log('HELL YEAH!')
+          alert('Nomor Antrian: ' + snapshot.val())
+          
           today.push().set({
             nama: nama,
             nik: nik,
