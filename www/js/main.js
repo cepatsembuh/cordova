@@ -116,6 +116,6 @@ function daftarPertama() {
   } else if (no.length != 20) {
     alert('Anda belum memasukan nomor BPJS');
   } else {
-    window.location.href 'puskesmas/option/index.html';
+    window.location.href = 'puskesmas/option/index.html';
   }
 }
