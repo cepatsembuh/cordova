@@ -5,11 +5,13 @@
       An app to help people to find the nearest faskes in their location
     </description>
     <author>
-      Andre Christoga
+      CepatSembuh Team
     </author>
     <content src="www/index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="https://cepatsembuh.firebaseio.com" />
     <preference name="Orientation" value="portrait" />
