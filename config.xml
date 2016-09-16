@@ -1,9 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="id.cepatsembuh" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CepatSembuh</name>
-    <description>
-      An app to help people to find the nearest faskes in their location
-    </description>
     <author>
       CepatSembuh Team
     </author>
