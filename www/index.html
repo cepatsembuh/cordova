@@ -5,7 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/main.js"></script>
+	<script>
+		function daftarPertama() {
+		  'use strict';
+		  var nama = $('#name').val();
+		  var nik = $('#nik').val();
+		  var no = $('#no').val();
+
+		  if (nama == '') {
+		    alert('Anda belum memasukan nama anda');
+		  } else if (nik.length != 16) {
+		    alert('Anda belum memasukan nik');
+		  } else if (no.length != 20) {
+		    alert('Anda belum memasukan nomor BPJS');
+		  } else {
+		    window.location.href = 'puskesmas/option/index.html';
+		  }
+		}
+	</script>
 </head>
 <body>
 	<div>

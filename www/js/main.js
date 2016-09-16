@@ -102,20 +102,3 @@ function antrian() {
     })
  }
 }
-
-function daftarPertama() {
-  'use strict';
-  var nama = $('#name').val();
-  var nik = $('#nik').val();
-  var no = $('#no').val();
-
-  if (nama == '') {
-    alert('Anda belum memasukan nama anda');
-  } else if (nik.length != 16) {
-    alert('Anda belum memasukan nik');
-  } else if (no.length != 20) {
-    alert('Anda belum memasukan nomor BPJS');
-  } else {
-    window.location.href = 'puskesmas/option/index.html';
-  }
-}
