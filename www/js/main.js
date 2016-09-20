@@ -47,7 +47,7 @@ function antrian() {
           var today = firebase.database().ref('puskesmas/kelapa_gading/pasien/' + right_now + '/bpu');
 
           console.log('HELL YEAH!')
-          alert('Nomor Antrian: ' + snapshot.val())
+          alert('Anda terdaftar pada: ' + right_now + "\n" + "Nomor antrian anda: " + snapshot.val() + "\n" + "Anda akan dilayani pada waktu: " + "11:00 AM - 11:10 AM")
 
           today.push().set({
             nama: nama,
@@ -68,7 +68,7 @@ function antrian() {
           var today = firebase.database().ref('puskesmas/kelapa_gading/pasien/' + right_now + '/bpg');
 
           console.log('HELL YEAH!')
-          alert('Nomor Antrian: ' + snapshot.val())
+          alert('Anda terdaftar pada: ' + right_now + "\n" + "Nomor antrian anda: " + snapshot.val())
           
           today.push().set({
             nama: nama,
@@ -89,7 +89,7 @@ function antrian() {
           var today = firebase.database().ref('puskesmas/kelapa_gading/pasien/' + right_now + '/kia');
 
           console.log('HELL YEAH!')
-          alert('Nomor Antrian: ' + snapshot.val())
+          alert('Anda terdaftar pada: ' + right_now + "\n" + "Nomor antrian anda: " + snapshot.val())
           
           today.push().set({
             nama: nama,
