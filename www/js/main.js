@@ -52,7 +52,8 @@ function antrian() {
           today.push().set({
             nama: nama,
             nik: nik,
-            no: no,
+            no_bpjs: no,
+						no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpu'
           })          
@@ -73,7 +74,8 @@ function antrian() {
           today.push().set({
             nama: nama,
             nik: nik,
-            no: no,
+            no_bpjs: no,
+						no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpg'
           })          
@@ -94,7 +96,8 @@ function antrian() {
           today.push().set({
             nama: nama,
             nik: nik,
-            no: no,
+            no_bpjs: no,
+						no_kk: kk,
             antrian: snapshot.val(),
             poli: 'kia'
           })          
