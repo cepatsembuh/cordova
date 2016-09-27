@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script>
-		function daftarPertama() {
+		function daftarPuskesmas() {
 		  'use strict';
 		  var nama = $('#name').val();
 		  var nik = $('#nik').val();
@@ -21,6 +21,22 @@
 		    alert('Anda belum memasukan nomor BPJS');
 		  } else {
 		    window.location.href = 'puskesmas/option/index.html';
+		  }
+		}
+		function daftarRS() {
+		  'use strict';
+		  var nama = $('#name').val();
+		  var nik = $('#nik').val();
+		  var no = $('#no').val();
+
+		  if (nama == '') {
+		    alert('Anda belum memasukan nama anda');
+		  } else if (nik.length != 16) {
+		    alert('Anda belum memasukan nik');
+		  } else if (no.length != 20) {
+		    alert('Anda belum memasukan nomor BPJS');
+		  } else {
+		    window.location.href = 'rs/option/index.html';
 		  }
 		}
 	</script>
@@ -45,10 +61,12 @@
 				<input type="number" placeholder="12345678901234567890" id="no">
 
 				<br><br>
-				<center><a class="button-primary button-outline button" onclick="daftarPertama()" style="width:55%">Daftar Puskesmas</a><br>
-				<a class="button-primary button-outline button" onclick="daftarPertama()" style="width:55%">Daftar RS</a></center>
-				<hr>
-				<br><br>
+				<center><a class="button-primary button-outline button" onclick="daftarPuskesmas()" style="width:55%">Daftar Puskesmas</a><br>
+				<a class="button-primary button-outline button" onclick="daftarRS()" style="width:55%">Daftar RS</a></center>
+				<hr>				
+				<center>
+					<a class="button button-primary" href="info.html">Info Kesehatan Terbaru Dunia</a>
+				</center>
 				
 
 				<!-- <center>
