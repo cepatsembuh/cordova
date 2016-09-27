@@ -34,9 +34,9 @@ function antrian() {
  } else if (nama == '') {
   alert('Anda belum memasukan nama anda');
  } else if (nik.length != 16) {
-  alert('Anda belum memasukan nik');
+  alert('NIK anda tidak valid');
  } if (no.length != 20) {
-  alert('Anda belum memasukan nomor BPJS');
+  alert('Nomor BPJS anda tidak valid');
  } else if (poli == 'bpu') {
     bpu.transaction(function(currentRank) {      
       return currentRank + 1;
