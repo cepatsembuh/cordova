@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../bower_components/milligram/dist/milligram.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/jquery.min.js"></script>	
+	<link rel="stylesheet" href="../fonts/icons/css/font-awesome.min.css">
+</head>
+<body>
+	<script>
+		function cek() {
+			var value = $('#roomie').val();
+			window.location.href = value + '.html';
+		}
+	</script>
+	<div class="container">
+		<center>
+			<img src="../img/icon.png"><br>
+		</center>
+		<hr>
+		<div class="row" align="center">
+			<h3>Cek Gejala Penyakit</h3>
+			<div class="column">
+				<select id="roomie">
+					<option disable selected>Pilih Penyakit</option>
+					<option value="tifus">Tifus</option>
+					<option value="malaria">Malaria</option>
+				</select>
+			</div>			
+			<hr>
+			<button class="button" style="width:70%" onclick="cek()">Submit</button>
+		</div>
+	</div>
+</body>
+</html>

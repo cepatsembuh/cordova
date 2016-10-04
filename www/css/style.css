@@ -31,3 +31,13 @@
 	color: #01875A;
 	margin-left: 5px;
 }
+.button {
+	border-radius: 200px !important;
+}
+.same-width {
+	width: 80% !important;
+}
+.shawn {
+	color: #01875A;
+	text-transform: uppercase;
+}
