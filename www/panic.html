@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script>
-		function daftarPuskesmas() {
+		function daftarRS() {
 		  'use strict';
 		  var nama = $('#name').val();
 		  var nik = $('#nik').val();
@@ -20,24 +20,11 @@
 		  } else if (no.length != 20) {
 		    alert('Nomor BPJS anda tidak valid');
 		  } else {
-		    window.location.href = 'puskesmas/option/index.html';
+		    window.location.href = 'faskes/option/index.html';
 		  }
-		}
-		function daftarRS() {
-		  'use strict';
-		  var nama = $('#name').val();
-		  var nik = $('#nik').val();
-		  var no = $('#no').val();
-
-		  if (nama == '') {
-		    alert('Anda belum memasukan nama anda');
-		  } else if (nik.length != 16) {
-		    alert('Anda belum memasukan nik');
-		  } else if (no.length != 20) {
-		    alert('Anda belum memasukan nomor BPJS');
-		  } else {
-		    window.location.href = 'rs/option/index.html';
-		  }
+		}	
+		function panic() {
+			window.location.href = 'panic.html';
 		}
 	</script>
 </head>
@@ -62,21 +49,15 @@
 				<input type="number" placeholder="12345678901234567890" id="no">
 
 				<br><br>
-				<center><a class="button-primary button-outline button same-width" onclick="daftarPuskesmas()">Daftar Puskesmas</a><br>
+				<center> <a class="button-primary button-outline button same-width" onclick="panic()">Panic Button</a><br> 
 				<a class="button-primary button-outline button same-width" onclick="daftarRS()">Daftar RS</a></center>
 				<hr>				
 				<center>
 					<a href="penyakit/index.html" class="button button-primary full-width">Cek Gejala Penyakit</a>
-					<a href="penyakit/index.html" class="button button-primary full-width">Tes Kesehatan Jiwa</a>
 					<a href="cekbpom.html" class="button button-primary full-width">Cek Produk BPOM</a>
 					<a class="button button-primary full-width" href="info.html">Info Kesehatan Terbaru Dunia</a>
 					<a class="button button-primary full-width" href="kpldh/index.html">Info Pelayanan Luar Gedung</a>
 				</center>
-				
-
-				<!-- <center>
-					<h5>Belum punya akun? <a href="daftar.html"><strong>Daftar</strong></a></h5>
-				</center> -->
 			</fieldset>			
 		</div>
 	</div>
