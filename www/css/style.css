@@ -16,6 +16,9 @@
 	color: #F44336;
 	float: right;
 }
+.trap-nation {
+	float: right
+}
 .full-width {
 	width: 100%
 }
@@ -36,6 +39,10 @@
 }
 .same-width {
 	width: 80% !important;
+}
+.the-beatles {
+	width: 100%;
+	margin-bottom: 15px;
 }
 .shawn {
 	color: #01875A;

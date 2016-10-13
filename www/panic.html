@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery.min.js"></script>
-	<script>
-		function daftarRS() {
-		  'use strict';
-		  var nama = $('#name').val();
-		  var nik = $('#nik').val();
-		  var no = $('#no').val();
-
-		  if (nama == '') {
-		    alert('Anda belum memasukan nama anda');
-		  } else if (nik.length != 16) {
-		    alert('NIK anda tidak valid');
-		  } else if (no.length != 20) {
-		    alert('Nomor BPJS anda tidak valid');
-		  } else {
-		    window.location.href = 'faskes/option/index.html';
-		  }
-		}	
-		function panic() {
-			window.location.href = 'panic.html';
-		}
-	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/maps.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+                margin-top: 5%;
+                height: 50%;
+      }
+    </style>
 </head>
+<script>
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {	
+		console.log('Device is ready')
+	};
+
+	function jantung() {
+        console.log('Serangan Jantung')	        
+	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=jantung&phone=08123456789", success:         function(result){
+	    }});
+	}
+
+	function bencana() {
+		console.log('Bencana Alam')   
+	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.536368&long=106.796907&pname=Lorem&stype=bencana&phone=08123456789", success:         function(result){	     
+	    }});
+	}
+
+	function luka() {
+	    console.log('Kecelakaan/Luka')	        
+	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=luka&phone=08123456789", success:        function(result){
+	    }});
+	}
+</script>
 <body>
-	<div class="container">
-		<center>
-			<img src="img/icon.png"><br>
-			<span id="ayat">"Hati yang gembira adalah obat."</span><br>			
-		</center>
-		<div class="form">
-			<hr>
-			<fieldset>
-				<h3 class="shawn">Registrasi</h3>
-				
-				<label for="name">Nama</label>
-				<input type="text" placeholder="Andre Christoga" id="name">
-
-				<label for="nik">NIK</label>
-				<input type="number" placeholder="1234567890123456" id="nik">
-
-				<label for="no">No BPJS</label>
-				<input type="number" placeholder="12345678901234567890" id="no">
-
-				<br><br>
-				<center> <a class="button-primary button-outline button same-width" onclick="panic()">Panic Button</a><br> 
-				<a class="button-primary button-outline button same-width" onclick="daftarRS()">Daftar RS</a></center>
-				<hr>				
-				<center>
-					<a href="penyakit/index.html" class="button button-primary full-width">Cek Gejala Penyakit</a>
-					<a href="cekbpom.html" class="button button-primary full-width">Cek Produk BPOM</a>
-					<a class="button button-primary full-width" href="info.html">Info Kesehatan Terbaru Dunia</a>
-					<a class="button button-primary full-width" href="kpldh/index.html">Info Pelayanan Luar Gedung</a>
-				</center>
-			</fieldset>			
-		</div>
-	</div>
+        <center>
+            <img src="img/icon.png"><br>
+            <img src="../../img/text.png" class="the-beatles"><br>
+            <h2>Jenis Bantuan Darurat</h2>
+        </center>
+        <center>
+         <button class="button button-outline same-width" onclick="jantung()">Serangan Jantung</button>
+         <button class="button button-outline same-width" onclick="luka()">Kecelakaan/Luka</button>
+         <button class="button button-outline same-width" onclick="bencana()">Bencana Alam</button>
+        </center>   
 </body>
 </html>

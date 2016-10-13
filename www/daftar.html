@@ -42,16 +42,35 @@
 	</script>
 </head>
 <body>
+	<script>
+		function standByMe() {
+			alert("Anda terdaftar di CepatSembuh!")
+			window.location.href = 'main.html';
+		}
+	</script>
 	<div class="container">
 		<center>
 			<img src="img/icon.png"><br>
 			<img src="img/text.png" class="the-beatles"><br>
-			<span id="ayat">"Hati yang gembira adalah obat."</span><br>			
+<!--			<span id="ayat">"Hati yang gembira adalah obat."</span><br>			-->
 		</center>
 		<div class="form">
 			<hr>
-				<center><a class="button-primary button-outline button same-width" href="daftar.html">Registrasi Pasien</a><br>
-				<a class="button-primary button-outline button same-width" href="panic.html">Panic Button</a></center>			
+			<fieldset>
+				<h3 class="shawn">Daftar</h3>
+				
+				<label for="name">Nama</label>
+				<input type="text" placeholder="Andre Christoga" id="name">
+
+				<label for="nik">NIK</label>
+				<input type="number" placeholder="1234567890123456" id="nik">
+
+				<label for="no">No BPJS</label>
+				<input type="number" placeholder="12345678901234567890" id="no">
+				
+				
+				<center><br><button class="button" onclick="standByMe()">Simpan</button></center>
+			</fieldset>			
 		</div>
 	</div>
 </body>
