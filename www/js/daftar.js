@@ -7,6 +7,15 @@ function validateNIK() {
 	if (pentatonix == '317206') {
 		 faskes = 'kelapa-gading';
 		 window.location.href = 'profil/' + faskes + '.html';
+	} else if (pentatonix = '317401') {
+		faskes = 'tebet';
+		window.location.href = 'profil/' + faskes + '.html';
+	} else if (pentatonix = '317305') {
+		faskes = 'kebon-jeruk';
+		window.location.href = 'profil/' + faskes + '.html';
+	} else if (pentatonix = '317506') {
+		faskes = 'cakung';
+		window.location.href = 'profil/' + faskes + '.html';
 	}
 
 }
