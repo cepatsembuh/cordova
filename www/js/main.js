@@ -28,12 +28,13 @@ function antrian() {
   var nik = $('#nik').val();
   var no = $('#no').val();
   var poli = $('#poli').val();
+  var sliced = nik.slice(0, 6);
 
  if (poli == null) {
   alert('Anda belum memilih poli');
  } else if (nama == '') {
   alert('Anda belum memasukan nama anda');
- } else if (nik.length != 16) {
+ } else if (nik.length != 16 && sliced !== '317206' && sliced !== '317506' && sliced !== '317305' && sliced !== '317401') {
   alert('NIK anda tidak valid');
  } if (no.length != 20) {
   alert('Nomor BPJS anda tidak valid');
