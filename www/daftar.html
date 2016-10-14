@@ -5,47 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery.min.js"></script>
-	<script>
-		function daftarPuskesmas() {
-		  'use strict';
-		  var nama = $('#name').val();
-		  var nik = $('#nik').val();
-		  var no = $('#no').val();
-
-		  if (nama == '') {
-		    alert('Anda belum memasukan nama anda');
-		  } else if (nik.length != 16) {
-		    alert('NIK anda tidak valid');
-		  } else if (no.length != 20) {
-		    alert('Nomor BPJS anda tidak valid');
-		  } else {
-		    window.location.href = 'puskesmas/option/index.html';
-		  }
-		}
-		function daftarRS() {
-		  'use strict';
-		  var nama = $('#name').val();
-		  var nik = $('#nik').val();
-		  var no = $('#no').val();
-
-		  if (nama == '') {
-		    alert('Anda belum memasukan nama anda');
-		  } else if (nik.length != 16) {
-		    alert('Anda belum memasukan nik');
-		  } else if (no.length != 20) {
-		    alert('Anda belum memasukan nomor BPJS');
-		  } else {
-		    window.location.href = 'rs/option/index.html';
-		  }
-		}
-	</script>
+	<script src="js/jquery.min.js"></script>	
 </head>
 <body>
 	<script>
 		function standByMe() {
-			alert("Anda terdaftar di CepatSembuh!")
-			window.location.href = 'main.html';
+			var nama = $('#name').val();
+			var nik = $('#nik').val();
+			var no = $('#no').val();
+
+			if (nama == '') {
+			  alert('Anda belum memasukan nama anda');
+			} else if (nik.length != 16) {
+			  alert('NIK anda tidak valid');
+			} else if (no.length != 20) {
+			  alert('Nomor BPJS anda tidak valid');
+			} else {			  
+			  alert("Anda terdaftar di CepatSembuh!")
+			  window.location.href = 'main.html';
+			}
 		}
 	</script>
 	<div class="container">
@@ -59,14 +37,14 @@
 			<fieldset>
 				<h3 class="shawn">Daftar</h3>
 				
-				<label for="name">Nama</label>
-				<input type="text" placeholder="Andre Christoga" id="name">
+				<label for="name">Masukan Nama</label>
+				<input type="text" id="name">
 
-				<label for="nik">NIK</label>
-				<input type="number" placeholder="1234567890123456" id="nik">
+				<label for="nik">Masukan NIK</label>
+				<input type="number" id="nik">
 
-				<label for="no">No BPJS</label>
-				<input type="number" placeholder="12345678901234567890" id="no">
+				<label for="no">Masukan No BPJS</label>
+				<input type="number" id="no">
 				
 				
 				<center><br><button class="button" onclick="standByMe()">Simpan</button></center>
