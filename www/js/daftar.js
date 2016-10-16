@@ -26,7 +26,7 @@ function standByMe() {
 
 	if (nama == '') {
 	  alert('Anda belum memasukan nama anda');
-	} else if (nik.length != 16 && ) {
+	} else if (nik.length != 16) {
 	  alert('NIK anda tidak valid');
 	} else if (no.length != 20) {
 	  alert('Nomor BPJS anda tidak valid');
