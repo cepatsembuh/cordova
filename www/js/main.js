@@ -34,10 +34,12 @@ function antrian() {
   alert('Anda belum memilih poli');
  } else if (nama == '') {
   alert('Anda belum memasukan nama anda');
- } else if (nik.length != 16 && sliced !== '317206' && sliced !== '317506' && sliced !== '317305' && sliced !== '317401') {
+ } else if (nik.length != 16) {
   alert('NIK anda tidak valid');
- } if (no.length != 20) {
+ } else if (no.length != 20) {
   alert('Nomor BPJS anda tidak valid');
+ } else if (sliced !== '317206' && sliced !== '317506' && sliced !== '317305' && sliced !== '317401') {
+	 alert('Layanan CepatSembuh belum tersedia di faskes kamu');
  } else if (poli == 'bpu') {
     bpu.transaction(function(currentRank) {      
       return currentRank + 1;
