@@ -16,13 +16,15 @@ function validateNIK() {
 	} else if (pentatonix = '317506') {
 		faskes = 'cakung';
 		window.location.href = 'profil/' + faskes + '.html';
+	} else {
+		alert('Mohon maaf,' + '\n' + 'Puskesmas anda belum terintegrasi dengan CepatSembuh.')
 	}
-
 }
 function standByMe() {
 	var nama = $('#name').val();
 	var nik = $('#nik').val();
 	var no = $('#no').val();
+	var email = $('#email').val();
 
 	if (nama == '') {
 	  alert('Anda belum memasukan nama anda');
@@ -30,6 +32,8 @@ function standByMe() {
 	  alert('NIK anda tidak valid');
 	} else if (no.length != 20) {
 	  alert('Nomor BPJS anda tidak valid');
+	} else if (email == '') {
+	  alert('Mohon masukan email anda untuk mendapatkan berita terbaru dari CepatSembuh')
 	} else {			  
 	  alert("Anda terdaftar di CepatSembuh!")
 	  window.location.href = 'main.html';
