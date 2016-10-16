@@ -14,8 +14,8 @@
         padding: 0;
       }
       #map {
-                margin-top: 5%;
-                height: 50%;
+		margin-top: 5%;
+		height: 50%;
       }
     </style>
 </head>
@@ -27,32 +27,33 @@
 
 	function jantung() {
         console.log('Serangan Jantung')	        
-	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=jantung&phone=08123456789", success:         function(result){
-	    }});
+//	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=jantung&phone=08123456789", success: function(result){
+//	    }});
+		alert("Bantuan sedang dalam perjalanan ke lokasi anda." + "\n" + "Bertahan & berdoalah")
 	}
 
 	function bencana() {
 		console.log('Bencana Alam')   
-	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.536368&long=106.796907&pname=Lorem&stype=bencana&phone=08123456789", success:         function(result){	     
-	    }});
+//	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.536368&long=106.796907&pname=Lorem&stype=bencana&phone=08123456789", success: function(result){	     
+//	    }});
+		alert("Bantuan sedang dalam perjalanan ke lokasi anda." + "\n" + "Bertahan & berdoalah")
 	}
 
 	function luka() {
 	    console.log('Kecelakaan/Luka')	        
-	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=luka&phone=08123456789", success:        function(result){
-	    }});
+//	    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=luka&phone=08123456789", success: function(result){
+//	    }});
+		alert("Bantuan sedang dalam perjalanan ke lokasi anda." + "\n" + "Bertahan & berdoalah")
 	}
 </script>
 <body>
-        <center>
-            <img src="img/icon.png"><br>
-            <img src="img/text.png" class="the-beatles"><br>
-            <h2>Jenis Pelayanan yang dibutuhkan:</h2>
-        </center>
-        <center>
-         <button class="button button-outline same-width" onclick="jantung()">Serangan Jantung</button>
-         <button class="button button-outline same-width" onclick="luka()">Kecelakaan/Luka</button>
-         <button class="button button-outline same-width" onclick="bencana()">Bencana Alam</button>
-        </center>   
+	<center>
+		<img src="img/icon.png"><br>
+		<img src="img/text.png" class="the-beatles"><br>
+		<h2>Jenis Pelayanan yang dibutuhkan:</h2>
+		<button class="button button-outline same-width" onclick="jantung()">Serangan Jantung</button>
+		<button class="button button-outline same-width" onclick="luka()">Kecelakaan/Luka</button>
+		<button class="button button-outline same-width" onclick="bencana()">Bencana Alam</button>
+	</center>   
 </body>
 </html>
