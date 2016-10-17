@@ -6,16 +6,16 @@
   };
   firebase.initializeApp(config);
 	
-	var ref = firebase.database().ref(),
-			puskesmas = ref.child('puskesmas'),
-			faskes = puskesmas.child('kelapa_gading'),
-      pasien = faskes.child('pasien');
+var ref = firebase.database().ref(),
+	puskesmas = ref.child('puskesmas'),
+	faskes = puskesmas.child('kelapa_gading'),
+    pasien = faskes.child('pasien');
 
 var date = new Date(),
-  year = date.getFullYear(),
-  month = date.getMonth() + 1,
-  day = date.getDate(),
-  right_now = year + '-' + month + '-' + day;
+    year = date.getFullYear(),
+    month = date.getMonth() + 1,
+    day = date.getDate(),
+    right_now = year + '-' + month + '-' + day;
 
  // Poli child's
  var bpu = firebase.database().ref('puskesmas/kelapa_gading/bpu'),
@@ -59,7 +59,7 @@ function antrian() {
             nama: nama,
             nik: nik,
             no_bpjs: bpjs,
-						no_kk: kk,
+			no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpu'
           })          
@@ -82,7 +82,7 @@ function antrian() {
             nama: nama,
             nik: nik,
             no_bpjs: bpjs,
-						no_kk: kk,
+			no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpg'
           })          
@@ -105,7 +105,7 @@ function antrian() {
             nama: nama,
             nik: nik,
             no_bpjs: bpjs,
-						no_kk: kk,
+			no_kk: kk,
             antrian: snapshot.val(),
             poli: 'kia'
           })          
