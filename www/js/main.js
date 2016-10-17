@@ -28,6 +28,7 @@ function antrian() {
   var nik = $('#nik').val();
   var no = $('#no').val();
   var poli = $('#poli').val();
+  var medis = $('#medis').val();
   var sliced = nik.slice(0, 6);
 
  if (poli == null) {
@@ -40,6 +41,8 @@ function antrian() {
   alert('Nomor BPJS anda tidak valid');
  } else if (sliced !== '317206' && sliced !== '317506' && sliced !== '317305' && sliced !== '317401') {
 	 alert('Layanan CepatSembuh belum tersedia di faskes kamu');
+ } else if (medis.length != 6) {
+  alert('Nomor Rekam Medis kamu tidak valid');
  } else if (poli == 'bpu') {
     bpu.transaction(function(currentRank) {      
       return currentRank + 1;
