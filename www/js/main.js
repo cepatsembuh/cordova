@@ -26,7 +26,7 @@ function antrian() {
  'use strict';
   var nama = $('#name').val();
   var nik = $('#nik').val();
-  var no = $('#no').val();
+  var bpjs = $('#bpjs').val();
   var poli = $('#poli').val();
   var medis = $('#medis').val();
   var sliced = nik.slice(0, 6);
@@ -37,7 +37,7 @@ function antrian() {
   alert('Anda belum memasukan nama anda');
  } else if (nik.length != 16) {
   alert('NIK anda tidak valid');
- } else if (no.length != 20) {
+ } else if (bpjs.length != 20) {
   alert('Nomor BPJS anda tidak valid');
  } else if (sliced !== '317206' && sliced !== '317506' && sliced !== '317305' && sliced !== '317401') {
 	 alert('Layanan CepatSembuh belum tersedia di faskes kamu');
@@ -58,7 +58,7 @@ function antrian() {
           today.push().set({
             nama: nama,
             nik: nik,
-            no_bpjs: no,
+            no_bpjs: bpjs,
 						no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpu'
@@ -81,7 +81,7 @@ function antrian() {
           today.push().set({
             nama: nama,
             nik: nik,
-            no_bpjs: no,
+            no_bpjs: bpjs,
 						no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpg'
@@ -104,7 +104,7 @@ function antrian() {
           today.push().set({
             nama: nama,
             nik: nik,
-            no_bpjs: no,
+            no_bpjs: bpjs,
 						no_kk: kk,
             antrian: snapshot.val(),
             poli: 'kia'
