@@ -23,19 +23,18 @@ function validateNIK() {
 function standByMe() {
 	var nama = $('#name').val();
 	var nik = $('#nik').val();
-	var no = $('#no').val();
+	var bpjs = $('#bpjs').val();
 	var email = $('#email').val();
 
 	if (nama == '') {
 	  alert('Anda belum memasukan nama anda');
 	} else if (nik.length != 16) {
 	  alert('NIK anda tidak valid');
-	} else if (no.length != 20) {
+	} else if (bpjs.length != 20) {
 	  alert('Nomor BPJS anda tidak valid');
 	} else if (email == '') {
 	  alert('Mohon masukan email anda untuk mendapatkan berita terbaru dari CepatSembuh')
-	} else {			  
-	  alert("Anda terdaftar di CepatSembuh!")
+	} else {			  	  
 	  window.location.href = 'main.html';
 	}
 }
