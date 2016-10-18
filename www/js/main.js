@@ -62,9 +62,9 @@ function antrian() {
 			no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpu'
-          })          
+          })
         }
-			window.location.href = '../daftar/kelapa-gading.html';
+	  window.location.href = '../daftar/kelapa-gading.html';
     })
  } else if (poli == 'bpg') {
     bpg.transaction(function(currentRank) {      
@@ -85,10 +85,10 @@ function antrian() {
 			no_kk: kk,
             antrian: snapshot.val(),
             poli: 'bpg'
-          })          
+          })
         }
+	  window.location.href = '../daftar/kelapa-gading.html';
     })
-		window.location.href = '../daftar/kelapa-gading.html';
  } else if (poli == 'kia') {
     kia.transaction(function(currentRank) {      
       return currentRank + 1;
@@ -108,9 +108,9 @@ function antrian() {
 			no_kk: kk,
             antrian: snapshot.val(),
             poli: 'kia'
-          })          
+          })
         }
+	  window.location.href = '../daftar/kelapa-gading.html';
     })
-		window.location.href = '../daftar/kelapa-gading.html';
  }
 }
