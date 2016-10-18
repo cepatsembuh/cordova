@@ -1,16 +1,25 @@
-(function() {
-  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  $.getJSON( flickerAPI, {
-    tags: "mount rainier",
-    tagmode: "any",
-    format: "json"
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-        if ( i === 3 ) {
-          return false;
-        }
-      });
-    });
-})();
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {      
+    console.log('Device is ready')
+};
+
+function jantung() {
+    console.log('Serangan Jantung')                
+    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=jantung&phone=08123456789", success: function(result){
+    }});
+    alert("Bantuan sedang dalam perjalanan ke lokasi anda." + "\n" + "Bertahan & berdoalah :)")
+}
+
+function bencana() {
+    console.log('Bencana Alam')   
+    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.536368&long=106.796907&pname=Lorem&stype=bencana&phone=08123456789", success: function(result){
+    }});
+    alert("Bantuan sedang dalam perjalanan ke lokasi anda." + "\n" + "Bertahan & berdoalah :)")
+}
+
+function luka() {
+    console.log('Kecelakaan/Luka')              
+    $.ajax({url: "http://192.168.0.104/cekatan/api.php?lat=-6.598033&long=106.797336&pname=Lorem&stype=luka&phone=08123456789", success: function(result){
+    }});
+    alert("Bantuan sedang dalam perjalanan ke lokasi anda." + "\n" + "Bertahan & berdoalah :)")
+}
