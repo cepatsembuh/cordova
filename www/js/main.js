@@ -1,10 +1,10 @@
- 'use strict';
- var config = {
+'use strict';
+var config = {
     apiKey: "fFRaVtFRskcRYpFdbbLC6NaGz8JSEpGPggQrudgF",
     authDomain: "cepatsembuh.firebaseapp.com",
     databaseURL: "https://cepatsembuh.firebaseio.com",
-  };
-  firebase.initializeApp(config);
+};
+firebase.initializeApp(config);
 	
 var ref = firebase.database().ref(),
 	puskesmas = ref.child('puskesmas'),
