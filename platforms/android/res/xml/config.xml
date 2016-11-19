@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="id.cepatsembuh.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>CepatSembuh</name>
+    <author>
+      CepatSembuh Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="https://cepatsembuh.firebaseio.com" />
+    <icon density="mdpi" src="res/icon.png" />
+    <icon density="hdpi" src="res/icon.png" />
+    <icon density="xhdpi" src="res/icon.png" />
+    <icon density="xxhdpi" src="res/icon.png" />
+    <icon density="xxxhdpi" src="res/icon.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="phonegap-version" value="cli-6.3.0" />
+</widget>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../bower_components/milligram/dist/milligram.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/jquery.min.js"></script>	
+	<link rel="stylesheet" href="../fonts/icons/css/font-awesome.min.css">
+</head>
+<body>
+	<script>
+		function cek() {
+			var value = $('#roomie').val();
+			window.location.href = value + '.html';
+		}
+		function shit() {
+			alert("Kamu didiagnosa: Hamil");
+		}
+	</script>
+	<div class="container">
+		<center>
+			<img src="../img/icon.png"><br>
+			<img src="../img/text.png" class="the-beatles"><br>
+		</center>
+		<hr>
+		<div class="row">
+			<center><h2>Cek Gejala Penyakit</h2><h5>Centang ciri-ciri gejala yang anda rasakan:</h5></center>
+			<div class="column">
+				<hr>
+				<input type="checkbox" id="pusing"> Pusing <br>
+				<input type="checkbox" id="muntah"> Muntah-muntah <br>		
+				<input type="checkbox" id="mules"> Mules/Sakit Perut	<br>
+				<input type="checkbox" id="fat"> Berat Bertambah <br>	
+				<input type="checkbox" id="skinny"> Berat Badan Berkurang	
+				<br>				
+			</div>			
+			<hr>
+			<center><button class="button" style="width:70%" onclick="shit()">Submit</button></center>
+		</div>
+	</div>
+</body>
+</html>

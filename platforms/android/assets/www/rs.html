@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script>
+		function daftarPuskesmas() {
+		  'use strict';
+		  var nama = $('#name').val();
+		  var nik = $('#nik').val();
+		  var no = $('#no').val();
+
+		  if (nama == '') {
+		    alert('Anda belum memasukan nama anda');
+		  } else if (nik.length != 16) {
+		    alert('NIK anda tidak valid');
+		  } else if (no.length != 20) {
+		    alert('Nomor BPJS anda tidak valid');
+		  } else {
+		    window.location.href = 'puskesmas/option/index.html';
+		  }
+		}
+		function daftarRS() {
+		  'use strict';
+		  var nama = $('#name').val();
+		  var nik = $('#nik').val();
+		  var no = $('#no').val();
+
+		  if (nama == '') {
+		    alert('Anda belum memasukan nama anda');
+		  } else if (nik.length != 16) {
+		    alert('Anda belum memasukan nik');
+		  } else if (no.length != 20) {
+		    alert('Anda belum memasukan nomor BPJS');
+		  } else {
+		    window.location.href = 'rs/option/index.html';
+		  }
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<center>
+			<img src="img/icon.png"><br>
+			<img src="img/text.png" class="the-beatles"><br>
+			<span id="ayat">"Hati yang gembira adalah obat."</span><br>			
+		</center>
+		<div class="form">
+			<hr>
+			<label for="rujukan">Nomor Rujukan</label>
+			<input type="text" id="rujukan" placeholder="Masukan Nomor Rujukan">
+			<br><br>
+			<center>
+				<a class="button" href="kamar/royal.html">Submit</a>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>	
+	<link rel="stylesheet" href="fonts/icons/css/font-awesome.min.css">
+</head>
+<body>
+	<script>
+		function rate() {
+			alert("Terima kasih atas responmu!")
+			window.location.href = 'index.html';
+		}
+	</script>
+	<div class="container" align="center">		
+		<img src="img/icon.png"><br>
+		<img src="img/text.png" class="the-beatles"><br>
+		<hr>
+		<h2>Apa tanggapanmu setelah berobat di faskes?</h2>
+		<h4>Rating Pelayanan</h4>
+		<div class="row">
+			<div class="column" align="center">
+				<button class="button button-clear oasis"><i class="fa fa-star-o rate-icon fa-2x"></i></button>
+				<button class="button button-clear oasis"><i class="fa fa-star-o rate-icon fa-2x"></i></button>
+				<button class="button button-clear oasis"><i class="fa fa-star-o rate-icon fa-2x"></i></button>					
+				<button class="button button-clear oasis"><i class="fa fa-star-o rate-icon fa-2x"></i></button>			
+				<button class="button button-clear oasis"><i class="fa fa-star-o rate-icon fa-2x"></i></button>
+			</div><br><br>
+		</div>		
+		<div class="column" align="left"><label for="comment">Komentarmu</label><input type="text" id="comment"></div>
+		<hr>
+		<button class="button" style="width:70%" onclick="rate()">Submit</button>
+	</div>
+</body>
+</html>

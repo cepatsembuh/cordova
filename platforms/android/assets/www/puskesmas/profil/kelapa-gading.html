@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../bower_components/milligram/dist/milligram.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../fonts/icons/css/font-awesome.min.css">
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script src="../../js/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div align="center">
+      <img src="../../img/kelapa-gading.jpg" class="image">  
+    </div>
+    <div class="text" style="text-align:left">
+      <h3>Puskesmas Kecamatan Kelapa Gading</h3>
+      <p><i class="fa fa-map-marker fa-1x"></i>: Jl. Merah Jambu Blok EJ/22<br>
+      <center>
+        <a href="tel:+6245853300" class="button button-outline" style="width:100%"><span style="float:left;"><i class="fa fa-phone fa-1x"></i></span>Telpon Faskes</a>
+      </center></p>
+    </div>
+    <hr>
+    <div class="facilities">
+        <span class="stranger-things">
+          Poli Umum
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Gigi
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Anak
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli THT
+          <span class="badge mike">
+            <i class="fa fa-times"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Mata
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Paru
+          <span class="badge mike">
+            <i class="fa fa-times"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Gizi
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli FeLaSe
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Kusta
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Kulit
+          <span class="badge mike">
+            <i class="fa fa-times"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Kanker
+          <span class="badge mike">
+            <i class="fa fa-times"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli Kandungan
+          <span class="badge mike">
+            <i class="fa fa-times"></i>
+          </span>
+        </span>
+        <br>
+        <span class="stranger-things">
+          Poli VCT (HIV/AIDS)
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span><br>
+        <span class="stranger-things">
+          Poli Penyakit Dalam
+          <span class="badge mike">
+            <i class="fa fa-times"></i>
+          </span>
+        </span><br>
+        <span class="stranger-things">
+          Poli Kesehatan Jiwa
+          <span class="badge eleven">
+            <i class="fa fa-check"></i>
+          </span>
+        </span><br>
+        <span class="stranger-things">
+          Poli Haji
+          <span class="badge mike">
+            <i class="fa fa-times"></i>
+          </span>
+        </span><br>
+    </div>
+    <hr>
+    <div class="form">
+        <fieldset>
+          <label for="name">Nama</label>
+          <input type="text" id="name">
+
+          <label for="nik">NIK</label>
+          <input type="number" id="nik">
+          
+          <label for="kk">Nomor KK</label>
+          <input type="number" id="kk">
+
+          <label for="bpjs">No BPJS</label>
+          <input type="number" id="bpjs">
+                      
+          <label for="poli">Pilih Poli</label>
+          <select id="poli">
+            <option selected>----</option>
+            <option value="bpu">BPU</option>
+            <option value="bpg">BPG</option>
+            <option value="kia">KIA</option>
+          </select>
+
+          <label for="medis">Nomor Rekam Medis</label>
+          <input type="number" id="medis">
+          <br><br>
+          <button class="button-primary full-width" onclick="antrian()">Daftar</button>
+        </fieldset>     
+    </div>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/callAPI.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+		margin-top: 5%;
+		height: 50%;
+      }
+    </style>
+</head>
+<body class="container">
+	<center>
+		<img src="img/icon.png"><br>
+		<img src="img/text.png" class="the-beatles"><br>
+		<h2>Jenis Pelayanan yang dibutuhkan:</h2>
+		<button class="button button-outline same-width" onclick="jantung()">Serangan Jantung</button>
+		<button class="button button-outline same-width" onclick="luka()">Kecelakaan/Luka</button>
+		<button class="button button-outline same-width" onclick="bencana()">Bencana Alam</button>
+	</center>   
+</body>
+</html>

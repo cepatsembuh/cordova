@@ -1,0 +1,55 @@
+/*
+  The class and id names will be so weird.
+  Just google it if you're curious :v
+*/
+/* ------------------------ */
+
+.stranger-things {
+	margin-left: 15px;
+	font-weight: bold;
+}
+.eleven {
+	color: #009688;
+	float: right;
+}
+.mike {
+	color: #F44336;
+	float: right;
+}
+.trap-nation {
+	float: right
+}
+.full-width {
+	width: 100%
+}
+.image {
+	width: 100%;
+	height: 100%;	
+	border-radius: 10px;
+}
+#ayat {
+	font-size: 1.2em;
+/*	font-style: italic;*/
+}
+.rate-icon {
+	color: #01875A;
+	margin-left: 5px;
+}
+.button {
+	border-radius: 200px !important;
+}
+.same-width {
+	width: 80% !important;
+}
+.the-beatles {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.shawn {
+	color: #01875A;
+	text-transform: uppercase;
+}
+.oasis {
+	border-radius: 1px !important;
+	width: 0 !important;
+}
