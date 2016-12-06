@@ -37,6 +37,6 @@ function standByMe() {
 	} else if (email == '') {
 	  alert('Mohon masukan email anda untuk mendapatkan berita terbaru dari CepatSembuh')
 	} else {			  	  
-	  window.location.href = 'main.html';
+	  window.location.href = 'puskesmas/konfirmasi.html';
 	}
 }
