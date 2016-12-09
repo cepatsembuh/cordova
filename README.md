@@ -1,12 +1,5 @@
 # CepatSembuh
-Repo for CepatSembuh Cordova. <br>
+Repository for CepatSembuh App. <br>
 
-_ti pukcab ot erongitig. morf meht evomer ,tsixe llits si redlof seksaf retho_ <br>
-Read it from right to left, you probably give up. _sucker_
-
-## ToDo
-- [ ] Slice error
-- [ ] Finish this app
-
-## License
-MIT Licensed.
+_lol, siht rof llaf yllautca ouY_ <br>
+Don't read the text above.
